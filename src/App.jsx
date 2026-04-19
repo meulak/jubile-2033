@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Container from './components/layout/Container';
 import Section from './components/layout/Section';
+import Home from './pages/Home';
 
 // Layout wrapper to easily access useLocation
 const AppLayout = ({ children }) => {
@@ -21,7 +21,7 @@ const AppLayout = ({ children }) => {
         activeLink={location.pathname} 
         onLanguageChange={handleLanguageChange} 
       />
-      <main className="flex-grow">
+      <main className="flex-grow flex flex-col">
         {children}
       </main>
       <Footer />
@@ -29,42 +29,10 @@ const AppLayout = ({ children }) => {
   );
 };
 
-const Home = () => {
-  const { t } = useTranslation();
-  return (
-    <Section 
-      title={t('home.heroTitle')} 
-      subtitle={t('home.jubileeDesc')}
-      background="cream"
-    >
-      <Container padding="md">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.5 }}
-          className="text-center py-10"
-        >
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-montserrat">
-            {t('home.heroDescription')}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-[#D4AF37] text-[#1B1B4D] px-6 py-2 rounded font-bold uppercase text-sm tracking-wider hover:bg-opacity-90 transition-opacity">
-              {t('home.heroBtnPrimary')}
-            </button>
-            <button className="border-2 border-[#1B1B4D] text-[#1B1B4D] px-6 py-2 rounded font-bold uppercase text-sm tracking-wider hover:bg-[#1B1B4D] hover:text-white transition-colors">
-              {t('home.heroBtnSecondary')}
-            </button>
-          </div>
-        </motion.div>
-      </Container>
-    </Section>
-  );
-};
-
 const Placeholder = ({ title }) => (
-  <Section title={title} background="white">
+  <Section title={title} background="white" className="flex-grow flex items-center justify-center">
     <Container className="text-center py-20">
-      <p>Cette page est en cours de construction.</p>
+      <p className="font-montserrat text-lg text-gray-600">Cette page est en cours de construction.</p>
     </Container>
   </Section>
 );
