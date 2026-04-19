@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container';
 import Section from '../components/layout/Section';
 import Button from '../components/common/Button';
+import Card from '../components/common/Card';
 
 // --- MOCK DATA ---
 const mockArticles = [
@@ -161,27 +162,14 @@ const Home = () => {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {mockArticles.map((article) => (
-              <motion.article 
-                key={article.id} 
-                variants={itemVariants}
-                className="group bg-[#F5F3ED] rounded-lg p-6 shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-transparent hover:border-[#D4AF37]"
-              >
-                <div className="text-4xl mb-4 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm">
-                  <span role="img" aria-label={article.category}>{article.emoji}</span>
-                </div>
-                <div className="flex justify-between items-center mb-3">
-                  <span className="bg-[#D4AF37] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-wider rounded">{article.category}</span>
-                  <span className="text-xs text-[#9B9B8B] font-montserrat">{article.date}</span>
-                </div>
-                <h4 className="font-playfair text-xl font-bold text-[#1B1B4D] mb-3 group-hover:text-[#B85D3E] transition-colors">{article.title}</h4>
-                <p className="font-montserrat text-sm text-[#5C5C4C] mb-6 flex-grow">{article.excerpt}</p>
-                <Link to="#" className="text-left font-montserrat text-sm font-bold text-[#D4AF37] hover:text-[#1B1B4D] transition-colors mt-auto inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1B1B4D] rounded pt-4 border-t border-[#D1D5DB]">
-                  Lire plus
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.article>
+              <Card 
+                key={article.id}
+                title={article.title}
+                description={article.excerpt}
+                category={article.category}
+                link="#"
+                className="h-full"
+              />
             ))}
           </motion.div>
         </Container>
