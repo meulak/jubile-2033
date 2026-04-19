@@ -6,6 +6,9 @@ import Container from './components/layout/Container';
 import Section from './components/layout/Section';
 import Home from './pages/Home';
 import AfricaInBible from './pages/AfricaInBible';
+import Heritage from './pages/Heritage';
+import Resources from './pages/Resources';
+import Community from './pages/Community';
 
 // Layout wrapper to easily access useLocation
 const AppLayout = ({ children }) => {
@@ -46,9 +49,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bible" element={<AfricaInBible />} />
-          <Route path="/heritage" element={<Placeholder title={t('navigation.heritage')} />} />
-          <Route path="/ressources" element={<Placeholder title={t('navigation.resources')} />} />
-          <Route path="/communaute" element={<Placeholder title={t('navigation.community')} />} />
+          <Route path="/heritage" element={<Heritage />} />
+          <Route path="/ressources" element={<Resources />} />
+          <Route path="/communaute" element={<Community />} />
           <Route path="*" element={<Placeholder title="404 - Page non trouvée" />} />
         </Routes>
       </AppLayout>
