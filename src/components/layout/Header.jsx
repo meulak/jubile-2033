@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Main application navigation header.
@@ -9,19 +10,22 @@ import { Link } from 'react-router-dom';
  * @param {Function} [props.onLanguageChange] - Callback when language is changed
  */
 const Header = ({ activeLink = '/', onLanguageChange = () => {} }) => {
+  const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState('FR');
+  
+  // Use current language directly from i18n, default to FR if not resolved yet
+  const currentLang = i18n.resolvedLanguage ? i18n.resolvedLanguage.toUpperCase() : 'FR';
 
   const navLinks = [
-    { name: 'Accueil', path: '/' },
-    { name: 'Bible', path: '/bible' },
-    { name: 'Héritage', path: '/heritage' },
-    { name: 'Ressources', path: '/ressources' },
-    { name: 'Communauté', path: '/communaute' }
+    { name: t('navigation.home'), path: '/' },
+    { name: t('navigation.bible'), path: '/bible' },
+    { name: t('navigation.heritage'), path: '/heritage' },
+    { name: t('navigation.resources'), path: '/ressources' },
+    { name: t('navigation.community'), path: '/communaute' }
   ];
 
   const handleLangChange = (lang) => {
-    setCurrentLang(lang);
+    i18n.changeLanguage(lang.toLowerCase());
     onLanguageChange(lang);
   };
 
@@ -135,12 +139,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
-/*
-// Example Usage:
-import Header from './Header';
-
-const App = () => (
-  <Header activeLink="/" onLanguageChange={(lang) => console.log(lang)} />
-);
-*/

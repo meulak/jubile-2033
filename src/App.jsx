@@ -33,8 +33,8 @@ const Home = () => {
   const { t } = useTranslation();
   return (
     <Section 
-      title={t('welcome') || "Bienvenue au Jubilé 2033"} 
-      subtitle="Célébrant 2000 ans d'histoire chrétienne africaine."
+      title={t('home.heroTitle')} 
+      subtitle={t('home.jubileeDesc')}
       background="cream"
     >
       <Container padding="md">
@@ -44,9 +44,17 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className="text-center py-10"
         >
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-            Explorez les racines profondes de notre héritage, depuis les premiers siècles de l'Église jusqu'au rassemblement du jubilé continental.
+          <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-montserrat">
+            {t('home.heroDescription')}
           </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-[#D4AF37] text-[#1B1B4D] px-6 py-2 rounded font-bold uppercase text-sm tracking-wider hover:bg-opacity-90 transition-opacity">
+              {t('home.heroBtnPrimary')}
+            </button>
+            <button className="border-2 border-[#1B1B4D] text-[#1B1B4D] px-6 py-2 rounded font-bold uppercase text-sm tracking-wider hover:bg-[#1B1B4D] hover:text-white transition-colors">
+              {t('home.heroBtnSecondary')}
+            </button>
+          </div>
         </motion.div>
       </Container>
     </Section>
@@ -62,15 +70,16 @@ const Placeholder = ({ title }) => (
 );
 
 function App() {
+  const { t } = useTranslation();
   return (
     <Router>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/bible" element={<Placeholder title="Bible" />} />
-          <Route path="/heritage" element={<Placeholder title="Héritage" />} />
-          <Route path="/ressources" element={<Placeholder title="Ressources" />} />
-          <Route path="/communaute" element={<Placeholder title="Communauté" />} />
+          <Route path="/bible" element={<Placeholder title={t('navigation.bible')} />} />
+          <Route path="/heritage" element={<Placeholder title={t('navigation.heritage')} />} />
+          <Route path="/ressources" element={<Placeholder title={t('navigation.resources')} />} />
+          <Route path="/communaute" element={<Placeholder title={t('navigation.community')} />} />
           <Route path="*" element={<Placeholder title="404 - Page non trouvée" />} />
         </Routes>
       </AppLayout>

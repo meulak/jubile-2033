@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Home",
+    "bible": "L'Africa nella Bibbia",
+    "heritage": "Eredità e Storia",
+    "resources": "Area Risorse",
+    "community": "Comunità"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "it": "Italiano"
+  },
+  "home": {
+    "heroTitle": "L'Africa fa parte della storia della salvezza",
+    "heroDescription": "Scopri 2000 anni di continua presenza cristiana, dalle origini ai giorni nostri.",
+    "heroBtnPrimary": "Esplora",
+    "heroBtnSecondary": "Saperne di più",
+    "jubileeTitle": "Giubileo della Redenzione 2033",
+    "jubileeDesc": "Commemorazione di 2000 anni di fede, speranza e carità.",
+    "mapTitle": "Luoghi biblici in Africa",
+    "newsTitle": "Ultime Notizie",
+    "ctaTitle": "Partecipa al Progetto"
+  },
+  "footer": {
+    "about": "Chi Siamo",
+    "content": "Contenuto",
+    "engagement": "Impegno",
+    "social": "Social Media",
+    "copyright": "© 2026 Impronte Africane di Gesù"
+  }
+}

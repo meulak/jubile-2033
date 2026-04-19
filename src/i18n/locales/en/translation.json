@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Home",
+    "bible": "Africa in the Bible",
+    "heritage": "Heritage and History",
+    "resources": "Resources Area",
+    "community": "Community"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "it": "Italiano"
+  },
+  "home": {
+    "heroTitle": "Africa is part of the salvation history",
+    "heroDescription": "Discover 2000 years of continuous Christian presence, from the origins to the present day.",
+    "heroBtnPrimary": "Explore",
+    "heroBtnSecondary": "Learn more",
+    "jubileeTitle": "Jubilee of Redemption 2033",
+    "jubileeDesc": "Commemorating 2000 years of faith, hope, and charity.",
+    "mapTitle": "Biblical places in Africa",
+    "newsTitle": "Latest News",
+    "ctaTitle": "Participate in the Project"
+  },
+  "footer": {
+    "about": "About",
+    "content": "Content",
+    "engagement": "Engagement",
+    "social": "Social Media",
+    "copyright": "© 2026 Impronte Africane di Gesù"
+  }
+}

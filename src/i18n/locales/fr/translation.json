@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "bible": "Afrique dans la Bible",
+    "heritage": "Héritage et Histoire",
+    "resources": "Espace Ressources",
+    "community": "Communauté"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "it": "Italiano"
+  },
+  "home": {
+    "heroTitle": "L'Afrique fait partie de l'histoire du salut",
+    "heroDescription": "Découvrez 2000 ans de présence chrétienne continue, des origines à nos jours.",
+    "heroBtnPrimary": "Explorer",
+    "heroBtnSecondary": "En savoir plus",
+    "jubileeTitle": "Jubilé de la Rédemption 2033",
+    "jubileeDesc": "Commémorant 2000 ans de foi, d'espérance et de charité.",
+    "mapTitle": "Lieux bibliques en Afrique",
+    "newsTitle": "Dernières Actualités",
+    "ctaTitle": "Participez au Projet"
+  },
+  "footer": {
+    "about": "À Propos",
+    "content": "Contenu",
+    "engagement": "Engagement",
+    "social": "Réseaux Sociaux",
+    "copyright": "© 2026 Impronte Africane di Gesù"
+  }
+}
