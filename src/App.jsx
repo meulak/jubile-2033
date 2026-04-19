@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer';
 import Container from './components/layout/Container';
 import Section from './components/layout/Section';
 import Home from './pages/Home';
+import AfricaInBible from './pages/AfricaInBible';
 
 // Layout wrapper to easily access useLocation
 const AppLayout = ({ children }) => {
@@ -44,7 +45,7 @@ function App() {
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/bible" element={<Placeholder title={t('navigation.bible')} />} />
+          <Route path="/bible" element={<AfricaInBible />} />
           <Route path="/heritage" element={<Placeholder title={t('navigation.heritage')} />} />
           <Route path="/ressources" element={<Placeholder title={t('navigation.resources')} />} />
           <Route path="/communaute" element={<Placeholder title={t('navigation.community')} />} />
