@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Source+Serif+Pro:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #1B1B4D;
+    --color-accent: #D4AF37;
+    --color-background: #F5F3ED;
+    --color-secondary-terracotta: #B85D3E;
+    --color-secondary-sage: #6B8069;
+  }
+
+  body {
+    @apply bg-background text-primary font-montserrat tracking-wide antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
