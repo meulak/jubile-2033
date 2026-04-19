@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container';
 import Section from '../components/layout/Section';
+import Button from '../components/common/Button';
 
 // --- MOCK DATA ---
 const mockArticles = [
@@ -89,12 +90,12 @@ const Home = () => {
               {t('home.heroDescription')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <button className="w-full sm:w-auto bg-[#D4AF37] text-[#1B1B4D] px-8 py-3 rounded font-bold uppercase text-sm tracking-wider hover:bg-opacity-90 transition-all shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto">
                 {t('home.heroBtnPrimary')}
-              </button>
-              <button className="w-full sm:w-auto bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-3 rounded font-bold uppercase text-sm tracking-wider hover:bg-[#D4AF37] hover:text-[#1B1B4D] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              </Button>
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                 {t('home.heroBtnSecondary')}
-              </button>
+              </Button>
             </div>
           </motion.div>
         </Container>
@@ -202,9 +203,9 @@ const Home = () => {
             <p className="opacity-80 max-w-2xl mx-auto mb-8 text-lg">
               Rejoignez ce mouvement historique. Que ce soit par la prière, le soutien ou l'étude, vous avez une place dans le Jubilé 2033.
             </p>
-            <button className="bg-[#D4AF37] text-[#1B1B4D] px-8 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-lg">
+            <Button variant="primary" size="lg" className="rounded-full">
               Découvrir Comment
-            </button>
+            </Button>
           </motion.div>
         </Container>
       </section>
