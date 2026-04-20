@@ -190,9 +190,10 @@ const Home = () => {
                 title={article.title}
                 description={article.excerpt}
                 category={article.category}
-                link="#"
+                link={`/articles/${article.slug}`}
                 className="h-full"
               />
+
             ))}
           </motion.div>
         </Container>

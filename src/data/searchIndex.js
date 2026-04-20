@@ -24,5 +24,8 @@ export const searchIndex = [
     image: a.image
   })),
   ...mockResourcesData.map(r => ({ ...r, image: null })),
-  ...mockPeopleData.map(p => ({ ...p, image: null }))
+  ...mockPeopleData.map(p => ({ ...p, image: null })),
+  { id: 'page-history', type: 'article', title: "Notre Histoire", category: "À Propos", content: "L'origine d'Impronte Africane, la redécouverte des racines africaines du christianisme, Moïse et Augustin.", url: "/histoire", image: null },
+  { id: 'page-vision', type: 'article', title: "Vision 2033", category: "À Propos", content: "Le bimillénaire de la Rédemption, Unité, Éducation, Avenir de l'Afrique chrétienne.", url: "/vision", image: null }
 ];
+
