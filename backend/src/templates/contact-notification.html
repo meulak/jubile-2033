@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; color: #333; line-height: 1.6; }
+    .container { max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+    .header { background: #1B1B4D; color: white; padding: 15px; border-radius: 5px 5px 0 0; }
+    .info { margin: 20px 0; padding: 15px; background: #f4f4f4; border-radius: 5px; }
+    blockquote { border-left: 4px solid #D4AF37; padding-left: 15px; margin: 20px 0; font-style: italic; }
+    .button { background: #D4AF37; color: #1B1B4D !important; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 style="margin: 0;">Nouveau message de contact</h2>
+    </div>
+    
+    <div class="info">
+      <p><strong>De:</strong> {{name}} (<a href="mailto:{{email}}">{{email}}</a>)</p>
+      <p><strong>Sujet:</strong> {{subject}}</p>
+    </div>
+    
+    <p><strong>Message :</strong></p>
+    <blockquote>{{message}}</blockquote>
+    
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="{{dashboardLink}}" class="button">Voir dans le Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>

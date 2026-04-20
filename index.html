@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jubilé 2033</title>
+    <meta name="theme-color" content="#1B1B4D" />
+    <title>Jubilé 2033 | Impronte Africane</title>
+    
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Critical CSS -->
+    <style>
+      :root {
+        --color-primary: #1B1B4D;
+        --color-background: #F5F3ED;
+      }
+      body {
+        margin: 0;
+        background-color: var(--color-background);
+        color: var(--color-primary);
+        font-family: sans-serif; /* Fallback until fonts load */
+      }
+      #root { min-height: 100vh; display: flex; flex-direction: column; }
+    </style>
   </head>
   <body>
     <div id="root"></div>

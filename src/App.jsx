@@ -1,18 +1,28 @@
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Container from './components/layout/Container';
 import Section from './components/layout/Section';
-import Home from './pages/Home';
-import AfricaInBible from './pages/AfricaInBible';
-import Heritage from './pages/Heritage';
-import Resources from './pages/Resources';
-import Community from './pages/Community';
-import ArticlePage from './pages/ArticlePage';
-import NewsletterPreferences from './pages/NewsletterPreferences';
-import SearchPage from './pages/SearchPage';
-import AdminComments from './pages/AdminComments';
+
+// --- LAZY-LOADED COMPONENTS ---
+const Home = lazy(() => import('./pages/Home'));
+const AfricaInBible = lazy(() => import('./pages/AfricaInBible'));
+const Heritage = lazy(() => import('./pages/Heritage'));
+const Resources = lazy(() => import('./pages/Resources'));
+const Community = lazy(() => import('./pages/Community'));
+const ArticlePage = lazy(() => import('./pages/ArticlePage'));
+const NewsletterPreferences = lazy(() => import('./pages/NewsletterPreferences'));
+const SearchPage = lazy(() => import('./pages/SearchPage'));
+const AdminComments = lazy(() => import('./pages/AdminComments'));
+
+// Loading Fallback
+const PageLoading = () => (
+  <div className="flex-grow flex items-center justify-center min-h-[50vh]">
+    <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 // Layout wrapper to easily access useLocation
 const AppLayout = ({ children }) => {
@@ -30,7 +40,9 @@ const AppLayout = ({ children }) => {
         onLanguageChange={handleLanguageChange} 
       />
       <main className="flex-grow flex flex-col">
-        {children}
+        <Suspense fallback={<PageLoading />}>
+          {children}
+        </Suspense>
       </main>
       <Footer />
     </div>
@@ -46,7 +58,6 @@ const Placeholder = ({ title }) => (
 );
 
 function App() {
-  const { t } = useTranslation();
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <AppLayout>

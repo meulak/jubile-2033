@@ -2,31 +2,44 @@ import React, { useState, useEffect } from 'react';
 import Container from '../components/layout/Container';
 import Badge from '../components/common/Badge';
 import { commentService } from '../services/commentService';
+import { useApi } from '../hooks/useApi';
 
 const AdminComments = () => {
   const [comments, setComments] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { execute: fetchAll, loading } = useApi(commentService.getAllComments);
+  const { execute: updateStatus } = useApi((id, status) => commentService.updateStatus(id, status));
+  const { execute: deleteComment } = useApi((id) => commentService.deleteComment(id));
 
   useEffect(() => {
-    fetchData();
+    loadData();
   }, []);
 
-  const fetchData = async () => {
-    setLoading(true);
-    const data = await commentService.getAllComments();
-    setComments(data);
-    setLoading(false);
+  const loadData = async () => {
+    try {
+      const data = await fetchAll();
+      setComments(data);
+    } catch (err) {
+      console.error("Failed to load comments for admin:", err);
+    }
   };
 
-  const updateStatus = async (id, status) => {
-    await commentService.updateStatus(id, status);
-    fetchData(); // reload
+  const handleStatusUpdate = async (id, status) => {
+    try {
+      await updateStatus(id, status);
+      loadData(); // reload
+    } catch (err) {
+      alert("Erreur lors de la mise à jour du statut.");
+    }
   };
 
-  const deleteComm = async (id) => {
+  const handleDelete = async (id) => {
     if(window.confirm("Supprimer ce commentaire et ses enfants ?")) {
-      await commentService.deleteComment(id);
-      fetchData();
+      try {
+        await deleteComment(id);
+        loadData();
+      } catch (err) {
+        alert("Erreur lors de la suppression.");
+      }
     }
   };
 
@@ -73,12 +86,12 @@ const AdminComments = () => {
                        </td>
                        <td className="p-4 align-top text-right space-x-2">
                          {c.status !== 'approved' && (
-                           <button onClick={() => updateStatus(c.id, 'approved')} className="text-xs bg-green-100 hover:bg-green-200 text-green-700 px-3 py-1 rounded font-montserrat uppercase font-bold">Valider</button>
+                           <button onClick={() => handleStatusUpdate(c.id, 'approved')} className="text-xs bg-green-100 hover:bg-green-200 text-green-700 px-3 py-1 rounded font-montserrat uppercase font-bold">Valider</button>
                          )}
                          {c.status !== 'spam' && (
-                           <button onClick={() => updateStatus(c.id, 'spam')} className="text-xs bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded font-montserrat uppercase font-bold">Spam</button>
+                           <button onClick={() => handleStatusUpdate(c.id, 'spam')} className="text-xs bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded font-montserrat uppercase font-bold">Spam</button>
                          )}
-                         <button onClick={() => deleteComm(c.id)} className="text-xs bg-red-100 hover:bg-red-200 text-red-700 px-3 py-1 rounded font-montserrat uppercase font-bold">X</button>
+                         <button onClick={() => handleDelete(c.id)} className="text-xs bg-red-100 hover:bg-red-200 text-red-700 px-3 py-1 rounded font-montserrat uppercase font-bold">X</button>
                        </td>
                      </tr>
                    ))}

@@ -4,19 +4,22 @@ import Button from './Button';
 import FormInput from './FormInput';
 import Textarea from './Textarea';
 import { commentService } from '../../services/commentService';
+import { useApi } from '../../hooks/useApi';
 
 // Composant formulaire réutilisable (pour root ou nested reply)
 const CommentForm = ({ articleId, articleTitle, parentId = null, onSubmitted, onCancel }) => {
   const [formData, setFormData] = useState({ name: '', email: '', text: '' });
-  const [loading, setLoading] = useState(false);
+  const { execute: submitComment, loading, error: apiError } = useApi(
+    (data) => commentService.postComment(articleId, data)
+  );
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.text) return;
-    setLoading(true);
+    
     try {
-      const newComment = await commentService.postComment(articleId, {
+      const newComment = await submitComment({
         ...formData,
         parentCommentId: parentId,
         articleTitle
@@ -29,8 +32,6 @@ const CommentForm = ({ articleId, articleTitle, parentId = null, onSubmitted, on
       }, 1000);
     } catch(err) {
       setMessage("Erreur lors de la publication.");
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -68,18 +69,22 @@ const CommentForm = ({ articleId, articleTitle, parentId = null, onSubmitted, on
 // Main Component
 const CommentsSection = ({ articleId, articleTitle }) => {
   const [comments, setComments] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { execute: fetchComments, loading, error: apiError } = useApi(
+    (id) => commentService.getComments(id)
+  );
   const [replyingTo, setReplyingTo] = useState(null);
 
   useEffect(() => {
-    fetchComments();
+    loadComments();
   }, [articleId]);
 
-  const fetchComments = async () => {
-    setLoading(true);
-    const data = await commentService.getComments(articleId);
-    setComments(data.comments);
-    setLoading(false);
+  const loadComments = async () => {
+    try {
+      const data = await fetchComments(articleId);
+      setComments(data.comments);
+    } catch (err) {
+      console.error("Failed to load comments:", err);
+    }
   };
 
   const handleNewComment = (newComment) => {

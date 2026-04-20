@@ -27,3 +27,9 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Backend
+backend/node_modules
+backend/*.sqlite
+backend/logs
+

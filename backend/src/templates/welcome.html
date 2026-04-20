@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: 'Source Serif Pro', serif; color: #2c2c1a; }
+    .container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+    .header { background: linear-gradient(135deg, #1B1B4D 0%, #B85D3E 100%); 
+              color: white; padding: 40px; text-align: center; border-radius: 8px; }
+    .button { background: #D4AF37; color: #1B1B4D; padding: 12px 24px; 
+              border-radius: 4px; text-decoration: none; display: inline-block; 
+              font-weight: 600; margin: 20px 0; }
+    .footer { text-align: center; padding: 20px; color: #5C5C4C; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Bienvenue à Impronte Africane</h1>
+      <p>Découvrez 2000 ans d'histoire chrétienne africaine</p>
+    </div>
+    
+    <p>Bonjour {{name}},</p>
+    
+    <p>Merci de vous être abonné à notre newsletter!</p>
+    <p>Cliquez ci-dessous pour confirmer votre email:</p>
+    
+    <a href="{{confirmationLink}}" class="button">Confirmer Mon Email</a>
+    
+    <p>Si vous n'avez pas effectué cette demande, vous pouvez ignorer cet email.</p>
+    
+    <div class="footer">
+      <p>Impronte Africane di Gesù | Jubilé 2033</p>
+      <p><a href="{{unsubscribeLink}}" style="color: #D4AF37;">Se désabonner</a></p>
+    </div>
+  </div>
+</body>
+</html>

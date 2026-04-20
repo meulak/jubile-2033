@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: 'Source Serif Pro', serif; color: #2c2c1a; }
+    .container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+    .header { border-bottom: 2px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
+    blockquote { border-left: 4px solid #D4AF37; padding: 15px; background: #f9f9f9; font-style: italic; color: #5C5C4C; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 style="color: #1B1B4D; margin: 0;">Merci pour votre message</h2>
+    </div>
+    
+    <p>Bonjour {{name}},</p>
+    
+    <p>Nous avons bien reçu votre demande et nous vous répondrons sous 48 heures.</p>
+    
+    <p><strong>Rappel de votre message :</strong></p>
+    <blockquote>{{message}}</blockquote>
+    
+    <div class="footer">
+      <p>Cordialement,<br><strong>L'équipe Impronte Africane</strong></p>
+      <p style="font-size: 12px; color: #999;">Ceci est une réponse automatique, merci de ne pas y répondre directement.</p>
+    </div>
+  </div>
+</body>
+</html>

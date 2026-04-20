@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Button from './Button';
 import FormInput from './FormInput';
 import { newsletterService } from '../../services/newsletterService';
+import { useApi } from '../../hooks/useApi';
 import Container from '../layout/Container';
 
 const NewsletterSignup = ({ 
@@ -12,9 +14,11 @@ const NewsletterSignup = ({
   buttonText,
   onSuccess
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
+  const { execute: subscribe, loading, error: apiError } = useApi(
+    (email, lang) => newsletterService.subscribe(email, lang)
+  );
   const [status, setStatus] = useState({ type: null, message: '' });
 
   const displayTitle = title || t('sidebar.newsletter.title');
@@ -39,18 +43,16 @@ const NewsletterSignup = ({
       return;
     }
 
-    setLoading(true);
     try {
-      const resp = await newsletterService.subscribe(email);
+      const resp = await subscribe(email, i18n.language);
       if (resp.success) {
         setStatus({ type: 'success', message: t('newsletter.success') });
         setEmail('');
         if (onSuccess) onSuccess();
       }
     } catch (err) {
+      // Error is handled by useApi and exposed via apiError/catch
       setStatus({ type: 'error', message: err.message || t('common.error') });
-    } finally {
-      setLoading(false);
     }
   };
 
