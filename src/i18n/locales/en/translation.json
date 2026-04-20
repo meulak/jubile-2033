@@ -50,6 +50,15 @@
     "ctaTitle": "Let's Write History Together",
     "ctaDesc": "Your voice, your art, and your prayers are the living stones of this edifice. Join the Impronte Africane community to prepare for 2033.",
     "ctaBtn": "Become a Member",
+    "map": {
+      "alexandria": "The intellectual lighthouse of ancient Christianity. Seat of the famous theological school where Origen and Clement taught, and the birthplace of evangelization by Saint Mark.",
+      "carthage": "The capital of courage. Land of the martyrs Felicity and Perpetua, and city of the great theologians Tertullian and Saint Cyprian who structured the Latin Church.",
+      "hippo": "The city of Augustine. It is here, on the Algerian coast, that the greatest theologian of Antiquity wrote 'The Confessions' and shaped universal thought.",
+      "axum": "The holy city of Ethiopia. Guardian of the Ark of the Covenant and center of a kingdom that was one of the first in the world to officially adopt Christianity.",
+      "lalibela": "The Jerusalem of Africa. Eleven monolithic churches carved into the rock, a testament to a faith capable of moving mountains.",
+      "meroe": "At the sources of the Nile. The kingdom of the Candace queens, one of whose high officials was the first African baptized by the apostle Philip.",
+      "cyrene": "The city of Simon. Hailing from present-day Libya, Cyrenians were present from the Passion and Pentecost, carrying the faith to the ends of the world."
+    },
     "articles": {
       "art1": {
         "title": "The Mystery of the Aksum Manuscripts",

@@ -21,3 +21,41 @@
     @apply font-playfair;
   }
 }
+
+@layer components {
+  .bg-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .cinematic-gradient {
+    background: linear-gradient(135deg, #1B1B4D 0%, #2B2B6D 40%, #B85D3E 100%);
+  }
+
+  .text-shadow-premium {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  }
+}

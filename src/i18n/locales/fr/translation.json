@@ -50,6 +50,15 @@
     "ctaTitle": "Écrivons l'Histoire Ensemble",
     "ctaDesc": "Votre voix, vos arts et vos prières sont les pierres vivantes de cet édifice. Rejoignez la communauté Impronte Africane pour préparer 2033.",
     "ctaBtn": "Devenir Membre",
+    "map": {
+      "alexandria": "Le phare intellectuel de la chrétienté antique. Siège de la célèbre école théologique où ont enseigné Origène et Clément, et berceau de l'évangélisation par Saint Marc.",
+      "carthage": "La capitale du courage. Terre des martyrs Félicité et Perpétue, et cité des grands théologiens Tertullien et Saint Cyprien qui ont structuré l'Église latine.",
+      "hippo": "La cité d'Augustin. C'est ici, sur la côte algérienne, que le plus grand théologien de l'Antiquité a écrit 'Les Confessions' et forgé la pensée universelle.",
+      "axum": "La cité sainte d'Éthiopie. Gardienne de l'Arche de l'Alliance et centre d'un royaume qui fut l'un des premiers au monde à adopter officiellement le christianisme.",
+      "lalibela": "La Jérusalem d'Afrique. Onze églises monolithiques taillées dans le roc, témoignage d'une foi capable de déplacer les montagnes.",
+      "meroe": "Aux sources du Nil. Le royaume des reines Candace, dont l'un des hauts fonctionnaires fut le premier Africain baptisé par l'apôtre Philippe.",
+      "cyrene": "La ville de Simon. Originaires de l'actuelle Libye, les Cyrénéens étaient présents dès la Passion et la Pentecôte, portant la foi aux confins du monde."
+    },
     "articles": {
       "art1": {
         "title": "Le Mystère des Manuscrits d'Aksoum",

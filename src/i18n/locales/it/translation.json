@@ -50,6 +50,15 @@
     "ctaTitle": "Scriviamo la Storia Insieme",
     "ctaDesc": "La tua voce, le tue arti e le tue preghiere sono le pietre vive di questo edificio. Unisciti alla comunità Impronte Africane per preparare il 2033.",
     "ctaBtn": "Diventa Membro",
+    "map": {
+      "alexandria": "Il faro intellettuale della cristianità antica. Sede della celebre scuola teologica dove insegnarono Origene e Clemente, e culla dell'evangelizzazione di San Marco.",
+      "carthage": "La capitale del coraggio. Terra dei martiri Felicita e Perpetua, e città dei grandi teologi Tertulliano e San Cipriano che hanno strutturato la Chiesa latina.",
+      "hippo": "La città di Agostino. È qui, sulla costa algerina, che il più grande teologo dell'antichità scrisse 'Le Confessioni' e forgiò il pensiero universale.",
+      "axum": "La città santa dell'Etiopia. Custode dell'Arca dell'Alleanza e centro di un regno che fu tra i primi al mondo ad adottare ufficialmente il cristianesimo.",
+      "lalibela": "La Gerusalemme d'Africa. Undici chiese monolitiche scavate nella roccia, testimonianza di una fede capace di spostare le montagne.",
+      "meroe": "Alle sorgenti del Nilo. Il regno delle regine Candace, uno dei cui alti funzionari fu il primo africano battezzato dall'apostolo Filippo.",
+      "cyrene": "La città di Simone. Originari dell'attuale Libia, i Cirenei erano presenti sin dalla Passione e dalla Pentecoste, portando la fede ai confini del mondo."
+    },
     "articles": {
       "art1": {
         "title": "Il Mistero dei Manoscritti di Axum",
