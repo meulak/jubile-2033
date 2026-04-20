@@ -1,8 +1,8 @@
 {
   "navigation": {
     "home": "Accueil",
-    "bible": "Afrique dans la Bible",
-    "heritage": "Héritage et Histoire",
+    "bible": "L'Afrique dans la Bible",
+    "heritage": "Héritage & Histoire",
     "resources": "Espace Ressources",
     "community": "Communauté"
   },
@@ -17,20 +17,11 @@
     "loading": "Chargement...",
     "error": "Une erreur est survenue",
     "search": "Rechercher",
-    "searchPlaceholder": "Rechercher...",
+    "searchPlaceholder": "Rechercher un thème, une vidéo...",
     "email": "Email",
     "emailPlaceholder": "votre@email.com",
-    "searchAria": "Lancer la recherche",
-    "clearSearch": "Effacer la recherche",
-    "noSuggestions": "Aucune suggestion rapide trouvée.",
-    "viewAllResults": "Voir tous les résultats pour \"{{query}}\"",
     "download": "Télécharger",
     "share": "Partager",
-    "types": {
-      "article": "Article",
-      "resource": "Ressource",
-      "person": "Personnalité"
-    },
     "categories": {
       "history": "Histoire",
       "community": "Communauté",
@@ -43,7 +34,7 @@
   },
   "home": {
     "heroTitle": "L'Afrique : Berceau Méconnu de la Chrétienté",
-    "heroDescription": "Explorez 2000 ans de foi ininterrompue. De la fuite en Égypte aux cathédrales de Lalibela, découvrez comment le continent a façonné et protégé le message du Christ.",
+    "heroDescription": "Explorez 2000 ans de foi ininterrompue. De la fuite en Égypte aux cathédrales de Lalibela, découvrez comment l'Afrique a façonné et protégé le message du Christ.",
     "heroBtnPrimary": "Commencer l'Exploration",
     "heroBtnSecondary": "Notre Vision",
     "jubileeTitle": "En Route vers le Jubilé 2033",
@@ -122,9 +113,32 @@
       "cta": "L'Église naissante",
       "quote1": "Et cet Éthiopien continua son chemin tout joyeux.",
       "ref1": "Actes 8:39"
+    },
+    "related": {
+      "title": "Vous pourriez aussi lire",
+      "art1": {
+        "title": "St-Augustin de Thagaste",
+        "description": "Découvrez l'apport monumental de la théologie africaine sur l'Église universelle."
+      },
+      "art2": {
+        "title": "Manuscrits de Timbuktu",
+        "description": "Plongée dans la préservation des écritures sacrées au cœur du Mali."
+      },
+      "art3": {
+        "title": "Art Paléochrétien",
+        "description": "Comment les mosaïques dépeignaient la chrétienté africaine vibrante."
+      }
     }
   },
   "heritage": {
+    "title": "Héritage & Histoire",
+    "subtitle": "Explorez la fascinante chronologie de 2000 ans de présence chrétienne continue sur le continent africaine.",
+    "filters": {
+      "all": "Tous",
+      "antiquity": "Antiquité",
+      "middle_ages": "Moyen-Âge",
+      "modern": "Moderne"
+    },
     "timeline": {
       "event1": { "year": "~33 AD", "title": "Simon de Cyrène", "desc": "Un Africain porte la croix du Christ, devenant le symbole de la participation du continent à la Passion." },
       "event2": { "year": "42 AD", "title": "St Marc à Alexandrie", "desc": "L'évangéliste fonde l'Église d'Égypte, instituant l'une des plus prestigieuses écoles théologiques au monde." },
@@ -135,12 +149,149 @@
       "event7": { "year": "1210 AD", "title": "Églises de Lalibela", "desc": "Le Roi Lalibela fait tailler dans le roc onze églises monumentales, créant une 'Nouvelle Jérusalem' africaine." },
       "event8": { "year": "1886 AD", "title": "Martyrs de l'Ouganda", "desc": "De jeunes courtisans donnent leur vie pour leur foi, marquant le renouveau spectaculaire de l'Église en Afrique subsaharienne." },
       "event9": { "year": "2033 AD", "title": "Le Grand Jubilé", "desc": "L'Afrique, continent comptant le plus grand nombre de chrétiens au monde, invite l'Église universelle à célébrer 2000 ans de grâce." }
+    },
+    "thinkersTitle": "Grands Témoins de l'Antiquité",
+    "contemporaryTitle": "Penseurs d'Aujourd'hui",
+    "contemporarySubtitle": "Celles et ceux qui façonnent la théologie africaine contemporaine.",
+    "mapTitle": "Carte de la Terre Sainte Africaine",
+    "mapDesc": "Visualisez les cités bibliques et les centres spirituels qui ont marqué l'histoire.",
+    "mapPlaceholder": "Sur cette carte interactive (Leaflet), découvrez Carthage, Alexandrie, Hippone et Lalibela."
+  },
+  "resources": {
+    "title": "Espace Ressources",
+    "subtitle": "Plongez dans notre bibliothèque de fiches pédagogiques, archives multimédias et trésors de l'inculturation.",
+    "searchPlaceholder": "Rechercher par thème (ex: Augustin, Rite, Chant)...",
+    "tabs": {
+      "tools": "Boîte à Outils",
+      "multimedia": "Multimédia",
+      "inculturation": "Inculturation"
+    },
+    "outils": {
+      "filters": {
+        "label": "Filtrer par :",
+        "levels": {
+          "all": "Tous Niveaux",
+          "children": "Enfants",
+          "teens": "Adolescents",
+          "adults": "Adultes"
+        },
+        "themes": {
+          "all": "Tous Thèmes",
+          "bible": "Étude Biblique",
+          "history": "Histoire de l'Église",
+          "practice": "Liturgie & Vie"
+        }
+      },
+      "results": "Ressources trouvées",
+      "noResults": "Aucune ressource ne correspond à vos critères."
+    },
+    "multimedia": {
+      "tabs": {
+        "videos": "Vidéo (YouTube)",
+        "podcasts": "Podcasts (Spotify)",
+        "playlists": "Playlists Musicales"
+      }
+    },
+    "inculturation": {
+      "galleryTitle": "L'Art au Service de la Foi",
+      "riteCongolais": {
+        "title": "Le Rite Zaïrois (Congolais)",
+        "p1": "Promulgué en 1988 par Saint Jean-Paul II, le Rite Congolais est le seul rite liturgique inculturé officiellement reconnu par l'Église Catholique. Il est l'expression parfaite de la rencontre entre le génie africain et le message chrétien.",
+        "p2": "Ce rite se distingue par la participation du corps (danse liturgique), l'invocation des ancêtres au cœur droit, et une structure d'homélie dialoguée qui rend la Parole de Dieu vivante et communautaire.",
+        "cta": "Télécharger le Missel (PDF)",
+        "regions": {
+          "east": {
+            "name": "Afrique de l'Est",
+            "culture": "Héritage Éthiopien & Copte",
+            "desc": "Berceau du christianisme orthodoxe tewahedo. Les liturgies sont chantées en Ge'ez, accompagnées des tambours kebero et des sistres. La fête de Timkat (Épiphanie) est l'une des plus grandioses au monde."
+          },
+          "west": {
+            "name": "Afrique de l'Ouest",
+            "culture": "Inculturation Joyeuse",
+            "desc": "Une ferveur vibrante caractérise les messes d'Afrique de l'Ouest, mêlant instruments traditionnels (djembé, balafon) et de vastes chorales vêtues de pagnes unifiés."
+          },
+          "center": {
+            "name": "Afrique Centrale",
+            "culture": "Le Rite Zaïrois",
+            "desc": "Le seul rite inculturé officiellement reconnu. Il intègre l'appel de l'Esprit Saint avec un annonceur, la participation physique de l'assemblée et une homélie dialoguée."
+          },
+          "south": {
+            "name": "Afrique Australe",
+            "culture": "Esprit Ubuntu",
+            "desc": "La théologie de l'Ubuntu imprègne la vie ecclésiale. Des chants a cappella puissants à plusieurs voix, profondément liés aux luttes historiques de libération spirituelle."
+          }
+        }
+      }
     }
   },
   "community": {
+    "heroTitle": "Rejoignez le Mouvement",
+    "heroSubtitle": "Participez au grand concours artistique Jubilé 2033, partagez vos témoignages et dialoguez avec les membres du monde entier.",
+    "btnParticipate": "S'inscrire au Concours",
+    "btnGallery": "Voir les Œuvres",
+    "partners": "Soutenu par nos partenaires académiques et ecclésiaux",
     "concours": {
-      "title": "Concours : Visions du Christ Africain",
-      "desc": "Comment imaginez-vous le visage du Christ dans nos cultures aujourd'hui ? Participez au grand concours artistique du Jubilé 2033."
+      "title": "Jésus Vu par l'Afrique",
+      "desc": "Comment imaginez-vous le visage du Christ dans nos cultures aujourd'hui ? Participez au grand concours créatif du Jubilé 2033 et exprimez votre foi par l'art.",
+      "datesTitle": "Dates & Récompenses",
+      "open": "Ouverture :",
+      "close": "Clôture :",
+      "results": "Annonce des Lauréats :",
+      "prize": "Grand Prix du Jubilé",
+      "prizeDesc": "Attribué aux meilleures œuvres dans les catégories Art, Vidéo et Musique.",
+      "downloadRules": "Règlement complet (PDF)",
+      "galleryTitle": "Galerie du Jubilé",
+      "sortBy": "Trier par :",
+      "allArts": "Tous les Arts",
+      "sort": {
+        "recent": "Plus Récents",
+        "popular": "Plus Populaires"
+      },
+      "form": {
+        "title": "Soumettre votre œuvre",
+        "success": "Soumission confirmée !",
+        "successDesc": "Votre œuvre a bien été reçue par le jury du Jubilé. Vous recevrez un email de confirmation sous peu.",
+        "uploadPlaceholder": "Glissez votre fichier ici (Image, Vidéo ou Audio)",
+        "uploadFormats": "Formats : JPG, PNG, MP4, MP3",
+        "consent": "J'accepte que mon œuvre soit exposée sur la plateforme Impronte Africane.",
+        "submit": "Envoyer ma soumission",
+        "submitting": "Envoi en cours..."
+      }
+    },
+    "forum": {
+      "title": "Discussions Forum",
+      "openThread": "Lancer un sujet",
+      "replies": "Réponses",
+      "explore": "Parcourir toutes les discussions"
     }
+  },
+  "sidebar": {
+    "toc": "Dans cette section",
+    "newsletter": {
+      "title": "Newsletter Hebdo",
+      "desc": "Chaque semaine, recevez une pépite historique ou théologique.",
+      "placeholder": "votre@email.com",
+      "btn": "S'abonner"
+    },
+    "share": "Partager cette page"
+  },
+  "footer": {
+    "about": "À Propos",
+    "content": "Navigation",
+    "engagement": "Participation",
+    "social": "Réseaux Sociaux",
+    "links": {
+      "history": "Notre Histoire",
+      "vision": "Vision 2033",
+      "team": "L'Équipe",
+      "join": "Nous Rejoindre",
+      "events": "Événements",
+      "contact": "Contact"
+    },
+    "legal": {
+      "mentions": "Mentions Légales",
+      "privacy": "Confidentialité"
+    },
+    "copyright": "© 2026 Impronte Africane di Gesù. Tous droits réservés."
   }
 }

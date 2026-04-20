@@ -17,7 +17,7 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "search": "Search",
-    "searchPlaceholder": "Search...",
+    "searchPlaceholder": "Search for a theme, a video...",
     "email": "Email",
     "emailPlaceholder": "your@email.com",
     "download": "Download",
@@ -34,7 +34,7 @@
   },
   "home": {
     "heroTitle": "Africa: The Hidden Cradle of Christianity",
-    "heroDescription": "Explore 2,000 years of unbroken faith. From the flight into Egypt to the rock-hewn churches of Lalibela, discover how the continent shaped and preserved the message of Christ.",
+    "heroDescription": "Explore 2000 years of unbroken faith. From the flight into Egypt to the cathedrals of Lalibela, discover how Africa shaped and protected the message of Christ.",
     "heroBtnPrimary": "Start Exploring",
     "heroBtnSecondary": "Our Vision",
     "jubileeTitle": "On the Road to Jubilee 2033",
@@ -49,11 +49,29 @@
     "newsTitle": "Jubilee Chronicles",
     "ctaTitle": "Let's Write History Together",
     "ctaDesc": "Your voice, your art, and your prayers are the living stones of this edifice. Join the Impronte Africane community to prepare for 2033.",
-    "ctaBtn": "Become a Member"
+    "ctaBtn": "Become a Member",
+    "articles": {
+      "art1": {
+        "title": "The Mystery of the Aksum Manuscripts",
+        "excerpt": "A deep dive into the archives of one of the world's oldest Christian nations."
+      },
+      "art2": {
+        "title": "Theology of Inculturation",
+        "excerpt": "How African rhythms and symbols enrich the universal liturgy."
+      },
+      "art3": {
+        "title": "Women of the Early Church",
+        "excerpt": "The decisive role of St. Monica and the martyrs of Carthage in the faith."
+      },
+      "art4": {
+        "title": "Echo from the Desert",
+        "excerpt": "The legacy of the Egyptian Desert Fathers in modern monasticism."
+      }
+    }
   },
   "bible": {
     "heroTitle": "Africa's Imprint in Scripture",
-    "heroSubtitle": "From the Garden of Eden to the early Church in the Book of Acts, the African continent is not on the sidelines of the Bible; it is one of its primary stages.",
+    "heroSubtitle": "From the Garden of Eden to the Church in the Book of Acts, the African continent is not on the sidelines of the Bible: it is one of its primary stages.",
     "tab1": "The Roots",
     "tab2": "The Wisdom",
     "tab3": "The Refuge",
@@ -70,8 +88,8 @@
       "ref2": "Genesis 2:13"
     },
     "sagesse": {
-      "title": "Splendor of the South: Solomon and Sheba",
-      "p1": "The meeting between Solomon and the Queen of Sheba symbolizes the union between the revealed wisdom of Jerusalem and the sovereign dignity of Africa. The Queen of Sheba did not come as a mere spectator, but to test wisdom with her own enigmes.",
+      "title": "The Splendor of the South: Solomon and Sheba",
+      "p1": "The meeting between Solomon and the Queen of Sheba symbolizes the union between the revealed wisdom of Jerusalem and the sovereign dignity of Africa. The Queen of Sheba did not come as a mere spectator, but to test wisdom with her own enigmas.",
       "p2": "This encounter left an indelible mark, particularly in Ethiopia, where tradition reports that this union gave birth to a royal lineage guardian of the Ark of the Covenant.",
       "p3": "The Bible celebrates this woman 'who came from the ends of the earth' to seek the truth, becoming a model of spiritual quest for all humanity.",
       "cta": "The Heritage of Aksum",
@@ -95,25 +113,163 @@
       "cta": "The Rising Church",
       "quote1": "And the Ethiopian went on his way rejoicing.",
       "ref1": "Acts 8:39"
+    },
+    "related": {
+      "title": "You Might Also Like",
+      "art1": {
+        "title": "St. Augustine of Tagaste",
+        "description": "Discover the monumental impact of African theology on the universal Church."
+      },
+      "art2": {
+        "title": "Timbuktu Manuscripts",
+        "description": "A deep dive into the preservation of sacred scriptures in the heart of Mali."
+      },
+      "art3": {
+        "title": "Early Christian Art",
+        "description": "How mosaics depicted the vibrant African Christianity of the early centuries."
+      }
     }
   },
   "heritage": {
+    "title": "Heritage & History",
+    "subtitle": "Explore the fascinating chronology of 2000 years of continuous Christian presence on the African continent.",
+    "filters": {
+      "all": "All",
+      "antiquity": "Antiquity",
+      "middle_ages": "Middle Ages",
+      "modern": "Modern"
+    },
     "timeline": {
-      "event1": { "year": "~33 AD", "title": "Simon of Cyrene", "desc": "An African carries Christ's cross, becoming the symbol of the continent's participation in the Passion." },
-      "event2": { "year": "42 AD", "title": "St. Mark in Alexandria", "desc": "The Evangelist founds the Church in Egypt, instituting one of the world's most prestigious theological schools." },
+      "event1": { "year": "~33 AD", "title": "Simon of Cyrene", "desc": "An African carries the cross of Christ, becoming the symbol of the continent's participation in the Passion." },
+      "event2": { "year": "42 AD", "title": "St. Mark in Alexandria", "desc": "The evangelist founds the Church of Egypt, instituting one of the most prestigious theological schools in the world." },
       "event3": { "year": "203 AD", "title": "Felicity and Perpetua", "desc": "Two young mothers martyred in Carthage, whose testimony rallied thousands to the faith." },
-      "event4": { "year": "325 AD", "title": "St. Athanasius of Alexandria", "desc": "The 'Pillar of the Church' defends Christ's divinity at the Council of Nicaea, saving Christian orthodoxy." },
+      "event4": { "year": "325 AD", "title": "St. Athanasius of Alexandria", "desc": "The 'Pillar of the Church' defends the divinity of Christ at the Council of Nicaea, saving Christian orthodoxy." },
       "event5": { "year": "340 AD", "title": "Kingdom of Aksum", "desc": "Ethiopia becomes one of the first nations in the world to officially adopt Christianity as its state religion." },
       "event6": { "year": "397 AD", "title": "Augustine's Confessions", "desc": "The Bishop of Hippo (Algeria) publishes his masterpiece, influencing all Western thought for centuries to come." },
       "event7": { "year": "1210 AD", "title": "Lalibela Churches", "desc": "King Lalibela carves eleven monumental churches from the rock, creating an African 'New Jerusalem'." },
       "event8": { "year": "1886 AD", "title": "Uganda Martyrs", "desc": "Young courtiers give their lives for their faith, marking the spectacular renewal of the Church in sub-Saharan Africa." },
-      "event9": { "year": "2033 AD", "title": "The Great Jubilee", "desc": "Africa, the continent with the largest number of Christians in the world, invites the universal Church to celebrate 2,000 years of grace." }
+      "event9": { "year": "2033 AD", "title": "The Great Jubilee", "desc": "Africa, the continent with the most Christians in the world, invites the universal Church to celebrate 2000 years of grace." }
+    },
+    "thinkersTitle": "Great Witnesses of Antiquity",
+    "contemporaryTitle": "Thinkers of Today",
+    "contemporarySubtitle": "Those who shape contemporary African theology.",
+    "mapTitle": "Map of the African Holy Land",
+    "mapDesc": "Visualize the biblical cities and spiritual centers that marked history.",
+    "mapPlaceholder": "On this interactive map, discover Carthage, Alexandria, Hippo, and Lalibela."
+  },
+  "resources": {
+    "title": "Resources Space",
+    "subtitle": "Dive into our library of educational guides, multimedia archives, and treasures of inculturation.",
+    "searchPlaceholder": "Search by theme (e.g., Augustine, Rite, Chant)...",
+    "tabs": {
+      "tools": "Toolkit",
+      "multimedia": "Multimedia",
+      "inculturation": "Inculturation"
+    },
+    "outils": {
+      "filters": {
+        "label": "Filter by:",
+        "levels": {
+          "all": "All Levels",
+          "children": "Children",
+          "teens": "Teens",
+          "adults": "Adults"
+        },
+        "themes": {
+          "all": "All Themes",
+          "bible": "Bible Study",
+          "history": "Church History",
+          "practice": "Liturgy & Life"
+        }
+      },
+      "results": "Resources found",
+      "noResults": "No resources match your criteria."
+    },
+    "multimedia": {
+      "tabs": {
+        "videos": "Video (YouTube)",
+        "podcasts": "Podcasts (Spotify)",
+        "playlists": "Music Playlists"
+      }
+    },
+    "inculturation": {
+      "galleryTitle": "Art at the Service of Faith",
+      "riteCongolais": {
+        "title": "The Zairean (Congolese) Rite",
+        "p1": "Promulgated in 1988 by Saint John Paul II, the Congolese Rite is the only officially recognized inculturated liturgical rite of the Catholic Church. It is the perfect expression of the meeting between African genius and the Christian message.",
+        "p2": "This rite stands out for the participation of the body (liturgical dance), the invocation of ancestors, and a dialogue-based homily structure that makes God's Word living and communal.",
+        "cta": "Download the Missal (PDF)"
+      }
     }
   },
   "community": {
+    "heroTitle": "Join the Movement",
+    "heroSubtitle": "Participate in the grand Jubilee 2033 artistic contest, share your testimonies, and dialogue with members worldwide.",
+    "btnParticipate": "Register for the Contest",
+    "btnGallery": "View Gallery",
+    "partners": "Supported by our academic and ecclesiastical partners",
     "concours": {
-      "title": "Contest: Visions of the African Christ",
-      "desc": "How do you imagine the face of Christ in our cultures today? Participate in the great Jubilee 2033 artistic contest."
+      "title": "Jesus Seen by Africa",
+      "desc": "How do you imagine the face of Christ in our cultures today? Participate in the grand Jubilee 2033 creative contest and express your faith through art.",
+      "datesTitle": "Dates & Awards",
+      "open": "Opening:",
+      "close": "Closing:",
+      "results": "Awards Announcement:",
+      "prize": "Great Jubilee Prize",
+      "prizeDesc": "Awarded to the best works in Art, Video, and Music categories.",
+      "downloadRules": "Complete Rules (PDF)",
+      "galleryTitle": "Jubilee Gallery",
+      "sortBy": "Sort by:",
+      "allArts": "All Arts",
+      "sort": {
+        "recent": "Most Recent",
+        "popular": "Most Popular"
+      },
+      "form": {
+        "title": "Submit your work",
+        "success": "Submission confirmed!",
+        "successDesc": "Your work has been received by the Jubilee jury. You will receive a confirmation email shortly.",
+        "uploadPlaceholder": "Drop your file here (Image, Video, or Audio)",
+        "uploadFormats": "Formats: JPG, PNG, MP4, MP3",
+        "consent": "I agree to have my work displayed on the Impronte Africane platform.",
+        "submit": "Send my submission",
+        "submitting": "Submitting..."
+      }
+    },
+    "forum": {
+      "title": "Forum Discussions",
+      "openThread": "Start a thread",
+      "replies": "Replies",
+      "explore": "Explore all discussions"
     }
+  },
+  "sidebar": {
+    "toc": "In this section",
+    "newsletter": {
+      "title": "Weekly Newsletter",
+      "desc": "Every week, receive a historical or theological gem.",
+      "placeholder": "your@email.com",
+      "btn": "Subscribe"
+    },
+    "share": "Share this page"
+  },
+  "footer": {
+    "about": "About",
+    "content": "Navigation",
+    "engagement": "Participation",
+    "social": "Social Media",
+    "links": {
+      "history": "Our History",
+      "vision": "Vision 2033",
+      "team": "The Team",
+      "join": "Join Us",
+      "events": "Events",
+      "contact": "Contact"
+    },
+    "legal": {
+      "mentions": "Legal Mentions",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2026 Impronte Africane di Gesù. All rights reserved."
   }
 }

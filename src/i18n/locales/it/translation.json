@@ -1,8 +1,8 @@
 {
   "navigation": {
     "home": "Home",
-    "bible": "Africa nella Bibbia",
-    "heritage": "Eredità e Storia",
+    "bible": "L'Africa nella Bibbia",
+    "heritage": "Eredità & Storia",
     "resources": "Risorse",
     "community": "Comunità"
   },
@@ -17,7 +17,7 @@
     "loading": "Caricamento...",
     "error": "Si è verificato un errore",
     "search": "Cerca",
-    "searchPlaceholder": "Cerca...",
+    "searchPlaceholder": "Cerca un tema, un video...",
     "email": "Email",
     "emailPlaceholder": "tua@email.com",
     "download": "Scarica",
@@ -34,7 +34,7 @@
   },
   "home": {
     "heroTitle": "Africa: La Culla Nascosta della Cristianità",
-    "heroDescription": "Esplora 2000 anni di fede ininterrotta. Dalla fuga in Egitto alle cattedrali di Lalibela, scopri come il continente ha plasmato e protetto il messaggio di Cristo.",
+    "heroDescription": "Esplora 2000 anni di fede ininterrotta. Dalla fuga in Egitto alle cattedrali di Lalibela, scopri come l'Africa ha plasmato e protetto il messaggio di Cristo.",
     "heroBtnPrimary": "Inizia l'Esplorazione",
     "heroBtnSecondary": "La nostra Visione",
     "jubileeTitle": "In Cammino verso il Giubileo 2033",
@@ -49,7 +49,25 @@
     "newsTitle": "Cronache del Giubileo",
     "ctaTitle": "Scriviamo la Storia Insieme",
     "ctaDesc": "La tua voce, le tue arti e le tue preghiere sono le pietre vive di questo edificio. Unisciti alla comunità Impronte Africane per preparare il 2033.",
-    "ctaBtn": "Diventa Membro"
+    "ctaBtn": "Diventa Membro",
+    "articles": {
+      "art1": {
+        "title": "Il Mistero dei Manoscritti di Axum",
+        "excerpt": "Un'immersione negli archivi di una delle nazioni cristiane più antiche al mondo."
+      },
+      "art2": {
+        "title": "Teologia dell'Inculturazione",
+        "excerpt": "Come i ritmi e i simboli africani arricchiscono la liturgia universale."
+      },
+      "art3": {
+        "title": "Donne della Chiesa Primitiva",
+        "excerpt": "Il ruolo decisivo di Santa Monica e delle martiri di Cartagine nella fede."
+      },
+      "art4": {
+        "title": "Eco dal Deserto",
+        "excerpt": "L'eredità dei Padri del Deserto egiziani nel monachesimo moderno."
+      }
+    }
   },
   "bible": {
     "heroTitle": "L'Impronta dell'Africa nella Scrittura",
@@ -95,25 +113,163 @@
       "cta": "La Chiesa Nascente",
       "quote1": "E l'Etiopo proseguì il suo viaggio tutto lieto.",
       "ref1": "Atti 8:39"
+    },
+    "related": {
+      "title": "Potrebbe interessarti anche",
+      "art1": {
+        "title": "Sant'Agostino di Tagaste",
+        "description": "Scopri l'apporto monumentale della teologia africana alla Chiesa universale."
+      },
+      "art2": {
+        "title": "Manoscritti di Timbuctu",
+        "description": "Un'immersione nella conservazione delle sacre scritture nel cuore del Mali."
+      },
+      "art3": {
+        "title": "Arte Paleocristiana",
+        "description": "Come i mosaici raffiguravano la vibrante cristianità africana dei primi secoli."
+      }
     }
   },
   "heritage": {
+    "title": "Eredità & Storia",
+    "subtitle": "Esplora l'affascinante cronologia di 2000 anni di presenza cristiana continua nel continente africano.",
+    "filters": {
+      "all": "Tutti",
+      "antiquity": "Antichità",
+      "middle_ages": "Medioevo",
+      "modern": "Moderna"
+    },
     "timeline": {
-      "event1": { "year": "~33 d.C.", "title": "Simone di Cirene", "desc": "Un africano porta la croce di Cristo, diventando il simbolo della partecipazione del continente alla Passione." },
-      "event2": { "year": "42 d.C.", "title": "San Marco ad Alessandria", "desc": "L'evangelista fonda la Chiesa in Egitto, istituendo una delle più prestigiose scuole teologiche al mondo." },
-      "event3": { "year": "203 d.C.", "title": "Felicita e Perpetua", "desc": "Due giovani madri martirizzate a Cartagine, la cui testimonianza ha attirato migliaia di persone alla fede." },
-      "event4": { "year": "325 d.C.", "title": "Sant'Atanasio di Alessandria", "desc": "Il 'Pilastro della Chiesa' difende la divinità di Cristo al Concilio di Nicea, salvando l'ortodossia cristiana." },
-      "event5": { "year": "340 d.C.", "title": "Regno di Axum", "desc": "L'Etiopia diventa una delle prime nazioni al mondo ad adottare ufficialmente il cristianesimo come religione di stato." },
-      "event6": { "year": "397 d.C.", "title": "Le Confessioni di Agostino", "desc": "Il Vescovo di Ippona (Algeria) pubblica il suo capolavoro, influenzando tutto il pensiero occidentale per i secoli a venir." },
-      "event7": { "year": "1210 d.C.", "title": "Chiese di Lalibela", "desc": "Il Re Lalibela fa scavare nella roccia undici chiese monumentali, creando una 'Nuova Gerusalemme' africana." },
-      "event8": { "year": "1886 d.C.", "title": "Martiri dell'Uganda", "desc": "Giovani cortigiani danno la vita per la loro fede, segnando il rinnovamento spettacolare della Chiesa nell'Africa subsahariana." },
-      "event9": { "year": "2033 d.C.", "title": "Il Grande Giubileo", "desc": "L'Africa, il continente con il maggior numero di cristiani al mondo, invita la Chiesa universale a celebrare 2000 anni di grazia." }
+      "event1": { "year": "~33 AD", "title": "Simone di Cirene", "desc": "Un africano porta la croce di Cristo, diventando il simbolo della partecipazione del continente alla Passione." },
+      "event2": { "year": "42 AD", "title": "San Marco ad Alessandria", "desc": "L'evangelista fonda la Chiesa in Egitto, istituendo una delle più prestigiose scuole teologiche al mondo." },
+      "event3": { "year": "203 AD", "title": "Felicita e Perpetua", "desc": "Due giovani madri martirizzate a Cartagine, la cui testimonianza ha attirato migliaia di persone alla fede." },
+      "event4": { "year": "325 AD", "title": "Sant'Atanasio di Alessandria", "desc": "Il 'Pilastro della Chiesa' difende la divinità di Cristo al Concilio di Nicea, salvando l'ortodossia cristiana." },
+      "event5": { "year": "340 AD", "title": "Regno di Axum", "desc": "L'Etiopia diventa una delle prime nazioni al mondo ad adottare ufficialmente il cristianesimo come religione di stato." },
+      "event6": { "year": "397 AD", "title": "Le Confessioni di Agostino", "desc": "Il Vescovo di Ippona (Algeria) pubblica il suo capolavoro, influenzando tutto il pensiero occidentale per i secoli a venire." },
+      "event7": { "year": "1210 AD", "title": "Chiese di Lalibela", "desc": "Il Re Lalibela fa scavare nella roccia undici chiese monumentali, creando una 'Nuova Gerusalemme' africana." },
+      "event8": { "year": "1886 AD", "title": "Martiri dell'Uganda", "desc": "Giovani cortigiani danno la vita per la loro fede, segnando il rinnovamento spettacolare della Chiesa nell'Africa subsahariana." },
+      "event9": { "year": "2033 AD", "title": "Il Grande Giubileo", "desc": "L'Africa, il continente con il maggior numero di cristiani al mondo, invita la Chiesa universale a celebrare 2000 anni di grazia." }
+    },
+    "thinkersTitle": "Grandi Testimoni dell'Antichità",
+    "contemporaryTitle": "Pensatori di Oggi",
+    "contemporarySubtitle": "Coloro che plasmano la teologia africana contemporanea.",
+    "mapTitle": "Mappa della Terra Santa Africana",
+    "mapDesc": "Visualizza le città bibliche e i centri spirituali che hanno segnato la storia.",
+    "mapPlaceholder": "In questa mappa interattiva, scopri Cartagine, Alessandria, Ippona e Lalibela."
+  },
+  "resources": {
+    "title": "Spazio Risorse",
+    "subtitle": "Immergiti nella nostra biblioteca di schede pedagogiche, archivi multimediali e tesori dell'inculturazione.",
+    "searchPlaceholder": "Cerca per tema (es: Agostino, Rito, Canto)...",
+    "tabs": {
+      "tools": "Cassetta degli Attrezzi",
+      "multimedia": "Multimedia",
+      "inculturation": "Inculturazione"
+    },
+    "outils": {
+      "filters": {
+        "label": "Filtra per:",
+        "levels": {
+          "all": "Tutti i Livelli",
+          "children": "Bambini",
+          "teens": "Adolescenti",
+          "adults": "Adulti"
+        },
+        "themes": {
+          "all": "Tutti i Temi",
+          "bible": "Studio Biblico",
+          "history": "Storia della Chiesa",
+          "practice": "Liturgia & Vita"
+        }
+      },
+      "results": "Risorse trovate",
+      "noResults": "Nessuna risorsa corrisponde ai tuoi criteri."
+    },
+    "multimedia": {
+      "tabs": {
+        "videos": "Video (YouTube)",
+        "podcasts": "Podcast (Spotify)",
+        "playlists": "Playlist Musicali"
+      }
+    },
+    "inculturation": {
+      "galleryTitle": "L'Arte al Servizio della Fede",
+      "riteCongolais": {
+        "title": "Il Rito Zaïrese (Congolese)",
+        "p1": "Promulgato nel 1988 da San Giovanni Paolo II, il Rito Congolese è l'unico rito liturgico inculturato ufficialmente riconosciuto dalla Chiesa Cattolica. È l'espressione perfetta dell'incontro tra il genio africano e il messaggio cristiano.",
+        "p2": "Questo rito si distingue per la partecipazione del corpo (danza liturgica), l'invocazione degli antenati e una struttura di omelia dialogata che rende la Parola di Dio viva e comunitaria.",
+        "cta": "Scarica il Messale (PDF)"
+      }
     }
   },
   "community": {
+    "heroTitle": "Unisciti al Movimento",
+    "heroSubtitle": "Partecipa al grande concorso artistico Giubileo 2033, condividi le tue testimonianze e dialoga con i membri di tutto il mondo.",
+    "btnParticipate": "Iscriviti al Concorso",
+    "btnGallery": "Vedi le Opere",
+    "partners": "Sostenuto dai nostri partner accademici ed ecclesiali",
     "concours": {
-      "title": "Concorso: Visioni del Cristo Africano",
-      "desc": "Come immagini il volto di Cristo nelle nostre culture oggi? Partecipa al grande concorso artistico del Giubileo 2033."
+      "title": "Gesù Visto dall'Africa",
+      "desc": "Come immagini il volto di Cristo nelle nostre culture oggi? Partecipa al grande concorso creativo del Giubileo 2033 ed esprimi la tua fede attraverso l'arte.",
+      "datesTitle": "Date & Premi",
+      "open": "Apertura:",
+      "close": "Chiusura:",
+      "results": "Annuncio dei Vincitori:",
+      "prize": "Gran Premio del Giubileo",
+      "prizeDesc": "Attribuito alle migliori opere nelle categorie Arte, Video e Musica.",
+      "downloadRules": "Regolamento completo (PDF)",
+      "galleryTitle": "Galleria del Giubileo",
+      "sortBy": "Ordina per:",
+      "allArts": "Tutte le Arti",
+      "sort": {
+        "recent": "Più Recenti",
+        "popular": "Più Popolari"
+      },
+      "form": {
+        "title": "Invia la tua opera",
+        "success": "Invio confermato!",
+        "successDesc": "La tua opera è stata ricevuta dalla giuria del Giubileo. Riceverai presto un'email di conferma.",
+        "uploadPlaceholder": "Trascina qui il tuo file (Immagine, Video o Audio)",
+        "uploadFormats": "Formati: JPG, PNG, MP4, MP3",
+        "consent": "Acconsento all'esposizione della mia opera sulla piattaforma Impronte Africane.",
+        "submit": "Invia il mio contributo",
+        "submitting": "Invio in corso..."
+      }
+    },
+    "forum": {
+      "title": "Discussioni Forum",
+      "openThread": "Inizia una discussione",
+      "replies": "Risposte",
+      "explore": "Esplora tutte le discussioni"
     }
+  },
+  "sidebar": {
+    "toc": "In questa sezione",
+    "newsletter": {
+      "title": "Newsletter Settimanale",
+      "desc": "Ogni settimana ricevi una perla storica o teologica.",
+      "placeholder": "tua@email.com",
+      "btn": "Iscriviti"
+    },
+    "share": "Condividi questa pagina"
+  },
+  "footer": {
+    "about": "Riguardo a noi",
+    "content": "Navigazione",
+    "engagement": "Partecipazione",
+    "social": "Social Media",
+    "links": {
+      "history": "La nostra Storia",
+      "vision": "Visione 2033",
+      "team": "Il Team",
+      "join": "Unisciti a noi",
+      "events": "Eventi",
+      "contact": "Contatti"
+    },
+    "legal": {
+      "mentions": "Menzioni Legali",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2026 Impronte Africane di Gesù. Tutti i diritti riservati."
   }
 }

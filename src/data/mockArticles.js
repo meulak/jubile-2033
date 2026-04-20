@@ -125,7 +125,82 @@ export const mockArticles = [
     image: "https://picsum.photos/seed/rite/1200/600",
     tags: ["Rite Congolais", "Inculturation", "Messe"]
   },
-  { id: "5", slug: "l-exil-en-egypte", title: "L'Exil Salvateur : L'Afrique Terre d'Asile du Christ", excerpt: "Méditation sur la Fuite en Égypte...", content: "<p>Texte fictif</p>", category: "Bible", author: { name: "Dr. Lydie Nzimbu", avatar: "https://picsum.photos/seed/lydie/100/100", bio: "" }, date: "22 Avril 2026", readTime: "5 min", image: "https://picsum.photos/seed/exil/1200/600", tags: ["Jésus"] },
-  { id: "6", slug: "martyrs-scillitains", title: "Les Martyrs Scillitains : Le Sang Fondateur", excerpt: "Aux sources du christianisme nord-africain...", content: "<p>Texte fictif</p>", category: "Héritage", author: { name: "Abbé Thomas Kalu", avatar: "https://picsum.photos/seed/thomas/100/100", bio: "" }, date: "1 Mai 2026", readTime: "4 min", image: "https://picsum.photos/seed/scil/1200/600", tags: ["Martyrs"] },
-  { id: "7", slug: "eunuque-ethiopien", title: "L'Eunuque Éthiopien et l'Apôtre Philippe", excerpt: "Le premier baptisé d'Afrique...", content: "<p>Texte fictif</p>", category: "Bible", author: { name: "Père Sylvestre Mwamba", avatar: "https://picsum.photos/seed/sylvestre/100/100", bio: "" }, date: "10 Mai 2026", readTime: "4 min", image: "https://picsum.photos/seed/eunuque/1200/600", tags: ["Actes"] },
+  { 
+    id: "5", 
+    slug: "l-exil-en-egypte", 
+    title: "L'Exil Salvateur : L'Afrique Terre d'Asile du Christ", 
+    excerpt: "Pourquoi le continent africain a-t-il été choisi par Dieu pour protéger le Sauveur ?", 
+    content: `
+      <p>L'exil de la Sainte Famille en Égypte n'est pas qu'un simple fait historique ; c'est un acte prophétique qui place l'Afrique au cœur de la préservation du salut.</p>
+      <h2>Un Sanctuaire Divin</h2>
+      <p>Quand l'ange ordonne à Joseph : "Fuis en Égypte", il ne lui indique pas seulement un abri, mais une terre qui, depuis Abraham, a vocation à secourir les porteurs de la promesse divine.</p>
+      <blockquote>"Lève-toi, prends le petit enfant et sa mère, fuis en Égypte." - Matthieu 2:13</blockquote>
+      <div class="callout">
+        <strong>L'Afrique, terre sacrée :</strong> Ce séjour d'environ trois ans a sanctifié le sol africain. Aujourd'hui, le "Chemin de la Sainte Famille" est l'un des pèlerinages les plus sacrés pour les chrétiens Coptes et du monde entier.
+      </div>
+      <h2>Une Hospitalité Spirituelle</h2>
+      <p>L'Afrique a accueilli le Christ dans sa fragilité de nouveau-né fugitif. En offrant l'hospitalité au Verbe de Dieu, le continent est devenu, à jamais, son protecteur et son sanctuaire.</p>
+    `, 
+    category: "Bible", 
+    author: { 
+      name: "Dr. Lydie Nzimbu", 
+      avatar: "https://picsum.photos/seed/lydie/100/100", 
+      bio: "Spécialiste de l'Antiquité éthiopienne et copte." 
+    }, 
+    date: "22 Avril 2026", 
+    readTime: "5 min read", 
+    image: `${import.meta.env.BASE_URL}/assets/images/holy_family_egypt.png`, 
+    tags: ["Jésus", "Sainte Famille", "Égypte"] 
+  },
+  { 
+    id: "6", 
+    slug: "martyrs-scillitains", 
+    title: "Les Martyrs Scillitains : Le Sang Fondateur", 
+    excerpt: "Le premier témoignage écrit du christianisme en Afrique du Nord.", 
+    content: `
+      <p>En l'an 180, douze chrétiens de la petite ville de Scilli (Numidie) comparaissent devant le proconsul à Carthage. Leur procès-verbal constitue le plus ancien document chrétien rédigé en latin connu à ce jour.</p>
+      <h2>La Solidité de la Foi</h2>
+      <p>Face à l'empereur, ces hommes et femmes africains refusent d'abjurer, affirmant qu'ils ne reconnaissent qu'un seul Seigneur : celui qui règne au ciel.</p>
+      <blockquote>"Nous ne craignons personne, sinon notre Dieu qui est au ciel." - Speratus, martyr</blockquote>
+      <div class="callout">
+        Cet acte héroïque montre que l'Église d'Afrique a été, dès ses origines, une église de témoins et de résistants, prête à donner sa vie pour la Vérité.
+      </div>
+    `, 
+    category: "Héritage", 
+    author: { 
+      name: "Abbé Thomas Kalu", 
+      avatar: "https://picsum.photos/seed/thomas/100/100", 
+      bio: "Liturgiste et historien à Kinshasa." 
+    }, 
+    date: "1 Mai 2026", 
+    readTime: "4 min read", 
+    image: `${import.meta.env.BASE_URL}/assets/images/carthage.png`, 
+    tags: ["Martyrs", "Carthage", "Histoire"] 
+  },
+  { 
+    id: "7", 
+    slug: "eunuque-ethiopien", 
+    title: "L'Eunuque Éthiopien et l'Apôtre Philippe", 
+    excerpt: "La rencontre sur la route de Gaza qui a ouvert les portes du Royaume à l'Afrique.", 
+    content: `
+      <p>L'histoire du baptême du fonctionnaire de la Candace (Reine d'Éthiopie) est l'un des moments les plus marquants des Actes des Apôtres. C'est l'instant où l'Esprit Saint dirige délibérément l'Église vers le Sud.</p>
+      <h2>Chercher la Lumière</h2>
+      <p>Cet homme, au pouvoir immense, était un chercheur de Dieu, lisant le prophète Ésaïe sans le comprendre. Philippe, poussé par l'Esprit, vient éclairer sa quête.</p>
+      <blockquote>"Voici de l'eau ; qu'est-ce qui empêche que je ne sois baptisé ?" - Actes 8:36</blockquote>
+      <div class="callout">
+        <strong>Première Conversion :</strong> Ce baptême fait de l'Afrique la première nation païenne à être officiellement greffée sur le tronc de l'Israël spirituel.
+      </div>
+    `, 
+    category: "Bible", 
+    author: { 
+      name: "Père Sylvestre Mwamba", 
+      avatar: "https://picsum.photos/seed/sylvestre/100/100", 
+      bio: "Théologien spécialisé dans l'exégèse africaine." 
+    }, 
+    date: "10 Mai 2026", 
+    readTime: "4 min read", 
+    image: `${import.meta.env.BASE_URL}/assets/images/eunuch_baptism.png`, 
+    tags: ["Actes", "Baptême", "Éthiopie"] 
+  },
 ];
+

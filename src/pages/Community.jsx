@@ -18,29 +18,36 @@ import Modal from '../components/common/Modal';
 // =======================
 const categories = ['Art', 'Vidéo', 'Musique'];
 
-const mockArtworks = Array.from({ length: 24 }).map((_, i) => ({
-  id: i + 1,
-  title: `Création Spirituelle ${i + 1}`,
-  artist: `Artiste ${['Mekonnen', 'Koffi', 'Amina', 'Chidi', 'Nkosi'][i % 5]}`,
-  category: categories[i % 3],
-  votes: Math.floor(Math.random() * 500) + 10,
-  img: `https://picsum.photos/seed/artwork${i}/400/${300 + (i % 3) * 100}`,
-  date: "12 Avril 2026",
-  desc: "Ceci est une description de l'œuvre symbolisant la vision africaine du Christ. L'artiste utilise des éléments inculturés pour exprimer sa foi."
-}));
-
-const mockPartners = [
-  "Diocèse de Kinshasa", "Université Catholique d'Afrique de l'Ouest", 
-  "Fondation Héritage Africain", "Pax Christi International", 
-  "Radio Vatican Afrique", "Jeunesse Étudiante Catholique"
+const mockArtworks = [
+  { 
+    id: 1, title: "L'Emmanuel de la Savane", artist: "Zewdu Mekonnen", category: "Art", votes: 452, 
+    img: "https://picsum.photos/seed/artwork1/400/500", date: "12 Avril 2026", 
+    desc: "Une peinture à l'huile explorant le visage du Christ à travers les traits des anciens rois d'Aksoum, symbolisant la protection éternelle." 
+  },
+  { 
+    id: 2, title: "Danse de la Pentecôte", artist: "Koffi Mensah", category: "Vidéo", votes: 215, 
+    img: "https://picsum.photos/seed/artwork2/400/300", date: "15 Avril 2026", 
+    desc: "Un court-métrage capturant la ferveur d'une communauté rurale célébrant la descente de l'Esprit Saint avec des percussions traditionnelles." 
+  },
+  { 
+    id: 3, title: "Symphonie de l'Ubuntu", artist: "Amina Okoro", category: "Musique", votes: 890, 
+    img: "https://picsum.photos/seed/artwork3/400/400", date: "18 Avril 2026", 
+    desc: "Une composition polyphonique a cappella mêlant les chants grégoriens aux harmonies bantoues, hymne à l'unité du Jubilé." 
+  },
+  { 
+    id: 4, title: "Mère de l'Afrique", artist: "Chidi Eze", category: "Art", votes: 340, 
+    img: "https://picsum.photos/seed/artwork4/400/600", date: "20 Avril 2026", 
+    desc: "Une sculpture en bronze représentant la Vierge Marie portant l'Enfant-Jésus dans un pagne traditionnel, honorant la maternité africaine." 
+  }
 ];
 
 const mockDiscussions = [
-  { id: 1, title: "Comment organiser le Jubilé dans mon diocèse ?", author: "Père Sylvestre", replies: 24, lastUpdate: "Il y a 2 heures", tag: "Organisation" },
-  { id: 2, title: "Partage de chants liturgiques en Kinyarwanda", author: "Chorale Céleste", replies: 8, lastUpdate: "Il y a 1 jour", tag: "Musique" },
-  { id: 3, title: "Recherche d'archives sur Tertullien", author: "Marie Hist.", replies: 15, lastUpdate: "Il y a 3 jours", tag: "Histoire" },
-  { id: 4, title: "Idées de Catéchèse : L'Eunuque Éthiopien", author: "Fr. Thomas", replies: 5, lastUpdate: "Il y a 4 jours", tag: "Bible" },
+  { id: 1, title: "Comment vivre le Jubilé en paroisse rurale ?", author: "Abbé Jean-Paul", replies: 56, lastUpdate: "Il y a 30 min", tag: "Pratique" },
+  { id: 2, title: "Patrimoine : Les églises oubliées du Soudan", author: "Dr. Elena", replies: 12, lastUpdate: "Il y a 2 heures", tag: "Histoire" },
+  { id: 3, title: "Composition : Écrire un hymne Jubilé 2033", author: "Maestro David", replies: 34, lastUpdate: "Il y a 1 jour", tag: "Musique" },
+  { id: 4, title: "Place des jeunes dans la théologie africaine", author: "Sarah T.", replies: 89, lastUpdate: "Il y a 3 jours", tag: "Communauté" },
 ];
+
 
 // =======================
 // MAIN COMPONENT

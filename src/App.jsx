@@ -16,6 +16,9 @@ const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 const NewsletterPreferences = lazy(() => import('./pages/NewsletterPreferences'));
 const SearchPage = lazy(() => import('./pages/SearchPage'));
 const AdminComments = lazy(() => import('./pages/AdminComments'));
+const History = lazy(() => import('./pages/History'));
+const Vision = lazy(() => import('./pages/Vision'));
+
 
 // Loading Fallback
 const PageLoading = () => (
@@ -71,6 +74,9 @@ function App() {
           <Route path="/preferences/newsletter" element={<NewsletterPreferences />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/admin/comments" element={<AdminComments />} />
+          <Route path="/histoire" element={<History />} />
+          <Route path="/vision" element={<Vision />} />
+
           <Route path="*" element={<Placeholder title="404 - Page non trouvée" />} />
         </Routes>
       </AppLayout>

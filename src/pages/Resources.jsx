@@ -14,21 +14,18 @@ import Modal from '../components/common/Modal';
 // MOCK DATA
 // =======================
 const getMockTools = (t) => [
-  { id: 1, title: "Abraham en Afrique", desc: "Fiche pédagogique catéchèse avec coloriages et quiz pour éveiller la foi.", level: t('resources.outils.filters.levels.children'), theme: t('resources.outils.filters.themes.bible'), size: "2.4 MB", date: "2024-01-15" },
-  { id: 2, title: "La Reine de Saba", desc: "Étude textuelle et historique de la rencontre diplomatique et spirituelle avec Salomon.", level: t('resources.outils.filters.levels.teens'), theme: t('resources.outils.filters.themes.history'), size: "1.8 MB", date: "2024-02-10" },
-  { id: 3, title: "Pères de l'Église Africaine", desc: "Livre d'étude complet sur la monumentale théologie d'Augustin et Tertullien.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.history'), size: "5.1 MB", date: "2023-11-20" },
-  { id: 4, title: "Liturgie et Inculturation", desc: "Manuel pratique pour intégrer harmonieusement les éléments locaux dans la messe.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.practice'), size: "3.2 MB", date: "2024-03-05" },
-  { id: 5, title: "Frise Chronologique 2000 ans", desc: "Infographie haute résolution (format A3) prête à imprimer pour la classe.", level: t('resources.outils.filters.levels.all'), theme: t('resources.outils.filters.themes.history'), size: "8.5 MB", date: "2024-01-01" },
-  { id: 6, title: "L'Eunuque Éthiopien", desc: "Jeu de rôle catéchistique en équipe pour comprendre le premier baptême africain.", level: t('resources.outils.filters.levels.teens'), theme: t('resources.outils.filters.themes.bible'), size: "1.2 MB", date: "2023-10-15" },
-  { id: 7, title: "Chants de la Messe Zairoise", desc: "Partitions complètes et paroles avec traductions littérales en français.", level: t('resources.outils.filters.levels.all'), theme: t('resources.outils.filters.themes.practice'), size: "4.0 MB", date: "2024-04-12" },
-  { id: 8, title: "Préparer le Jubilé 2033", desc: "Guide de l'animateur spirituel : comment préparer les jeunes au grand jubilé.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.practice'), size: "2.9 MB", date: "2024-05-01" },
+  { id: 1, title: "L'Héritage d'Aksoum", desc: "Guide d'étude sur l'une des plus vieilles Bibles au monde (Garima) et l'introduction du christianisme en Éthiopie.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.history'), size: "4.5 MB", date: "2024-01-15" },
+  { id: 2, title: "Abraham : L'Appel Africain", desc: "Fiche pédagogique pour la catéchèse explorant le séjour d'Abraham en Égypte comme moment de bénédiction.", level: t('resources.outils.filters.levels.children'), theme: t('resources.outils.filters.themes.bible'), size: "1.2 MB", date: "2024-02-10" },
+  { id: 3, title: "Le Missel Zaïrois Expliqué", desc: "Manuel complet sur la participation active du corps et l'annonce de la Parole dans le rite inculturé congolais.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.practice'), size: "3.8 MB", date: "2023-11-20" },
+  { id: 4, title: "L'Eunuque et Philippe", desc: "Matériel d'animation pour adolescents sur le premier baptême des nations selon le livre des Actes.", level: t('resources.outils.filters.levels.teens'), theme: t('resources.outils.filters.themes.bible'), size: "2.1 MB", date: "2024-03-05" },
+  { id: 5, title: "Les Pères du Désert égyptien", desc: "Recueil de paroles de sagesse (Apophtegmes) des premiers moines chrétiens de la Thébaïde.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.history'), size: "2.5 MB", date: "2024-01-01" },
+  { id: 6, title: "Chants de Louange en Swahili", desc: "Livret de partitions et traductions pour chorales cherchant à explorer les hymnes d'Afrique de l'Est.", level: t('resources.outils.filters.levels.all'), theme: t('resources.outils.filters.themes.practice'), size: "3.2 MB", date: "2023-10-15" },
 ];
 
 const mockVideos = [
-  { id: 'v1', ytid: 'J---aiyznGQ', title: "L'Histoire oubliée des Pères Africains", views: "45K vues", duration: "14:20", date: "Il y a 2 mois", desc: "Découvrez l'influence majeure d'Augustin et Tertullien sur l'Église universelle." },
-  { id: 'v2', ytid: 'lx2JdF4zpoE', title: "Le Rite Zairois expliqué", views: "12K vues", duration: "08:15", date: "Il y a 5 mois", desc: "Une plongée magnifique dans l'inculturation liturgique du rite congolais approuvé par Rome." },
-  { id: 'v3', ytid: '9bZkp7q19f0', title: "L'Éthiopie : Aux sources du Christianisme", views: "110K vues", duration: "25:40", date: "Il y a 1 an", desc: "Visite des églises monolithiques rupestres de Lalibela et des traditions anciennes." },
-  { id: 'v4', ytid: 'kJQP7kiw5Fk', title: "Les défis de la théologie fricaine demain", views: "8K vues", duration: "18:05", date: "Il y a 1 mois", desc: "Table ronde sur le futur de la pensée chrétienne sur le continent africain." },
+  { id: 'v1', ytid: 'J---aiyznGQ', title: "L'Afrique : Cœur de la Chrétienté Antique", views: "128K vues", duration: "18:45", date: "Il y a 2 mois", desc: "Une conférence magistrale sur le rôle des évêques africains dans la définition du dogme chrétien." },
+  { id: 'v2', ytid: 'lx2JdF4zpoE', title: "Splendeur du Rite Congolais", views: "75K vues", duration: "12:10", date: "Il y a 5 mois", desc: "Documentaire sur la beauté de la liturgie inculturée à Kinshasa : danse, rythme et ferveur." },
+  { id: 'v3', ytid: '9bZkp7q19f0', title: "Sur les traces de Reine de Saba", views: "210K vues", duration: "32:20", date: "Il y a 1 an", desc: "Le mystère de l'Arche d'Alliance et les liens millénaires entre Jérusalem et Aksoum." },
 ];
 
 const mockSpotifyShows = [
@@ -49,17 +46,18 @@ const mockChants = [
 ];
 
 const getMockRegions = (t) => [
-  { id: 'est', name: "Afrique de l'Est", culture: "Culture Éthiopienne & Copte", desc: "Berceau du christianisme orthodoxe tewahedo. Les liturgies sont chantées en Ge'ez, accompagnées des tambours kebero et des sistres. La fête de Timkat (Épiphanie) est l'une des plus grandioses au monde.", img: "🌍" },
-  { id: 'ouest', name: "Afrique de l'Ouest", culture: "Inculturation Joyeuse", desc: "Une ferveur vibrante caractérise les messes d'Afrique de l'Ouest, mêlant instruments traditionnels (djembé, balafon), chorales massives habillées de pagnes unifiés, et la danse processionale.", img: "🥁" },
-  { id: 'centre', name: "Afrique Centrale", culture: "Le Rite Congolais (Zaïrois)", desc: "Seul rite inculturé officiellement reconnu par le Vatican. Il intègre l'appel de l'Esprit Saint avec un annonceur, la participation physique de l'assemblée, et une structure d'homélie dialoguée.", img: "🌾" },
-  { id: 'sud', name: "Afrique Australe", culture: "L'Héritage Ubuntu", desc: "La théologie de l'Ubuntu imprègne la vie communautaire ecclésiale. Chants a cappella puissants à plusieurs voix, fortement liés aux luttes historiques de libération spirituelle et sociale.", img: "🤝" }
+  { id: 'est', name: t('resources.inculturation.regions.east.name'), culture: t('resources.inculturation.regions.east.culture'), desc: t('resources.inculturation.regions.east.desc'), img: "🌍" },
+  { id: 'ouest', name: t('resources.inculturation.regions.west.name'), culture: t('resources.inculturation.regions.west.culture'), desc: t('resources.inculturation.regions.west.desc'), img: "🥁" },
+  { id: 'centre', name: t('resources.inculturation.regions.center.name'), culture: t('resources.inculturation.regions.center.culture'), desc: t('resources.inculturation.regions.center.desc'), img: "🌾" },
+  { id: 'sud', name: t('resources.inculturation.regions.south.name'), culture: t('resources.inculturation.regions.south.culture'), desc: t('resources.inculturation.regions.south.desc'), img: "🤝" }
 ];
 
-const mockGallery = Array(12).fill(null).map((_, i) => ({
-  id: `img_${i}`,
-  src: `https://picsum.photos/seed/africa${i}/600/${400 + (Math.random() > 0.5 ? 200 : 0)}`,
-  caption: `Célébration litugique ${i+1} en communauté locale. Moments d'inculturation et de joie partagée.`
-}));
+const mockGallery = [
+  { id: 'img_1', src: "https://picsum.photos/seed/africa_faith_1/800/600", caption: "Procession solennelle des fidèles portant des icônes éthiopiennes traditionnelles lors de la fête de Timkat." },
+  { id: 'img_2', src: "https://picsum.photos/seed/africa_faith_2/800/1000", caption: "Chorale de jeunes filles en Afrique de l'Ouest, portant l'habit traditionnel pour la messe du Jubilé." },
+  { id: 'img_3', src: "https://picsum.photos/seed/africa_faith_3/800/600", caption: "Reproduction d'une mosaïque carthaginoise représentant les premiers symboles du christianisme en Afrique du Nord." },
+  { id: 'img_4', src: "https://picsum.photos/seed/africa_faith_4/800/500", caption: "Intérieur d'une église éthiopienne monolithique, où la spiritualité rencontre la pierre millénaire." }
+];
 
 // =======================
 // MAIN COMPONENT
