@@ -8,16 +8,17 @@ import Card from '../components/common/Card';
 import Badge from '../components/common/Badge';
 
 // --- MOCK DATA ---
-const mockTimeline = [
-  { id: 1, year: '50 AD', title: "L'Eunuque Éthiopien", desc: "Le ministre de la Candace est baptisé par l'apôtre Philippe, plantant les toutes premières graines de l'Évangile au cœur du continent africain.", category: 'Antiquité' },
-  { id: 2, year: '180 AD', title: 'Les Martyrs Scillitains', desc: 'Premières traces documentées du christianisme florissant en Afrique du Nord, tragiquement scellées par le martyre de 12 héroïques chrétiens à Carthage.', category: 'Antiquité' },
-  { id: 3, year: '251 AD', title: 'Cyprien de Carthage', desc: "Élu brillant évêque de Carthage, il unifie l'Église africaine lors des brutales persécutions de Dèce et structure magistralement la théologie ecclésiologique.", category: 'Antiquité' },
-  { id: 4, year: '354-430', title: "Saint Augustin d'Hippone", desc: "Le plus grand penseur de l'Antiquité chrétienne. Ses immenses œuvres, comme La Cité de Dieu, façonnent encore aujourd'hui toute la théologie occidentale.", category: 'Antiquité' },
-  { id: 5, year: '451 AD', title: 'Le Concile de Chalcédoine', desc: "Grand schisme impliquant la puissante Église Copte d'Égypte qui maintient indéfectiblement sa propre lignée théologique (miaphysisme) à travers les siècles.", category: 'Antiquité' },
-  { id: 6, year: '700-1400', title: 'La Période Médiévale', desc: "Expansion fulgurante de l'Islam en Afrique du Nord. La majestueuse Église orthodoxe éthiopienne continue de prospérer, isolée dans ses montagnes (églises rupestres de Lalibela).", category: 'Moyen-Âge' },
-  { id: 7, year: '1500-1800', title: 'Les Premières Missions Modernes', desc: "Arrivée de missionnaires catholiques européens sur les côtes (notamment au Kongo), entraînant un christianisme de cour et de nouvelles christianisations complexes.", category: 'Moderne' },
-  { id: 8, year: '1900-2000', title: 'Renouveau et Indépendance', desc: "Émergence forte et vibrante des Églises d'Institution Africaine (EIA), réappropriation de la foi et incroyable explosion démographique du christianisme sur le continent.", category: 'Moderne' },
-  { id: 9, year: '2033', title: 'Jubilé de la Rédemption', desc: "Célébration spirituelle mondiale des 2000 ans du salut chrétien. L'Afrique se positionne définitivement comme le cœur battant et l'avenir de la chrétienté universelle.", category: 'Moderne' },
+// --- MOCK DATA ---
+const getMockTimeline = (t) => [
+  { id: 1, year: t('heritage.timeline.event1.year'), title: t('heritage.timeline.event1.title'), desc: t('heritage.timeline.event1.desc'), category: t('heritage.filters.antiquity') },
+  { id: 2, year: t('heritage.timeline.event2.year'), title: t('heritage.timeline.event2.title'), desc: t('heritage.timeline.event2.desc'), category: t('heritage.filters.antiquity') },
+  { id: 3, year: t('heritage.timeline.event3.year'), title: t('heritage.timeline.event3.title'), desc: t('heritage.timeline.event3.desc'), category: t('heritage.filters.antiquity') },
+  { id: 4, year: t('heritage.timeline.event4.year'), title: t('heritage.timeline.event4.title'), desc: t('heritage.timeline.event4.desc'), category: t('heritage.filters.antiquity') },
+  { id: 5, year: t('heritage.timeline.event5.year'), title: t('heritage.timeline.event5.title'), desc: t('heritage.timeline.event5.desc'), category: t('heritage.filters.antiquity') },
+  { id: 6, year: t('heritage.timeline.event6.year'), title: t('heritage.timeline.event6.title'), desc: t('heritage.timeline.event6.desc'), category: t('heritage.filters.middle_ages') },
+  { id: 7, year: t('heritage.timeline.event7.year'), title: t('heritage.timeline.event7.title'), desc: t('heritage.timeline.event7.desc'), category: t('heritage.filters.modern') },
+  { id: 8, year: t('heritage.timeline.event8.year'), title: t('heritage.timeline.event8.title'), desc: t('heritage.timeline.event8.desc'), category: t('heritage.filters.modern') },
+  { id: 9, year: t('heritage.timeline.event9.year'), title: t('heritage.timeline.event9.title'), desc: t('heritage.timeline.event9.desc'), category: t('heritage.filters.modern') },
 ];
 
 const mockFathers = [
@@ -34,7 +35,7 @@ const mockContemporary = [
 ];
 
 // --- SUB-COMPONENTS ---
-const TimelineItemDesktop = ({ item, index }) => {
+const TimelineItemDesktop = ({ item, index, t }) => {
   const isEven = index % 2 === 0;
   return (
     <motion.div 
@@ -57,7 +58,7 @@ const TimelineItemDesktop = ({ item, index }) => {
             {item.desc}
           </p>
           <div className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}>
-            <Badge label={item.category} variant={item.category === 'Antiquité' ? 'default' : item.category === 'Moyen-Âge' ? 'warning' : 'primary'} size="sm" />
+            <Badge label={item.category} variant={item.category === t('heritage.filters.antiquity') ? 'default' : item.category === t('heritage.filters.middle_ages') ? 'warning' : 'primary'} size="sm" />
           </div>
         </div>
       </div>
@@ -72,7 +73,7 @@ const TimelineItemDesktop = ({ item, index }) => {
   );
 };
 
-const TimelineItemMobile = ({ item }) => (
+const TimelineItemMobile = ({ item, t }) => (
   <motion.div 
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -90,7 +91,7 @@ const TimelineItemMobile = ({ item }) => (
         {item.desc}
       </p>
       <div className="mt-auto">
-        <Badge label={item.category} variant={item.category === 'Antiquité' ? 'default' : item.category === 'Moyen-Âge' ? 'warning' : 'primary'} size="sm" />
+        <Badge label={item.category} variant={item.category === t('heritage.filters.antiquity') ? 'default' : item.category === t('heritage.filters.middle_ages') ? 'warning' : 'primary'} size="sm" />
       </div>
     </div>
   </motion.div>
@@ -99,11 +100,17 @@ const TimelineItemMobile = ({ item }) => (
 
 const Heritage = () => {
   const { t } = useTranslation();
-  const [activeFilter, setActiveFilter] = useState('Tous');
+  const mockTimeline = getMockTimeline(t);
+  const [activeFilter, setActiveFilter] = useState(t('heritage.filters.all'));
 
-  const filters = ['Tous', 'Antiquité', 'Moyen-Âge', 'Moderne'];
+  const filters = [
+    t('heritage.filters.all'), 
+    t('heritage.filters.antiquity'), 
+    t('heritage.filters.middle_ages'), 
+    t('heritage.filters.modern')
+  ];
 
-  const filteredTimeline = activeFilter === 'Tous' 
+  const filteredTimeline = activeFilter === t('heritage.filters.all') 
     ? mockTimeline 
     : mockTimeline.filter(item => item.category === activeFilter);
 
@@ -115,9 +122,9 @@ const Heritage = () => {
         <div className="absolute inset-0 z-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')]"></div>
         <Container className="relative z-10">
           <div className="mb-4 text-[#D4AF37] font-montserrat text-xs font-bold tracking-widest uppercase flex items-center justify-center">
-            <Link to="/" className="hover:underline opacity-80 hover:opacity-100">Accueil</Link> 
+            <Link to="/" className="hover:underline opacity-80 hover:opacity-100">{t('navigation.home')}</Link> 
             <span className="mx-2">&gt;</span> 
-            <span>Héritage</span>
+            <span>{t('heritage.title')}</span>
           </div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -125,7 +132,7 @@ const Heritage = () => {
             transition={{ duration: 0.5 }}
             className="font-playfair text-4xl md:text-6xl font-bold mb-6 text-[#D4AF37]"
           >
-            {t('heritage.title', 'Héritage et Histoire')}
+            {t('heritage.title')}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -166,7 +173,7 @@ const Heritage = () => {
           
           <AnimatePresence mode="popLayout">
             {filteredTimeline.map((item, index) => (
-              <TimelineItemDesktop key={item.id} item={item} index={index} />
+              <TimelineItemDesktop key={item.id} item={item} index={index} t={t} />
             ))}
           </AnimatePresence>
         </div>
@@ -175,14 +182,14 @@ const Heritage = () => {
         <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-12 pt-6 hide-scrollbar -mx-4 px-4 w-[100vw]">
           <AnimatePresence>
             {filteredTimeline.map(item => (
-              <TimelineItemMobile key={`mob-${item.id}`} item={item} />
+              <TimelineItemMobile key={`mob-${item.id}`} item={item} t={t} />
             ))}
           </AnimatePresence>
         </div>
       </Container>
 
       {/* 3. PÈRES DE L'ÉGLISE SECTION */}
-      <Section title="Les Grands Penseurs de l'Antiquité" background="white">
+      <Section title={t('heritage.thinkersTitle')} background="white">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {mockFathers.map((father, idx) => (
@@ -219,7 +226,7 @@ const Heritage = () => {
       </Section>
 
       {/* 4. THÉOLOGIENS CONTEMPORAINS SECTION */}
-      <Section title="Théologiens Contemporains" subtitle="Penseurs d'aujourd'hui façonnant la pensée chrétienne africaine" background="cream">
+      <Section title={t('heritage.contemporaryTitle')} subtitle={t('heritage.contemporarySubtitle')} background="cream">
         <Container>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {mockContemporary.map((person, idx) => (
@@ -230,7 +237,7 @@ const Heritage = () => {
                 description={person.bio}
                 footer={
                   <Link to="#" className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:text-[#1B1B4D] transition-colors">
-                    Découvrir travaux &rarr;
+                    {t('common.readMore')} &rarr;
                   </Link>
                 }
                 hoverable
@@ -244,15 +251,15 @@ const Heritage = () => {
       <Section background="blue" className="py-20 text-white">
         <Container>
           <div className="text-center mb-10">
-            <h3 className="font-playfair text-4xl font-bold text-[#D4AF37] mb-4">La Carte Historique</h3>
-            <p className="font-montserrat text-white/80 max-w-2xl mx-auto">Explorez visuellement les grandes métropoles religieuses de Carthage à Alexandrie en passant par Aksoum.</p>
+            <h3 className="font-playfair text-4xl font-bold text-[#D4AF37] mb-4">{t('heritage.mapTitle')}</h3>
+            <p className="font-montserrat text-white/80 max-w-2xl mx-auto">{t('heritage.mapDesc')}</p>
           </div>
           
           <div className="w-full h-[300px] md:h-[500px] bg-[#F5F3ED] rounded-xl shadow-2xl relative overflow-hidden flex flex-col items-center justify-center p-6 border-4 border-[#D4AF37] group">
             {/* Visual map placeholder overlay */}
             <span className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-500">🌍</span>
             <p className="text-[#1B1B4D] font-playfair text-2xl font-bold mb-2">Leaflet Interactive Map</p>
-            <p className="text-[#5C5C4C] font-montserrat text-sm text-center max-w-md">La prochaine étape intégrera la cartographie interactive permettant de cliquer sur Carthage, Hippone, l'Éthiopie, et l'Égypte pour de riches détails historiques.</p>
+            <p className="text-[#5C5C4C] font-montserrat text-sm text-center max-w-md">{t('heritage.mapPlaceholder')}</p>
           </div>
         </Container>
       </Section>

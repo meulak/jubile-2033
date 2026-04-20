@@ -11,6 +11,52 @@
     "en": "English",
     "it": "Italiano"
   },
+  "common": {
+    "readMore": "Read more",
+    "backToHome": "Back to home",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "search": "Search",
+    "searchPlaceholder": "Search...",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "searchAria": "Start search",
+    "clearSearch": "Clear search",
+    "noSuggestions": "No quick suggestions found.",
+    "viewAllResults": "View all results for \"{{query}}\"",
+    "download": "Download",
+    "share": "Share",
+    "types": {
+      "article": "Article",
+      "resource": "Resource",
+      "person": "Person"
+    },
+    "categories": {
+      "history": "History",
+      "community": "Community",
+      "bible": "Bible",
+      "resources": "Resources",
+      "culture": "Culture",
+      "heritage": "Heritage",
+      "practice": "Practice"
+    }
+  },
+  "article": {
+    "shareAlert": "Share on {{platform}} : Social pop-up simulation.",
+    "commentSuccess": "Thank you! Your comment has been submitted and is awaiting approval.",
+    "tocTitle": "In this article",
+    "authorRole": "Guest Author",
+    "prev": "Previous Article",
+    "next": "Next Article",
+    "relatedTitle": "Related topics"
+  },
+  "newsletter": {
+    "success": "Thank you! Please check your mailbox to confirm your subscription.",
+    "error": {
+      "empty": "Please enter an email address.",
+      "invalid": "Invalid email format."
+    }
+  },
   "home": {
     "heroTitle": "Africa is part of the salvation history",
     "heroDescription": "Discover 2000 years of continuous Christian presence, from the origins to the present day.",
@@ -18,15 +64,230 @@
     "heroBtnSecondary": "Learn more",
     "jubileeTitle": "Jubilee of Redemption 2033",
     "jubileeDesc": "Commemorating 2000 years of faith, hope, and charity.",
-    "mapTitle": "Biblical places in Africa",
+    "stats": {
+      "year": "Jubilee Year",
+      "presence": "Of Christian Presence",
+      "regions": "Continental Regions"
+    },
+    "mapTitle": "Biblical Places in Africa",
+    "mapPlaceholder": "Interactive map of African biblical sites (Leaflet.js)",
     "newsTitle": "Latest News",
-    "ctaTitle": "Participate in the Project"
+    "ctaTitle": "Participate in the Project",
+    "ctaDesc": "Join this historic movement. Whether through prayer, support, or study, you have a place in Jubilee 2033.",
+    "ctaBtn": "Discover How",
+    "articles": {
+      "art1": {
+        "title": "Discovery in Egypt",
+        "excerpt": "New excavations revealing ancient Christian manuscripts near the Red Sea."
+      },
+      "art2": {
+        "title": "African Synod",
+        "excerpt": "Bishops meet to prepare for the great Jubilee 2033."
+      },
+      "art3": {
+        "title": "Biblical Translations",
+        "excerpt": "Publication of sacred texts in 5 new local languages."
+      },
+      "art4": {
+        "title": "Martyrs' Journey",
+        "excerpt": "Virtual exhibition on the heritage of the first Christians of North Africa."
+      }
+    }
+  },
+  "bible": {
+    "heroTitle": "Africa in the Bible",
+    "heroSubtitle": "Discover how Africa and its peoples are intimately linked to sacred history, forming the origins of an unshakeable millennial faith.",
+    "tab1": "The Roots",
+    "tab2": "The Wisdom",
+    "tab3": "The Exile",
+    "tab4": "The Firstfruits",
+    "racines": {
+      "title": "The Roots: Abraham and Egypt",
+      "p1": "The rich history of the African continent is deeply rooted in the stories of the patriarchs. Abraham found refuge in Egypt during the famine, marking the first strong link of interdependence between the original promise of Israel and the vast protective land of Africa.",
+      "p2": "Over the centuries, the nation of Israel developed within powerful ancient Egypt, inevitably absorbing its culture, architecture, and wisdom before beginning the great saving Exodus to the Promised Land.",
+      "p3": "Sinai and the burning desert, this mystical bridge that geographically and religiously connects Africa to the Middle East, became the majestic cradle of the Law, Revelation, and the eternal divine Covenant.",
+      "cta": "Read Full Article",
+      "quote1": "The Lord said to Abram: 'Leave your country, your kindred and your father's house, and go to the land that I will show you.'",
+      "ref1": "Genesis 12:1",
+      "quote2": "These are the names of the sons of Israel who came to Egypt...",
+      "ref2": "Exodus 1:1-5"
+    },
+    "sagesse": {
+      "title": "Wisdom: The Queen of Sheba and Solomon",
+      "p1": "The sumptuous and legendary meeting between the prestigious King Solomon, endowed with divine wisdom, and the Queen of Sheba marks a diplomatic, economic, but also deeply spiritual alliance between radiant Jerusalem and the rich Horn of Africa.",
+      "p2": "Beyond the gold, precious stones, and spices that the Bible details in profusion, these exchanges fused and shaped a religious and scholarly imagery deeply shared by both peoples.",
+      "p3": "This politico-religious heritage remains extremely vibrant today, especially in ancestral Ethiopian traditions that faithfully link their powerful royal lineage (the Negus) to this majestic biblical meeting at the crossroads of two worlds.",
+      "cta": "View Biography",
+      "quote1": "The Queen of Sheba heard of Solomon's fame because of the name of the Lord. She came to test him with hard questions. She arrived in Jerusalem with a very large retinue...",
+      "ref1": "1 Kings 10:1-13"
+    },
+    "exil": {
+      "title": "Exile and Welcome: Jesus in Egypt",
+      "p1": "The Flight into Egypt is one of the founding and most symbolic moments of the dawn of the New Testament. Faced with the destructive madness and mortal jealousy of King Herod, it was benevolent Africa that instantly offered saving refuge to the Holy Family.",
+      "p2": "Africa has always been celebrated as the land of asylum par excellence in the Bible, the providential place where the innocent and cornered divine and human find comfort, resources, and ultimate protection to guarantee and preserve the lineage.",
+      "p3": "This spiritual symbolism of incredible power still resonates today: yesterday's land of exile is tomorrow's original foundation. The African continent is glorified for having physically protected Him who came in spirit to protect and save the entire world.",
+      "cta": "Discover the Symbolism",
+      "quote1": "When they had gone, an angel of the Lord appeared to Joseph in a dream. 'Get up,' he said, 'take the child and his mother and escape to Egypt. Stay there until I tell you...'",
+      "ref1": "Matthew 2:13-15"
+    },
+    "premices": {
+      "title": "The Firstfruits of Salvation: The Ethiopian Eunuch",
+      "p1": "On the dusty and deserted road descending from Jerusalem to Gaza, a founding encounter ordered by the Holy Spirit occurred between the apostle Philip and a magnificently dressed high dignitary: the eunuch, the powerful minister of the Candace, Queen of Ethiopia.",
+      "p2": "Ardently and humbly seeking to understand the old and complex texts of the prophet Isaiah from the seat of his royal chariot, total light was suddenly revealed and given to him by the enthusiastic apostle.",
+      "p3": "Upon his serene descent into the providential water, he became the first formally baptized African high representative as reported in Acts, proudly taking with him the very first living seed of Christianity to transplant it to the deep heart of Africa for its lightning-fast future millennial expansion.",
+      "cta": "Read Acts Chapter",
+      "quote1": "Now there was an Ethiopian, an eunuch, a high official of Candace, Queen of the Ethiopians, and superintendent of all her treasures. He had come to Jerusalem to worship...",
+      "ref1": "Acts 8:26-40"
+    },
+    "related": {
+      "title": "You Might Also Like",
+      "art1": {
+        "title": "St. Augustine of Tagaste",
+        "description": "Discover the monumental and essential contribution of Northern African theology to the dogma of the Church."
+      },
+      "art2": {
+        "title": "Timbuktu Manuscripts",
+        "description": "A stunning dive into the fierce preservation of sacred scriptures in the heart of Mali's millennial sands."
+      },
+      "art3": {
+        "title": "Paleochristian Art",
+        "description": "How Roman mosaics depicted the vibrant African Christianity of the first centuries."
+      }
+    }
+  },
+  "heritage": {
+    "title": "Heritage and History",
+    "subtitle": "Explore the fascinating chronology of 2000 years of continuous Christian presence on the African continent.",
+    "filters": {
+      "all": "All",
+      "antiquity": "Antiquity",
+      "middle_ages": "Middle Ages",
+      "modern": "Modern"
+    },
+    "timeline": {
+      "event1": { "year": "50 AD", "title": "The Ethiopian Eunuch", "desc": "The minister of the Candace is baptized by the apostle Philip, planting the very first seeds of the Gospel in the heart of the African continent." },
+      "event2": { "year": "180 AD", "title": "The Scillitan Martyrs", "desc": "First documented traces of flourishing Christianity in North Africa, tragically sealed by the martyrdom of 12 heroic Christians in Carthage." },
+      "event3": { "year": "251 AD", "title": "Cyprian of Carthage", "desc": "Elected brilliant Bishop of Carthage, he unified the African Church during Decius's brutal persecutions and masterfully structured ecclesiological theology." },
+      "event4": { "year": "354-430", "title": "Saint Augustine of Hippo", "desc": "The greatest thinker of Christian antiquity. His immense works, like The City of God, still shape all of Western theology today." },
+      "event5": { "year": "451 AD", "title": "The Council of Chalcedon", "desc": "Great schism involving the powerful Coptic Church of Egypt which unswervingly maintains its own theological lineage (miaphysitism) throughout the centuries." },
+      "event6": { "year": "700-1400", "title": "The Medieval Period", "desc": "Rapid expansion of Islam in North Africa. The majestic Ethiopian Orthodox Church continues to thrive, isolated in its mountains (rock-hewn churches of Lalibela)." },
+      "event7": { "year": "1500-1800", "title": "First Modern Missions", "desc": "Arrival of European Catholic missionaries on the coasts (notably in Kongo), leading to courtly Christianity and new complex Christianizations." },
+      "event8": { "year": "1900-2000", "title": "Renewal and Independence", "desc": "Strong and vibrant emergence of African Instituted Churches (AICs), reappropriation of faith and incredible demographic explosion of Christianity on the continent." },
+      "event9": { "year": "2033", "title": "Jubilee of Redemption", "desc": "Worldwide spiritual celebration of 2000 years of Christian salvation. Africa definitively positions itself as the beating heart and future of universal Christianity." }
+    },
+    "thinkersTitle": "Great Thinkers of Antiquity",
+    "contemporaryTitle": "Contemporary Theologians",
+    "contemporarySubtitle": "Today's thinkers shaping African Christian thought",
+    "mapTitle": "The History Map",
+    "mapDesc": "Visually explore the great religious centers from Carthage to Alexandria via Aksum.",
+    "mapPlaceholder": "The next step will integrate interactive mapping allowing you to click on Carthage, Hippo, Ethiopia, and Egypt for rich historical details."
+  },
+  "resources": {
+    "title": "Resources Area",
+    "subtitle": "Explore, read, listen, and download our precious toolkits, teaching sheets, and our fantastic inculturated multimedia directories.",
+    "searchPlaceholder": "Search for a theme, video, chant...",
+    "tabs": {
+      "tools": "Toolkit",
+      "multimedia": "Multimedia",
+      "inculturation": "Inculturation"
+    },
+    "outils": {
+      "filters": {
+        "levels": {
+          "all": "All Levels",
+          "children": "Children",
+          "teens": "Teens",
+          "adults": "Adults"
+        },
+        "themes": {
+          "all": "All Subjects",
+          "bible": "Bible",
+          "history": "History",
+          "practice": "Practice"
+        }
+      },
+      "results": "Resource(s) found",
+      "noResults": "No resources match your search."
+    },
+    "multimedia": {
+      "tabs": {
+        "videos": "Videos (YouTube)",
+        "podcasts": "Podcasts",
+        "playlists": "Music Playlists"
+      }
+    },
+    "inculturation": {
+      "riteCongolais": {
+        "title": "The Zairean (Congolese) Rite",
+        "p1": "The Roman Missal for the Dioceses of Zaire, promulgated in 1988 by Saint John Paul II, constitutes the most outstanding example of successful liturgical inculturation officially approved by the Holy See.",
+        "p2": "Its genius lies in the harmonious integration of the African soul: the rhythmic triumphal entry, invocations of ancestors justified in Christ, and the dialogic form of the homily. The entire body prays, dance becomes liturgy.",
+        "cta": "Download Missal (PDF)"
+      },
+      "chantsTitle": "Chant Library",
+      "regionsTitle": "Diversity of Local Traditions",
+      "galleryTitle": "Inspiring Gallery"
+    }
+  },
+  "community": {
+    "heroTitle": "Join the Community",
+    "heroSubtitle": "Participate in the great Jubilee 2033 art contest, submit your testimonies, and discuss with members from across the continent.",
+    "btnParticipate": "Participate Now",
+    "btnGallery": "View Gallery",
+    "concours": {
+      "title": "Jesus Seen by Africa",
+      "desc": "The great creative contest of Jubilee 2033 is open! Express your vision of the Christian faith through visual art, music, or video.",
+      "datesTitle": "Key Dates & Prizes",
+      "open": "Opening:",
+      "close": "Closing:",
+      "results": "Results:",
+      "prize": "Global Endowment",
+      "prizeDesc": "Shared among the winners of the three categories.",
+      "downloadRules": "Download Rules (PDF)",
+      "form": {
+        "title": "Share Your Creativity",
+        "success": "Submission Successful!",
+        "successDesc": "Your work has been successfully transmitted to the jury. A confirmation email has been sent to you. Thank you for your participation!",
+        "uploadPlaceholder": "Drag and drop your file here",
+        "uploadFormats": "JPG/PNG (Max 10MB), MP4 (Max 50MB), MP3 (Max 5MB)",
+        "consent": "I accept the competition rules and grant display rights on this platform.",
+        "submit": "Submit Work",
+        "submitting": "Uploading in progress"
+      }
+    },
+    "forum": {
+      "title": "Recent Discussions",
+      "openThread": "Open a thread",
+      "replies": "Replies",
+      "explore": "Explore full forum"
+    },
+    "partners": "Supported by our partners and sponsors"
+  },
+  "sidebar": {
+    "newsletter": {
+      "title": "Subscribe to Newsletter",
+      "desc": "Receive our latest historical discoveries and theological reflections directly in your mailbox.",
+      "placeholder": "your@email.com",
+      "btn": "Join"
+    },
+    "share": "Share"
   },
   "footer": {
     "about": "About",
     "content": "Content",
     "engagement": "Engagement",
     "social": "Social Media",
+    "links": {
+      "history": "Our History",
+      "vision": "Jubilee 2033 Vision",
+      "team": "The Team",
+      "join": "Join the Community",
+      "events": "Events",
+      "contact": "Contact Us"
+    },
+    "legal": {
+      "mentions": "Legal notice",
+      "privacy": "Privacy Policy"
+    },
     "copyright": "© 2026 Impronte Africane di Gesù"
   }
 }

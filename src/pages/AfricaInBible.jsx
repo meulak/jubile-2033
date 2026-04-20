@@ -75,56 +75,56 @@ const AfricaInBible = () => {
 
   const tabData = {
     racines: {
-      title: t('bible.racines.title', "Les Racines : Abraham et L'Égypte"),
+      title: t('bible.racines.title'),
       content: [
-        t('bible.racines.p1', "L'histoire foisonnante du continent africain est profondément ancrée dans les récits des patriarches. Abraham a trouvé refuge en Égypte lors de la famine, marquant ainsi le premier lien d'interdépendance fort entre la promesse originelle d'Israël et la vaste terre protectrice d'Afrique."),
-        t('bible.racines.p2', "À travers les siècles, la nation d'Israël s'est développée au sein de la puissante Égypte antique, s'imprégnant inévitablement de sa culture, de son architecture et de sa sagesse avant d'entamer le grand Exode salvateur vers la Terre Promise."),
-        t('bible.racines.p3', "Le Sinaï et le désert brûlant, ce pont mystique qui relie géographiquement et religieusement l'Afrique au Moyen-Orient, sont devenus le berceau majestueux de la Loi, de la Révélation et de l'Alliance divine éternelle.")
+        t('bible.racines.p1'),
+        t('bible.racines.p2'),
+        t('bible.racines.p3')
       ],
       quotes: [
-        { text: "Le Seigneur dit à Abram : « Quitte ton pays, ta parenté et la maison de ton père, et va vers le pays que je te montrerai. »", ref: "Genèse 12:1" },
-        { text: "Voici les noms des fils d'Israël qui vinrent en Égypte...", ref: "Exode 1:1-5" }
+        { text: t('bible.racines.quote1'), ref: t('bible.racines.ref1') },
+        { text: t('bible.racines.quote2'), ref: t('bible.racines.ref2') }
       ],
-      cta: t('bible.racines.cta', "Lire l'Article Complet"),
+      cta: t('bible.racines.cta'),
       align: "left"
     },
     sagesse: {
-      title: t('bible.sagesse.title', "La Sagesse : La Reine de Saba et Salomon"),
+      title: t('bible.sagesse.title'),
       content: [
-        t('bible.sagesse.p1', "La rencontre somptueuse et légendaire entre le prestigieux Roi Salomon, doté d'une sagesse divine, et la Reine de Saba marque une alliance diplomatique, économique, mais aussi profondément spirituelle entre la rayonnante Jérusalem et la riche corne de l'Afrique."),
-        t('bible.sagesse.p2', "Au-delà de l'or, des pierres précieuses et des aromates dont la Bible détaille profusionnement le transport, ces échanges ont fusionné et modelé un imaginaire religieux et savant profondément partagé par les deux peuples."),
-        t('bible.sagesse.p3', "Cet héritage politico-religieux demeure extrêmement vivace de nos jours, tout particulièrement dans les traditions éthiopiennes ancestrales qui rattachent et lient fidèlement leur puissante lignée royale (les Négus) à cette majestueuse rencontre biblique au croisement de deux mondes.")
+        t('bible.sagesse.p1'),
+        t('bible.sagesse.p2'),
+        t('bible.sagesse.p3')
       ],
       quotes: [
-        { text: "La reine de Saba apprit la renommée que Salomon devait au nom du Seigneur. Elle vint donc l'éprouver par des énigmes. Elle arriva à Jérusalem avec une suite imposante...", ref: "1 Rois 10:1-13" }
+        { text: t('bible.sagesse.quote1'), ref: t('bible.sagesse.ref1') }
       ],
-      cta: t('bible.sagesse.cta', "Voir la Biographie"),
+      cta: t('bible.sagesse.cta'),
       align: "right"
     },
     exil: {
-      title: t('bible.exil.title', "L'Exil et l'Accueil : Jésus en Égypte"),
+      title: t('bible.exil.title'),
       content: [
-        t('bible.exil.p1', "La Fuite en Égypte est l'un des moments fondateurs et des plus symboliques de l'aube du Nouveau Testament. Face à la folie destructrice et jalousie mortelle du roi Hérode, c'est l'Afrique bienveillante qui offre instantanément le refuge salvateur à la Sainte Famille."),
-        t('bible.exil.p2', "L'Afrique a de tous temps été célébrée comme la terre d'asile par excellence dans la Bible, l'endroit providentiel où le divin et l'humain innocents et acculés trouvent réconfort, ressources et protection ultime pour garantir et préserver la lignée."),
-        t('bible.exil.p3', "Cette symbolique spirituelle d'une puissance inouïe résonne encore de nos jours : la terre de l'exil d'hier est le socle originel de demain. Le continent africain est glorifié pour avoir protégé physiquement Celui qui venait en esprit pour protéger et sauver le monde entier.")
+        t('bible.exil.p1'),
+        t('bible.exil.p2'),
+        t('bible.exil.p3')
       ],
       quotes: [
-        { text: "Après leur départ, voici que l'Ange du Seigneur apparaît en songe à Joseph et lui dit : « Lève-toi ; prends l'enfant et sa mère, et fuis en Égypte. Reste là-bas jusqu'à ce que je t'avertisse... »", ref: "Matthieu 2:13-15" }
+        { text: t('bible.exil.quote1'), ref: t('bible.exil.ref1') }
       ],
-      cta: t('bible.exil.cta', "Découvrir la Symbolique"),
+      cta: t('bible.exil.cta'),
       align: "left"
     },
     premices: {
-      title: t('bible.premices.title', "Les Prémices du Salut : L'Eunuque Éthiopien"),
+      title: t('bible.premices.title'),
       content: [
-        t('bible.premices.p1', "Sur la route poussiéreuse et déserte descendant de Jérusalem vers Gaza, une rencontre fondatrice ordonnée par l'Esprit Saint se produit entre l'apôtre Philippe et un haut dignitaire magnifiquement vêtu : l'eunuque, le puissant ministre de la Candace, reine d'Éthiopie."),
-        t('bible.premices.p2', "Cherchant ardemment et avec humilité à comprendre les vieux et complexes textes du prophète Isaïe depuis le siège de son char royal, la lumière totale lui fut soudainement révélée et donnée par l'apôtre enthousiaste."),
-        t('bible.premices.p3', "Dès sa descente sereine dans l'eau providentielle, il devient le premier haut-représentant Africain formellement baptisé tel que rapporté par les Actes, emportant fièrement avec lui la toute première graine vivace du christianisme pour la transplanter vers le cœur profond de l'Afrique pour sa fulgurante expansion millénaire future.")
+        t('bible.premices.p1'),
+        t('bible.premices.p2'),
+        t('bible.premices.p3')
       ],
       quotes: [
-        { text: "Or, se trouvait là un Éthiopien, un eunuque, haut fonctionnaire de Candace, reine d'Éthiopie, et surintendant de tous ses trésors. Il était venu à Jérusalem pour adorer...", ref: "Actes 8:26-40" }
+        { text: t('bible.premices.quote1'), ref: t('bible.premices.ref1') }
       ],
-      cta: t('bible.premices.cta', "Lire le Chapitre des Actes"),
+      cta: t('bible.premices.cta'),
       align: "right"
     }
   };
@@ -205,23 +205,23 @@ const AfricaInBible = () => {
               <h3 className="font-playfair text-3xl text-[#1B1B4D] font-bold mb-10 border-b border-[#D4AF37]/30 pb-4">
                 {t('bible.related.title', 'Vous pourriez aussi lire')}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                  <Card 
-                  title="St-Augustin de Thagaste"
-                  description="Découvrez l'apport monumental et incontournable de la théologie africaine nordique sur la dogmatique de l'Église."
-                  category="Héritage"
+                  title={t('bible.related.art1.title')}
+                  description={t('bible.related.art1.description')}
+                  category={t('common.categories.heritage')}
                   hoverable
                  />
                  <Card 
-                  title="Manuscrits de Timbuktu"
-                  description="Plongée sidérante dans la préservation acharnée des écritures sacrées au cœur des sables millénaires du Mali."
-                  category="Ressources"
+                  title={t('bible.related.art2.title')}
+                  description={t('bible.related.art2.description')}
+                  category={t('common.categories.resources')}
                   hoverable
                  />
                  <Card 
-                  title="Art Paléochrétien"
-                  description="Comment les mosaïques romaines dépeignaient la chrétienté africaine vibrante des premiers siècles."
-                  category="Culture"
+                  title={t('bible.related.art3.title')}
+                  description={t('bible.related.art3.description')}
+                  category={t('common.categories.culture')}
                   hoverable
                  />
               </div>
@@ -260,7 +260,7 @@ const AfricaInBible = () => {
                 {t('sidebar.newsletter.title', "S'inscrire à la Newsletter")}
               </h4>
               <p className="text-sm opacity-80 mb-6 font-montserrat leading-relaxed">
-                Recevez nos dernières découvertes historiques et réflexions théologiques directement dans votre boîte mail.
+                {t('sidebar.newsletter.desc')}
               </p>
               <form className="flex flex-col gap-4 max-w-full" onSubmit={(e) => e.preventDefault()}>
                 <input 
@@ -279,7 +279,7 @@ const AfricaInBible = () => {
             {/* Social Share */}
             <div className="bg-white p-6 rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-[#D4AF37]/10">
               <h4 className="font-montserrat font-bold text-[#1B1B4D] uppercase text-xs tracking-widest mb-4">
-                {t('sidebar.share', "Partager")}
+                {t('sidebar.share')}
               </h4>
               <div className="flex flex-wrap gap-3">
                 <Tag label="Facebook" className="cursor-pointer hover:bg-blue-50 border-gray-200" />

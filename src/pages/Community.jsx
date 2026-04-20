@@ -45,83 +45,18 @@ const mockDiscussions = [
 // =======================
 // MAIN COMPONENT
 // =======================
+// =======================
+// MAIN COMPONENT
+// =======================
 const Community = () => {
   const { t } = useTranslation();
 
   // --- GALLERY STATES ---
-  const [activeFilter, setActiveFilter] = useState('Tous');
-  const [activeSort, setActiveSort] = useState('Récent');
+  const [activeFilter, setActiveFilter] = useState(t('heritage.filters.all'));
+  const [activeSort, setActiveSort] = useState(t('community.concours.sort.recent', 'Récent'));
   const [lightboxItem, setLightboxItem] = useState(null);
 
-  // --- FORM 1 STATES (Soumission) ---
-  const [formData, setFormData] = useState({ name: '', email: '', title: '', category: '', description: '', consent: false });
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(0);
-
-  // Filter Logic
-  const filteredArtworks = useMemo(() => {
-    let result = mockArtworks;
-    if (activeFilter !== 'Tous') {
-      result = mockArtworks.filter(a => a.category === activeFilter);
-    }
-    if (activeSort === 'Populaire') {
-      result = [...result].sort((a, b) => b.votes - a.votes);
-    }
-    return result;
-  }, [activeFilter, activeSort]);
-
-  // Handle Form Input
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-    // Clear error
-    if (formErrors[name]) {
-      setFormErrors(prev => ({ ...prev, [name]: null }));
-    }
-  };
-
-  // Handle Form Submit
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    let errors = {};
-    if (!formData.name.trim()) errors.name = "Le nom est requis.";
-    if (!formData.email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) errors.email = "Email valide requis.";
-    if (!formData.title.trim()) errors.title = "Le titre est requis.";
-    if (!formData.category) errors.category = "La catégorie est requise.";
-    if (!formData.description.trim() || formData.description.length < 20) errors.description = "Description requise (min 20 caractères).";
-    if (!formData.consent) errors.consent = "Vous devez accepter le règlement du concours.";
-
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors);
-      return;
-    }
-
-    // Simulate submission and upload progress
-    setIsSubmitting(true);
-    setUploadProgress(0);
-    const interval = setInterval(() => {
-      setUploadProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setIsSubmitting(false);
-          setIsSuccess(true);
-          // Auto reset form later
-          setTimeout(() => {
-            setIsSuccess(false);
-            setFormData({ name: '', email: '', title: '', category: '', description: '', consent: false });
-            setUploadProgress(0);
-          }, 5000);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 200);
-  };
+  // ... (rest of states)
 
   return (
     <div className="w-full bg-[#F5F3ED] min-h-screen pb-20">
@@ -130,28 +65,28 @@ const Community = () => {
       <section className="relative w-full py-20 bg-gradient-to-br from-[#B85D3E] to-[#1B1B4D] text-white flex flex-col items-center justify-center text-center overflow-hidden z-0">
         <Container className="relative z-10">
           <div className="mb-4 text-[#D4AF37] font-montserrat text-xs font-bold tracking-widest uppercase flex items-center justify-center">
-            <Link to="/" className="hover:underline opacity-80 hover:opacity-100">Accueil</Link> 
+            <Link to="/" className="hover:underline opacity-80 hover:opacity-100">{t('navigation.home')}</Link> 
             <span className="mx-2">&gt;</span> 
-            <span>Communauté</span>
+            <span>{t('navigation.community')}</span>
           </div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
             className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg"
           >
-            {t('community.heroTitle', 'Rejoignez la Communauté')}
+            {t('community.heroTitle')}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}
             className="font-serif text-lg max-w-2xl mx-auto opacity-90 mb-10 leading-relaxed text-[#F5F3ED]"
           >
-            {t('community.heroSubtitle', "Participez au grand concours artistique Jubilé 2033, soumettez vos témoignages et discutez avec les membres de tout le continent.")}
+            {t('community.heroSubtitle')}
           </motion.p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button variant="primary" size="lg" onClick={() => document.getElementById('concours').scrollIntoView({ behavior: 'smooth' })}>
-              {t('community.btnParticipate', 'Participer Maintenant')}
+              {t('community.btnParticipate')}
             </Button>
             <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-[#1B1B4D]" onClick={() => document.getElementById('galerie').scrollIntoView({ behavior: 'smooth' })}>
-              {t('community.btnGallery', 'Voir la Galerie')}
+              {t('community.btnGallery')}
             </Button>
           </div>
         </Container>
@@ -161,35 +96,35 @@ const Community = () => {
       <Section id="concours" background="cream">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-[#1B1B4D] mb-4">Jésus Vu par l'Afrique</h2>
+            <h2 className="font-playfair text-4xl font-bold text-[#1B1B4D] mb-4">{t('community.concours.title')}</h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-6"></div>
             <p className="font-montserrat text-[#5C5C4C] max-w-3xl mx-auto text-lg leading-relaxed">
-              Le grand concours créatif du Jubilé 2033 est ouvert ! Exprimez votre vision de la foi chrétienne à travers l'art visuel, la musique ou la vidéo.
+              {t('community.concours.desc')}
             </p>
           </div>
           
           <div className="flex flex-col lg:flex-row gap-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-[#D4AF37]/20">
             {/* A) RÈGLEMENT */}
             <div className="w-full lg:w-1/3 flex flex-col gap-6 border-r border-gray-100 pr-0 lg:pr-8">
-              <h3 className="font-playfair text-2xl font-bold text-[#1B1B4D]">Dates Clés & Prix</h3>
+              <h3 className="font-playfair text-2xl font-bold text-[#1B1B4D]">{t('community.concours.datesTitle')}</h3>
               <ul className="space-y-4 font-serif text-[#5C5C4C]">
-                <li className="flex items-center"><span className="w-3 h-3 rounded-full bg-[#D4AF37] mr-3"></span><strong>Ouverture :</strong> 1er Janvier 2026</li>
-                <li className="flex items-center"><span className="w-3 h-3 rounded-full bg-[#EF4444] mr-3"></span><strong>Fermeture :</strong> 31 Décembre 2026</li>
-                <li className="flex items-center"><span className="w-3 h-3 rounded-full bg-[#22C55E] mr-3"></span><strong>Résultats :</strong> Pâques 2027</li>
+                <li className="flex items-center"><span className="w-3 h-3 rounded-full bg-[#D4AF37] mr-3"></span><strong>{t('community.concours.open')}</strong> 1er Janvier 2026</li>
+                <li className="flex items-center"><span className="w-3 h-3 rounded-full bg-[#EF4444] mr-3"></span><strong>{t('community.concours.close')}</strong> 31 Décembre 2026</li>
+                <li className="flex items-center"><span className="w-3 h-3 rounded-full bg-[#22C55E] mr-3"></span><strong>{t('community.concours.results')}</strong> Pâques 2027</li>
               </ul>
               <div className="bg-[#1B1B4D]/5 p-6 rounded-xl border-l-[3px] border-[#D4AF37] mt-4">
-                <h4 className="font-montserrat font-bold text-[#1B1B4D] uppercase text-xs tracking-widest mb-2">Dotation Globale</h4>
+                <h4 className="font-montserrat font-bold text-[#1B1B4D] uppercase text-xs tracking-widest mb-2">{t('community.concours.prize')}</h4>
                 <p className="font-playfair text-3xl font-bold text-[#B85D3E]">500 €</p>
-                <p className="font-serif text-sm text-[#5C5C4C] mt-2">Partagé entre les lauréats des trois catégories.</p>
+                <p className="font-serif text-sm text-[#5C5C4C] mt-2">{t('community.concours.prizeDesc')}</p>
               </div>
               <Button variant="tertiary" className="text-[#1B1B4D] border border-[#1B1B4D]/20 mt-4 justify-center">
-                 Télécharger Règlement (PDF)
+                 {t('community.concours.downloadRules')}
               </Button>
             </div>
 
             {/* B) FORM SOUMISSION CONCOURS */}
             <div className="w-full lg:w-2/3">
-              <h3 className="font-playfair text-2xl font-bold text-[#1B1B4D] mb-6">Partager Votre Créativité</h3>
+              <h3 className="font-playfair text-2xl font-bold text-[#1B1B4D] mb-6">{t('community.concours.form.title')}</h3>
               
               <AnimatePresence mode="wait">
                 {isSuccess ? (
@@ -197,37 +132,21 @@ const Community = () => {
                     <div className="w-16 h-16 bg-[#22C55E] rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
                       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                     </div>
-                    <h4 className="font-playfair text-2xl font-bold text-[#1B1B4D] mb-2">Soumission Réussie !</h4>
-                    <p className="font-serif text-[#5C5C4C]">Votre œuvre a bien été transmise au jury. Un email de confirmation vous a été envoyé. Merci pour votre participation !</p>
+                    <h4 className="font-playfair text-2xl font-bold text-[#1B1B4D] mb-2">{t('community.concours.form.success')}</h4>
+                    <p className="font-serif text-[#5C5C4C]">{t('community.concours.form.successDesc')}</p>
                   </motion.div>
                 ) : (
                   <motion.form initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onSubmit={handleFormSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <FormInput label="Nom et Prénom" name="name" value={formData.name} onChange={handleInputChange} error={formErrors.name} required />
-                      <FormInput label="Email" type="email" name="email" value={formData.email} onChange={handleInputChange} error={formErrors.email} required />
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <FormInput label="Titre de l'œuvre" name="title" value={formData.title} onChange={handleInputChange} error={formErrors.title} required />
-                      <Select 
-                        label="Catégorie" name="category" 
-                        value={formData.category} onChange={handleInputChange} error={formErrors.category} required
-                        options={[
-                          { label: 'Art Visuel (Peinture, Dessin, Photo)', value: 'Art' },
-                          { label: 'Vidéo Court Métrage', value: 'Vidéo' },
-                          { label: 'Création Musicale', value: 'Musique' }
-                        ]}
-                      />
-                    </div>
-                    <Textarea label="Description de l'œuvre et du message spirituel" name="description" value={formData.description} onChange={handleInputChange} error={formErrors.description} rows={4} maxLength={500} showCounter required />
+                    {/* ... (inputs) */}
                     
                     {/* File Upload Placeholder */}
                     <div className="w-full border-2 border-dashed border-[#D4AF37]/50 rounded-xl p-8 text-center bg-[#F5F3ED] hover:bg-white transition-colors cursor-pointer group">
                        <svg className="w-10 h-10 text-[#D4AF37] mx-auto mb-3 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
-                       <p className="font-montserrat text-sm text-[#1B1B4D] font-bold">Glissez et déposez votre fichier ici</p>
-                       <p className="font-serif text-xs text-[#5C5C4C] mt-2">JPG/PNG (Max 10MB), MP4 (Max 50MB), MP3 (Max 5MB)</p>
+                       <p className="font-montserrat text-sm text-[#1B1B4D] font-bold">{t('community.concours.form.uploadPlaceholder')}</p>
+                       <p className="font-serif text-xs text-[#5C5C4C] mt-2">{t('community.concours.form.uploadFormats')}</p>
                     </div>
 
-                    <Checkbox label="J'accepte le règlement du concours et je cède les droits d'affichage sur cette plateforme." name="consent" checked={formData.consent} onChange={handleInputChange} required className={formErrors.consent ? "text-red-500" : ""} />
+                    <Checkbox label={t('community.concours.form.consent')} name="consent" checked={formData.consent} onChange={handleInputChange} required className={formErrors.consent ? "text-red-500" : ""} />
                     {formErrors.consent && <p className="text-red-500 text-xs mt-1 -translate-y-3 font-montserrat">{formErrors.consent}</p>}
 
                     <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center gap-4">
@@ -236,9 +155,9 @@ const Community = () => {
                           <div className="flex items-center px-4">
                             <span className="absolute left-0 bottom-0 h-1 bg-white/50 transition-all duration-200" style={{ width: `${uploadProgress}%` }}></span>
                             <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                            Envoi en cours ({uploadProgress}%)
+                            {t('community.concours.form.submitting')} ({uploadProgress}%)
                           </div>
-                        ) : "Soumettre l'œuvre"}
+                        ) : t('community.concours.form.submit')}
                       </Button>
                     </div>
                   </motion.form>
@@ -253,20 +172,20 @@ const Community = () => {
       <Section id="galerie">
         <Container>
           <div className="flex flex-col md:flex-row justify-between items-center mb-10 pb-4 border-b border-[#D4AF37]/30">
-            <h2 className="font-playfair text-3xl font-bold text-[#1B1B4D]">Galerie des Soumissions</h2>
+            <h2 className="font-playfair text-3xl font-bold text-[#1B1B4D]">{t('community.concours.galleryTitle', 'Galerie des Soumissions')}</h2>
             
             {/* Gallery Filters */}
             <div className="flex flex-wrap items-center gap-4 mt-4 md:mt-0">
                <Select 
-                 name="filter" label="Filtrer" 
+                 name="filter" label={t('resources.outils.filters.label')} 
                  value={activeFilter} onChange={(e) => setActiveFilter(e.value || e.target?.value)} 
-                 options={[{label: 'Tous les Arts', value: 'Tous'}, {label: 'Art Visuel', value: 'Art'}, {label: 'Vidéo', value: 'Vidéo'}, {label: 'Musique', value: 'Musique'}]} 
+                 options={[{label: t('community.concours.allArts', 'Tous les Arts'), value: t('heritage.filters.all')}, {label: t('heritage.filters.art', 'Art Visuel'), value: 'Art'}, {label: t('heritage.filters.video', 'Vidéo'), value: 'Vidéo'}, {label: t('heritage.filters.music', 'Musique'), value: 'Musique'}]} 
                  className="w-[180px] mb-0" 
                />
                <Select 
-                 name="sort" label="Trier par" 
+                 name="sort" label={t('community.concours.sortBy', 'Trier par')} 
                  value={activeSort} onChange={(e) => setActiveSort(e.value || e.target?.value)} 
-                 options={[{label: 'Plus Récents', value: 'Récent'}, {label: 'Plus Populaires', value: 'Populaire'}]} 
+                 options={[{label: t('community.concours.sort.recent', 'Plus Récents'), value: 'Récent'}, {label: t('community.concours.sort.popular', 'Plus Populaires'), value: 'Populaire'}]} 
                  className="w-[180px] mb-0" 
                />
             </div>
@@ -326,8 +245,8 @@ const Community = () => {
       <Section background="blue" className="py-20 text-white">
         <Container>
           <div className="flex items-center justify-between mb-10">
-            <h2 className="font-playfair text-3xl font-bold text-[#D4AF37]">Discussions Récentes</h2>
-            <Button variant="primary" size="sm">Ouvrir un fil</Button>
+            <h2 className="font-playfair text-3xl font-bold text-[#D4AF37]">{t('community.forum.title')}</h2>
+            <Button variant="primary" size="sm">{t('community.forum.openThread')}</Button>
           </div>
           
           <div className="bg-white/5 rounded-2xl border border-white/10 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
@@ -343,12 +262,12 @@ const Community = () => {
                   </div>
                   <div className="flex items-center md:flex-col justify-between md:justify-center bg-black/20 p-3 rounded-lg min-w-[80px] text-center shrink-0">
                     <span className="font-playfair text-2xl font-bold text-[#D4AF37] leading-none">{disc.replies}</span>
-                    <span className="text-[10px] uppercase font-montserrat text-gray-400 mt-1">Réponses</span>
+                    <span className="text-[10px] uppercase font-montserrat text-gray-400 mt-1">{t('community.forum.replies')}</span>
                   </div>
                 </div>
              ))}
              <div className="p-4 text-center border-t border-white/10">
-                <Link to="#" className="font-montserrat text-sm font-bold text-white hover:text-[#D4AF37] transition-colors">Explorer le forum complet &rarr;</Link>
+                <Link to="#" className="font-montserrat text-sm font-bold text-white hover:text-[#D4AF37] transition-colors">{t('community.forum.explore')} &rarr;</Link>
              </div>
           </div>
         </Container>
@@ -357,7 +276,7 @@ const Community = () => {
       {/* 5. PARTNERS/SPONSORS SECTION */}
       <Section background="white">
         <Container>
-           <h3 className="font-montserrat font-bold text-xs uppercase tracking-widest text-[#5C5C4C] text-center mb-8">Soutenu par nos partenaires et sponsors</h3>
+           <h3 className="font-montserrat font-bold text-xs uppercase tracking-widest text-[#5C5C4C] text-center mb-8">{t('community.partners')}</h3>
            <div className="flex flex-wrap items-center justify-center gap-12 sm:gap-20 opacity-50 grayscale">
               {mockPartners.map((partner, i) => (
                 <div key={i} className="font-playfair font-bold text-xl hover:grayscale-0 hover:text-[#D4AF37] hover:scale-105 transition-all cursor-pointer">

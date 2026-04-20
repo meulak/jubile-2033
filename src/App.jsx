@@ -9,6 +9,10 @@ import AfricaInBible from './pages/AfricaInBible';
 import Heritage from './pages/Heritage';
 import Resources from './pages/Resources';
 import Community from './pages/Community';
+import ArticlePage from './pages/ArticlePage';
+import NewsletterPreferences from './pages/NewsletterPreferences';
+import SearchPage from './pages/SearchPage';
+import AdminComments from './pages/AdminComments';
 
 // Layout wrapper to easily access useLocation
 const AppLayout = ({ children }) => {
@@ -44,7 +48,7 @@ const Placeholder = ({ title }) => (
 function App() {
   const { t } = useTranslation();
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -52,6 +56,10 @@ function App() {
           <Route path="/heritage" element={<Heritage />} />
           <Route path="/ressources" element={<Resources />} />
           <Route path="/communaute" element={<Community />} />
+          <Route path="/articles/:slug" element={<ArticlePage />} />
+          <Route path="/preferences/newsletter" element={<NewsletterPreferences />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/admin/comments" element={<AdminComments />} />
           <Route path="*" element={<Placeholder title="404 - Page non trouvée" />} />
         </Routes>
       </AppLayout>

@@ -13,15 +13,15 @@ import Modal from '../components/common/Modal';
 // =======================
 // MOCK DATA
 // =======================
-const mockTools = [
-  { id: 1, title: "Abraham en Afrique", desc: "Fiche pédagogique catéchèse avec coloriages et quiz pour éveiller la foi.", level: "Enfants", theme: "Bible", size: "2.4 MB", date: "2024-01-15" },
-  { id: 2, title: "La Reine de Saba", desc: "Étude textuelle et historique de la rencontre diplomatique et spirituelle avec Salomon.", level: "Ados", theme: "Histoire", size: "1.8 MB", date: "2024-02-10" },
-  { id: 3, title: "Pères de l'Église Africaine", desc: "Livre d'étude complet sur la monumentale théologie d'Augustin et Tertullien.", level: "Adultes", theme: "Histoire", size: "5.1 MB", date: "2023-11-20" },
-  { id: 4, title: "Liturgie et Inculturation", desc: "Manuel pratique pour intégrer harmonieusement les éléments locaux dans la messe.", level: "Adultes", theme: "Pratique", size: "3.2 MB", date: "2024-03-05" },
-  { id: 5, title: "Frise Chronologique 2000 ans", desc: "Infographie haute résolution (format A3) prête à imprimer pour la classe.", level: "Tous", theme: "Histoire", size: "8.5 MB", date: "2024-01-01" },
-  { id: 6, title: "L'Eunuque Éthiopien", desc: "Jeu de rôle catéchistique en équipe pour comprendre le premier baptême africain.", level: "Ados", theme: "Bible", size: "1.2 MB", date: "2023-10-15" },
-  { id: 7, title: "Chants de la Messe Zairoise", desc: "Partitions complètes et paroles avec traductions littérales en français.", level: "Tous", theme: "Pratique", size: "4.0 MB", date: "2024-04-12" },
-  { id: 8, title: "Préparer le Jubilé 2033", desc: "Guide de l'animateur spirituel : comment préparer les jeunes au grand jubilé.", level: "Adultes", theme: "Pratique", size: "2.9 MB", date: "2024-05-01" },
+const getMockTools = (t) => [
+  { id: 1, title: "Abraham en Afrique", desc: "Fiche pédagogique catéchèse avec coloriages et quiz pour éveiller la foi.", level: t('resources.outils.filters.levels.children'), theme: t('resources.outils.filters.themes.bible'), size: "2.4 MB", date: "2024-01-15" },
+  { id: 2, title: "La Reine de Saba", desc: "Étude textuelle et historique de la rencontre diplomatique et spirituelle avec Salomon.", level: t('resources.outils.filters.levels.teens'), theme: t('resources.outils.filters.themes.history'), size: "1.8 MB", date: "2024-02-10" },
+  { id: 3, title: "Pères de l'Église Africaine", desc: "Livre d'étude complet sur la monumentale théologie d'Augustin et Tertullien.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.history'), size: "5.1 MB", date: "2023-11-20" },
+  { id: 4, title: "Liturgie et Inculturation", desc: "Manuel pratique pour intégrer harmonieusement les éléments locaux dans la messe.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.practice'), size: "3.2 MB", date: "2024-03-05" },
+  { id: 5, title: "Frise Chronologique 2000 ans", desc: "Infographie haute résolution (format A3) prête à imprimer pour la classe.", level: t('resources.outils.filters.levels.all'), theme: t('resources.outils.filters.themes.history'), size: "8.5 MB", date: "2024-01-01" },
+  { id: 6, title: "L'Eunuque Éthiopien", desc: "Jeu de rôle catéchistique en équipe pour comprendre le premier baptême africain.", level: t('resources.outils.filters.levels.teens'), theme: t('resources.outils.filters.themes.bible'), size: "1.2 MB", date: "2023-10-15" },
+  { id: 7, title: "Chants de la Messe Zairoise", desc: "Partitions complètes et paroles avec traductions littérales en français.", level: t('resources.outils.filters.levels.all'), theme: t('resources.outils.filters.themes.practice'), size: "4.0 MB", date: "2024-04-12" },
+  { id: 8, title: "Préparer le Jubilé 2033", desc: "Guide de l'animateur spirituel : comment préparer les jeunes au grand jubilé.", level: t('resources.outils.filters.levels.adults'), theme: t('resources.outils.filters.themes.practice'), size: "2.9 MB", date: "2024-05-01" },
 ];
 
 const mockVideos = [
@@ -48,7 +48,7 @@ const mockChants = [
   { id: 4, title: "Amezaliwa", lang: "Swahili", lyrics: "Amezaliwa leo, Mwokozi wetu... (Aujourd'hui est né notre Sauveur...)", author: "Prière Est-Africaine" },
 ];
 
-const mockRegions = [
+const getMockRegions = (t) => [
   { id: 'est', name: "Afrique de l'Est", culture: "Culture Éthiopienne & Copte", desc: "Berceau du christianisme orthodoxe tewahedo. Les liturgies sont chantées en Ge'ez, accompagnées des tambours kebero et des sistres. La fête de Timkat (Épiphanie) est l'une des plus grandioses au monde.", img: "🌍" },
   { id: 'ouest', name: "Afrique de l'Ouest", culture: "Inculturation Joyeuse", desc: "Une ferveur vibrante caractérise les messes d'Afrique de l'Ouest, mêlant instruments traditionnels (djembé, balafon), chorales massives habillées de pagnes unifiés, et la danse processionale.", img: "🥁" },
   { id: 'centre', name: "Afrique Centrale", culture: "Le Rite Congolais (Zaïrois)", desc: "Seul rite inculturé officiellement reconnu par le Vatican. Il intègre l'appel de l'Esprit Saint avec un annonceur, la participation physique de l'assemblée, et une structure d'homélie dialoguée.", img: "🌾" },
@@ -72,8 +72,8 @@ const Resources = () => {
   const [searchQuery, setSearchQuery] = useState('');
   
   // Outils States
-  const [outilFilterLevel, setOutilFilterLevel] = useState('Tous');
-  const [outilFilterTheme, setOutilFilterTheme] = useState('Tous');
+  const [outilFilterLevel, setOutilFilterLevel] = useState(t('resources.outils.filters.levels.all'));
+  const [outilFilterTheme, setOutilFilterTheme] = useState(t('resources.outils.filters.themes.all'));
   
   // Multimedia States
   const [activeMediaTab, setActiveMediaTab] = useState('videos');
@@ -81,22 +81,25 @@ const Resources = () => {
   // Lightbox State
   const [lightboxImg, setLightboxImg] = useState(null);
 
+  const mockTools = getMockTools(t);
+  const mockRegions = getMockRegions(t);
+
   const mainTabs = [
-    { id: 'outils', label: 'Boîte à Outils' },
-    { id: 'multimedia', label: 'Multimédia' },
-    { id: 'inculturation', label: 'Inculturation' },
+    { id: 'outils', label: t('resources.tabs.tools') },
+    { id: 'multimedia', label: t('resources.tabs.multimedia') },
+    { id: 'inculturation', label: t('resources.tabs.inculturation') },
   ];
 
   // Filtering Outils
   const filteredTools = useMemo(() => {
     return mockTools.filter(tool => {
-      const matchLevel = outilFilterLevel === 'Tous' || tool.level === outilFilterLevel || tool.level === 'Tous';
-      const matchTheme = outilFilterTheme === 'Tous' || tool.theme === outilFilterTheme;
+      const matchLevel = outilFilterLevel === t('resources.outils.filters.levels.all') || tool.level === outilFilterLevel || tool.level === t('resources.outils.filters.levels.all');
+      const matchTheme = outilFilterTheme === t('resources.outils.filters.themes.all') || tool.theme === outilFilterTheme;
       const matchSearch = tool.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           tool.desc.toLowerCase().includes(searchQuery.toLowerCase());
       return matchLevel && matchTheme && matchSearch;
     });
-  }, [outilFilterLevel, outilFilterTheme, searchQuery]);
+  }, [outilFilterLevel, outilFilterTheme, searchQuery, mockTools, t]);
 
 
   // =======================
@@ -109,28 +112,28 @@ const Resources = () => {
     >
       <div className="bg-white p-6 rounded-xl shadow-sm border border-[#D4AF37]/20 flex flex-wrap gap-4 items-center justify-between">
         <div className="flex flex-wrap gap-4 items-center">
-          <span className="font-montserrat text-sm font-bold text-[#1B1B4D] uppercase tracking-wider">Filtres :</span>
+          <span className="font-montserrat text-sm font-bold text-[#1B1B4D] uppercase tracking-wider">{t('resources.outils.filters.label', 'Filtres :')}</span>
           <select 
             className="border border-[#D4AF37]/50 rounded font-serif px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-sm text-[#1B1B4D] bg-[#F5F3ED]"
             value={outilFilterLevel} onChange={(e) => setOutilFilterLevel(e.target.value)}
           >
-            <option value="Tous">Tous Niveaux</option>
-            <option value="Enfants">Enfants</option>
-            <option value="Ados">Ados</option>
-            <option value="Adultes">Adultes</option>
+            <option value={t('resources.outils.filters.levels.all')}>{t('resources.outils.filters.levels.all')}</option>
+            <option value={t('resources.outils.filters.levels.children')}>{t('resources.outils.filters.levels.children')}</option>
+            <option value={t('resources.outils.filters.levels.teens')}>{t('resources.outils.filters.levels.teens')}</option>
+            <option value={t('resources.outils.filters.levels.adults')}>{t('resources.outils.filters.levels.adults')}</option>
           </select>
           <select 
             className="border border-[#D4AF37]/50 rounded font-serif px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-sm text-[#1B1B4D] bg-[#F5F3ED]"
             value={outilFilterTheme} onChange={(e) => setOutilFilterTheme(e.target.value)}
           >
-            <option value="Tous">Tous Sujets</option>
-            <option value="Bible">Bible</option>
-            <option value="Histoire">Histoire</option>
-            <option value="Pratique">Pratique</option>
+            <option value={t('resources.outils.filters.themes.all')}>{t('resources.outils.filters.themes.all')}</option>
+            <option value={t('resources.outils.filters.themes.bible')}>{t('resources.outils.filters.themes.bible')}</option>
+            <option value={t('resources.outils.filters.themes.history')}>{t('resources.outils.filters.themes.history')}</option>
+            <option value={t('resources.outils.filters.themes.practice')}>{t('resources.outils.filters.themes.practice')}</option>
           </select>
         </div>
         <div className="text-xs font-montserrat text-[#5C5C4C] font-bold">
-          {filteredTools.length} Ressource(s) trouvée(s)
+          {filteredTools.length} {t('resources.outils.results')}
         </div>
       </div>
 
@@ -162,7 +165,7 @@ const Resources = () => {
       </div>
       {filteredTools.length === 0 && (
          <div className="py-20 text-center font-montserrat text-[#5C5C4C]">
-           Aucune ressource ne correspond à votre recherche.
+           {t('resources.outils.noResults')}
          </div>
       )}
     </motion.div>
@@ -184,7 +187,7 @@ const Resources = () => {
                 ${activeMediaTab === tab ? 'text-[#D4AF37]' : 'text-[#1B1B4D] opacity-70 hover:opacity-100'}
               `}
             >
-              {tab === 'videos' ? 'Vidéos (YouTube)' : tab === 'podcasts' ? 'Podcasts' : 'Playlists Musicales'}
+              {tab === 'videos' ? t('resources.multimedia.tabs.videos') : tab === 'podcasts' ? t('resources.multimedia.tabs.podcasts') : t('resources.multimedia.tabs.playlists')}
               {activeMediaTab === tab && <motion.div layoutId="mediatab" className="absolute bottom-[-17px] left-0 right-0 h-[3px] bg-[#D4AF37]" />}
             </button>
           ))}
@@ -264,15 +267,15 @@ const Resources = () => {
       {/* SECTION A: Rite Congolais */}
       <section className="flex flex-col lg:flex-row gap-12 items-center">
         <div className="flex-1">
-          <h2 className="font-playfair text-4xl font-bold text-[#1B1B4D] mb-6">Le Rite Zaïrois (Congolais)</h2>
+          <h2 className="font-playfair text-4xl font-bold text-[#1B1B4D] mb-6">{t('resources.inculturation.riteCongolais.title')}</h2>
           <div className="w-16 h-1 bg-[#D4AF37] mb-6"></div>
           <p className="font-serif text-[#5C5C4C] text-[17px] leading-[1.9] mb-4">
-            Le Missel Romain pour les Diocèses du Zaïre, promulgué en 1988 par Saint Jean-Paul II, constitue l'exemple le plus éclatant d'inculturation liturgique réussie et officiellement approuvée par le Saint-Siège.
+            {t('resources.inculturation.riteCongolais.p1')}
           </p>
           <p className="font-serif text-[#5C5C4C] text-[17px] leading-[1.9] mb-8">
-            Son génie réside dans l'intégration harmonieuse de l'âme africaine : l'entrée triomphale rythmée, l'invocations des ancêtres au cœur droit justifiés en Christ, et la forme dialoguée de l'homélie. Le corps tout entier prie, la danse devient liturgie.
+            {t('resources.inculturation.riteCongolais.p2')}
           </p>
-          <Button variant="primary">Télécharger le Missel (PDF)</Button>
+          <Button variant="primary">{t('resources.inculturation.riteCongolais.cta')}</Button>
         </div>
         <div className="w-full lg:w-[500px] flex gap-4">
            {/* Double Image Staggered Layout */}
@@ -359,10 +362,10 @@ const Resources = () => {
             <span>Ressources</span>
           </div>
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#F5F3ED] drop-shadow-lg">
-            {t('resources.title', 'Espace Ressources')}
+            {t('resources.title')}
           </h1>
           <p className="font-serif text-base lg:text-lg max-w-3xl mx-auto opacity-90 mb-10 leading-relaxed text-[#E5E3DD]">
-            {t('resources.subtitle', "Explorez, lisez, écoutez et téléchargez nos précieuses boîtes à outils, fiches pédagogiques et nos fantastiques répertoires multimédias inculturés.")}
+            {t('resources.subtitle')}
           </p>
 
           {/* Global Search Bar */}
@@ -370,12 +373,12 @@ const Resources = () => {
             <svg className="w-6 h-6 text-gray-400 absolute left-6 top-1/2 transform -translate-y-1/2 z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
             <input 
               type="text" 
-              placeholder="Rechercher un thème, une vidéo, un chant..." 
+              placeholder={t('resources.searchPlaceholder')} 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full py-4 pl-14 pr-4 font-serif text-[#1B1B4D] text-lg outline-none rounded-full bg-transparent border-none placeholder-gray-400"
             />
-            <Button variant="primary" className="rounded-full px-8 whitespace-nowrap hidden sm:block">Chercher</Button>
+            <Button variant="primary" className="rounded-full px-8 whitespace-nowrap hidden sm:block">{t('common.search')}</Button>
           </div>
         </Container>
       </section>
@@ -419,7 +422,7 @@ const Resources = () => {
         isOpen={!!lightboxImg} 
         onClose={() => setLightboxImg(null)} 
         size="lg"
-        title="Galerie d'Inculturation"
+        title={t('resources.inculturation.galleryTitle')}
       >
         {lightboxImg && (
           <div className="w-full flex flex-col items-center">

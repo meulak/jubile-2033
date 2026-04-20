@@ -11,22 +11,283 @@
     "en": "English",
     "it": "Italiano"
   },
+  "common": {
+    "readMore": "Leggi tutto",
+    "backToHome": "Torna alla home",
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "search": "Cerca",
+    "searchPlaceholder": "Cerca...",
+    "email": "Email",
+    "emailPlaceholder": "tua@email.com",
+    "searchAria": "Avvia ricerca",
+    "clearSearch": "Cancella ricerca",
+    "noSuggestions": "Nessun suggerimento rapido trovato.",
+    "viewAllResults": "Vedi tutti i risultati per \"{{query}}\"",
+    "download": "Scarica",
+    "share": "Condividi",
+    "types": {
+      "article": "Articolo",
+      "resource": "Risorsa",
+      "person": "Persona"
+    },
+    "categories": {
+      "history": "Storia",
+      "community": "Comunità",
+      "bible": "Bibbia",
+      "resources": "Risorse",
+      "culture": "Cultura",
+      "heritage": "Eredità",
+      "practice": "Pratica"
+    }
+  },
+  "article": {
+    "shareAlert": "Condivisione su {{platform}} : Simulazione pop-up social.",
+    "commentSuccess": "Grazie! Il tuo commento è stato inviato ed è in attesa di approvazione.",
+    "tocTitle": "In questo articolo",
+    "authorRole": "Autore ospite",
+    "prev": "Articolo Precedente",
+    "next": "Articolo Successivo",
+    "relatedTitle": "Argomenti correlati"
+  },
+  "newsletter": {
+    "success": "Grazie! Controlla la tua casella di posta per confermare l'iscrizione.",
+    "error": {
+      "empty": "Inserisci un indirizzo email.",
+      "invalid": "Formato email non valido."
+    }
+  },
   "home": {
     "heroTitle": "L'Africa fa parte della storia della salvezza",
-    "heroDescription": "Scopri 2000 anni di continua presenza cristiana, dalle origini ai giorni nostri.",
+    "heroDescription": "Scopri 2000 ans de continua presenza cristiana, dalle origini ai giorni nostri.",
     "heroBtnPrimary": "Esplora",
     "heroBtnSecondary": "Saperne di più",
     "jubileeTitle": "Giubileo della Redenzione 2033",
     "jubileeDesc": "Commemorazione di 2000 anni di fede, speranza e carità.",
+    "stats": {
+      "year": "Anno del Giubileo",
+      "presence": "Di Presenza Cristiana",
+      "regions": "Regioni Continentali"
+    },
     "mapTitle": "Luoghi biblici in Africa",
+    "mapPlaceholder": "Mappa interattiva dei siti biblici africani (Leaflet.js)",
     "newsTitle": "Ultime Notizie",
-    "ctaTitle": "Partecipa al Progetto"
+    "ctaTitle": "Partecipa al Progetto",
+    "ctaDesc": "Unisciti a questo movimento storico. Sia attraverso la preghiera, il sostegno o lo studio, hai un posto nel Giubileo 2033.",
+    "ctaBtn": "Scopri Come",
+    "articles": {
+      "art1": {
+        "title": "Scoperta in Egitto",
+        "excerpt": "Nuovi scavi rivelano antichi manoscritti cristiani vicino al Mar Rosso."
+      },
+      "art2": {
+        "title": "Sinodo Africano",
+        "excerpt": "I vescovi si riuniscono per preparare il grande Giubileo 2033."
+      },
+      "art3": {
+        "title": "Traduzioni Bibliche",
+        "excerpt": "Pubblicazione di testi sacri in 5 nuove lingue locali."
+      },
+      "art4": {
+        "title": "Il Viaggio dei Martiri",
+        "excerpt": "Mostra virtuale sul patrimonio dei primi cristiani del Nord Africa."
+      }
+    }
+  },
+  "bible": {
+    "heroTitle": "L'Africa nella Bibbia",
+    "heroSubtitle": "Scopri come l'Africa e i suoi popoli siano intimamente legati alla storia sacra, formando le origini di una fede millenaria incrollabile.",
+    "tab1": "Le Radici",
+    "tab2": "La Sapienza",
+    "tab3": "L'Esilio",
+    "tab4": "Le Primizie",
+    "racines": {
+      "title": "Le Radici: Abramo e l'Egitto",
+      "p1": "La ricca storia del continente africano è profondamente radicata nelle storie dei patriarchi. Abramo trovò rifugio in Egitto durante la carestia, segnando il primo forte legame di interdipendenza tra la promessa originale di Israele e la vasta terra protettiva dell'Africa.",
+      "p2": "Nel corso dei secoli, la nazione di Israele si è sviluppata all'interno del potente antico Egitto, assorbendo inevitabilmente la sua cultura, architettura e saggezza prima di iniziare le grande Esodo di salvezza verso la Terra Promessa.",
+      "p3": "Il Sinai e il deserto ardente, questo ponte mistico che collega geograficamente e religiosamente l'Africa al Medio Oriente, è diventato la maestosa culla della Legge, della Rivelazione e dell'eterna Alleanza divina.",
+      "cta": "Leggi l'articolo completo",
+      "quote1": "Il Signore disse ad Abram: 'Lascia il tuo paese, la tua parentela e la casa di tuo padre, e va' verso il paese che io ti mostrerò.'",
+      "ref1": "Genesi 12:1",
+      "quote2": "Questi sono i nomi dei figli d'Israele che vennero in Egitto...",
+      "ref2": "Esodo 1:1-5"
+    },
+    "sagesse": {
+      "title": "La Sapienza: La Regina di Saba e Salomone",
+      "p1": "Il sontuoso e leggendario incontro tra il prestigioso Re Salomone, dotato di saggezza divina, e la Regina di Saba segna un'alleanza diplomatica, economica, ma anche profondamente spirituale tra la radiosa Gerusalemme e il ricco Corno d'Africa.",
+      "p2": "Oltre all'oro, alle pietre preziose e alle spezie che la Bibbia dettaglia in profusione, questi scambi hanno fuso e modellato un immaginario religioso e dotto profondamente condiviso da entrambi i popoli.",
+      "p3": "Questo patrimonio politico-religioso rimane estremamente vivace oggi, specialmente nelle tradizioni ancestrali etiopi che collegano fedelmente la loro potente stirpe reale (i Negus) a questo maestoso incontro biblico all'incrocio di due mondi.",
+      "cta": "Visualizza Biografia",
+      "quote1": "La regina di Saba sentì parlare della fama di Salomone dovuta al nome del Signore. Venne quindi a metterlo alla prova con enigmi. Arrivò a Gerusalemme con un seguito imponente...",
+      "ref1": "1 Re 10:1-13"
+    },
+    "exil": {
+      "title": "Esilio e Accoglienza: Gesù in Egitto",
+      "p1": "La Fuga in Egitto è uno dei momenti fondanti e più simbolici dell'alba del Nuovo Testamento. Di fronte alla follia distruttrice et alla gelosia mortale del re Erode, fu la benevola Africa ad offrire istantaneamente un rifugio salvifico alla Sacra Famiglia.",
+      "p2": "L'Africa è sempre stata celebrata come terra d'asilo per eccellenza nella Bibbia, il luogo provvidenziale dove il divino e l'umano innocenti e messi alle strette trovano conforto, risorse e protezione ultima per garantire e preservare la stirpe.",
+      "p3": "Questo simbolismo spirituale di incredibile potenza risuona ancora oggi: la terra d'esilio di ieri è il fondamento originale di domani. Il continente africano è glorificato per aver protetto fisicamente Colui che è venuto in spirito per proteggere e salvare il mondo intero.",
+      "cta": "Scopri il Simbolismo",
+      "quote1": "Dopo che furono partiti, ecco che l'Angelo del Signore appare in sogno a Giuseppe e gli dice: 'Alzati; prendi il bambino e sua madre, e fuggi in Egitto. Resta là finché non ti avvertirò...'",
+      "ref1": "Matteo 2:13-15"
+    },
+    "premices": {
+      "title": "Le Primizie della Salvezza: L'Eunuque Etiope",
+      "p1": "Sulla strada polverosa e deserta che scende da Gerusalemme verso Gaza, un incontro fondante ordinato dallo Spirito Santo avvenne tra l'apostolo Filippo e un alto dignitario magnificamente vestito: l'eunuque, il potente ministro della Candace, regina d'Etiopia.",
+      "p2": "Cercando ardentemente e con umiltà di comprendere i vecchi e complessi testi del profeta Isaia dal sedile del suo carro reale, la luce totale gli fu improvvisamente rivelata e data dall'apostolo entusiasta.",
+      "p3": "Al suo sereno discendere nell'acqua provvidenziale, divenne il primo alto rappresentante africano formalmente battezzato come riportato negli Atti, portando con sé con orgoglio il primo seme vivente del cristianesimo da trapiantare nel cuore profondo dell'Africa per la sua rapidissima espansione millenaria futura.",
+      "cta": "Leggi il Capitolo degli Atti",
+      "quote1": "Ora, c'era un Etiope, un eunuco, alto dignitario di Candace, regina di Etiopia, e sovrintendente di tutti i suoi tesori. Era venuto a Gerusalemme per adorare...",
+      "ref1": "Atti 8:26-40"
+    },
+    "related": {
+      "title": "Potrebbe interessarti anche",
+      "art1": {
+        "title": "Sant'Agostino di Tagaste",
+        "description": "Scopri il contributo monumentale ed essenziale della teologia dell'Africa settentrionale al dogma della Chiesa."
+      },
+      "art2": {
+        "title": "Manoscritti di Timbuctù",
+        "description": "Un tuffo mozzafiato nella feroce conservazione delle sacre scritture nel cuore delle sabbie millenarie del Mali."
+      },
+      "art3": {
+        "title": "Arte Paleocristiana",
+        "description": "Come i mosaici romani raffiguravano il vibrante cristianesimo africano dei primi secoli."
+      }
+    }
+  },
+  "heritage": {
+    "title": "Eredità e Storia",
+    "subtitle": "Esplora l'affascinante cronologia di 2000 anni di continua presenza cristiana nel continente africano.",
+    "filters": {
+      "all": "Tutti",
+      "antiquity": "Antichità",
+      "middle_ages": "Medioevo",
+      "modern": "Moderno"
+    },
+    "timeline": {
+      "event1": { "year": "50 DC", "title": "L'Eunuque Éthiopien", "desc": "Il ministro della Candace viene battezzato dall'apostolo Filippo, piantando i primissimi semi del Vangelo nel cuore del continente africano." },
+      "event2": { "year": "180 DC", "title": "I Martiri Scillitani", "desc": "Prime tracce documentate di un cristianesimo fiorente nel Nord Africa, tragicamente suggellate dal martirio di 12 eroici cristiani a Cartagine." },
+      "event3": { "year": "251 DC", "title": "Cipriano di Cartagine", "desc": "Eletto brillante vescovo di Cartagine, unificò la Chiesa africana durante le brutali persecuzioni de Decio e strutturò magistralmente la teologia ecclesiologica." },
+      "event4": { "year": "354-430", "title": "Sant'Agostino d'Ippona", "desc": "Il più grande pensatore dell'antichità cristiana. Le sue immense opere, come La Città di Dio, modellano ancora oggi tutta la teologia occidentale." },
+      "event5": { "year": "451 DC", "title": "Il Concilio di Calcedonia", "desc": "Grande scisma che coinvolge la potente Chiesa copta d'Egitto che mantiene costantemente la propria stirpe teologica (miafisimo) attraverso i secoli." },
+      "event6": { "year": "700-1400", "title": "Il Periodo Medievale", "desc": "Espansione fulminea dell'Islam nel Nord Africa. La maestosa Chiesa ortodossa etiope continua a prosperare, isolata nelle sue montagne (chiese rupestri di Lalibela)." },
+      "event7": { "year": "1500-1800", "title": "Le Prime Missioni Moderne", "desc": "Arrivo di missionari cattolici europei sulle coste (soprattutto in Congo), portando a un cristianesimo di corte e a nuove complesse cristianizzazioni." },
+      "event8": { "year": "1900-2000", "title": "Rinnovo e Indipendenza", "desc": "Forte e vibrante emersione delle Chiese di Istituzione Africana (AIC), riappropriazione della fede e incredibile esplosione demografica del cristianisme nel continente." },
+      "event9": { "year": "2033", "title": "Giubileo della Redenzione", "desc": "Celebrazione spirituale mondiale dei 2000 anni della salvezza cristiana. L'Africa si posiziona definitivamente come cuore pulsante e futuro del cristianesimo universale." }
+    },
+    "thinkersTitle": "I Grandi Pensatori dell'Antichità",
+    "contemporaryTitle": "Teologi Contemporanei",
+    "contemporarySubtitle": "I pensatori di oggi che modellano il pensiero cristiano africano",
+    "mapTitle": "La Mappa Storica",
+    "mapDesc": "Esplora visivamente i grandi centri religiosi da Cartagine ad Alessandria passando per Axum.",
+    "mapPlaceholder": "La fase successiva integrerà la mappatura interattiva che consentirà di cliccare su Cartagine, Ippona, Etiopia ed Egitto per ricchi dettagli storici."
+  },
+  "resources": {
+    "title": "Area Risorse",
+    "subtitle": "Esplora, leggi, ascolta e scarica i nostri preziosi toolkit, le schede didattiche e i nostri fantastici repertori multimediali inculturati.",
+    "searchPlaceholder": "Cerca un tema, un video, un canto...",
+    "tabs": {
+      "tools": "Cassetta degli attrezzi",
+      "multimedia": "Multimedia",
+      "inculturation": "Inculturazione"
+    },
+    "outils": {
+      "filters": {
+        "levels": {
+          "all": "Tutti i livelli",
+          "children": "Bambini",
+          "teens": "Adolescenti",
+          "adults": "Adulti"
+        },
+        "themes": {
+          "all": "Tutti i soggetti",
+          "bible": "Bibbia",
+          "history": "Storia",
+          "practice": "Pratica"
+        }
+      },
+      "results": "Risorsa(e) trovata(e)",
+      "noResults": "Nessuna risorsa corrisponde alla tua ricerca."
+    },
+    "multimedia": {
+      "tabs": {
+        "videos": "Video (YouTube)",
+        "podcasts": "Podcast",
+        "playlists": "Playlist musicali"
+      }
+    },
+    "inculturation": {
+      "riteCongolais": {
+        "title": "Il Rito Zairese (Congolese)",
+        "p1": "Il Messale Romano per le Diocesi dello Zaire, promulgato nel 1988 da San Giovanni Paolo II, costituisce l'esempio più eclatante di inculturazione liturgica riuscita e ufficialmente approvata dalla Santa Sede.",
+        "p2": "Il suo genio risiede nell'integrazione armoniosa dell'anima africana: l'ingresso trionfale ritmato, le invocazioni degli antenati giustificati in Cristo e la forma dialogata dell'omelia. Tutto il corpo prega, la danza diventa liturgia.",
+        "cta": "Scarica Messale (PDF)"
+      },
+      "chantsTitle": "Biblioteca dei Canti",
+      "regionsTitle": "Diversità delle Tradizioni Locali",
+      "galleryTitle": "Galleria Ispirante"
+    }
+  },
+  "community": {
+    "heroTitle": "Unisciti alla Comunità",
+    "heroSubtitle": "Partecipa al grande concorso artistico Giubileo 2033, invia le tue testimonianze e discuti con i membri di tutto il continente.",
+    "btnParticipate": "Partecipa ora",
+    "btnGallery": "Vedi la Galleria",
+    "concours": {
+      "title": "Gesù visto dall'Africa",
+      "desc": "Il grande concorso creativo del Giubileo 2033 è aperto! Esprimi la tua visione della fede cristiana attraverso l'arte visiva, la musica o il video.",
+      "datesTitle": "Date chiave e premi",
+      "open": "Apertura:",
+      "close": "Chiusura:",
+      "results": "Risultati:",
+      "prize": "Dotazione Globale",
+      "prizeDesc": "Diviso tra i vincitori delle tre categorie.",
+      "downloadRules": "Scarica Regolamento (PDF)",
+      "form": {
+        "title": "Condividi la tua Creatività",
+        "success": "Sottomissione riuscita!",
+        "successDesc": "La tua opera è stata trasmessa con successo alla giuria. Ti è stata inviata un'e-mail di conferma. Grazie per la partecipazione!",
+        "uploadPlaceholder": "Trascina e rilascia il tuo file qui",
+        "uploadFormats": "JPG/PNG (Max 10MB), MP4 (Max 50MB), MP3 (Max 5MB)",
+        "consent": "Accetto il regolamento del concorso e concedo i diritti di visualizzazione su questa piattaforma.",
+        "submit": "Invia opera",
+        "submitting": "Caricamento in corso"
+      }
+    },
+    "forum": {
+      "title": "Discussioni Recenti",
+      "openThread": "Apri un thread",
+      "replies": "Risposte",
+      "explore": "Esplora il forum completo"
+    },
+    "partners": "Sostenuto dai nostri partner e sponsor"
+  },
+  "sidebar": {
+    "newsletter": {
+      "title": "Iscriviti alla Newsletter",
+      "desc": "Ricevi le nostre ultime scoperte storiche e riflessioni teologiche direttamente nella tua casella di posta.",
+      "placeholder": "tuo@email.com",
+      "btn": "Iscriviti"
+    },
+    "share": "Condividi"
   },
   "footer": {
     "about": "Chi Siamo",
     "content": "Contenuto",
     "engagement": "Impegno",
     "social": "Social Media",
+    "links": {
+      "history": "La nostra storia",
+      "vision": "Visione Giubileo 2033",
+      "team": "La squadra",
+      "join": "Unisciti alla comunità",
+      "events": "Eventi",
+      "contact": "Contattaci"
+    },
+    "legal": {
+      "mentions": "Note legali",
+      "privacy": "Informativa sulla privacy"
+    },
     "copyright": "© 2026 Impronte Africane di Gesù"
   }
 }

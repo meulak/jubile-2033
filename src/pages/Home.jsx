@@ -6,47 +6,50 @@ import Container from '../components/layout/Container';
 import Section from '../components/layout/Section';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
+import SEOMeta from '../components/common/SEOMeta';
+import ResponsiveImage from '../components/common/ResponsiveImage';
+import { getOrganizationSchema } from '../utils/schemaHelpers';
 
 // --- MOCK DATA ---
-const mockArticles = [
+const getMockArticles = (t) => [
   { 
     id: 1, 
     date: '12 Oct 2026', 
-    title: 'Découverte en Égypte', 
-    excerpt: 'Nouvelles fouilles révélant d\'anciens manuscrits chrétiens près de la mer Rouge.', 
-    category: 'Histoire',
+    title: t('home.articles.art1.title'), 
+    excerpt: t('home.articles.art1.excerpt'), 
+    category: t('common.categories.history'),
     emoji: '🏺'
   },
   { 
     id: 2, 
     date: '05 Nov 2026', 
-    title: 'Synode Africain', 
-    excerpt: 'Les évêques se réunissent pour préparer le grand Jubilé 2033.', 
-    category: 'Communauté',
+    title: t('home.articles.art2.title'), 
+    excerpt: t('home.articles.art2.excerpt'), 
+    category: t('common.categories.community'),
     emoji: '👥'
   },
   { 
     id: 3, 
     date: '20 Déc 2026', 
-    title: 'Traductions Bibliques', 
-    excerpt: 'Publication des textes sacrés en 5 nouvelles langues locales.', 
-    category: 'Bible',
+    title: t('home.articles.art3.title'), 
+    excerpt: t('home.articles.art3.excerpt'), 
+    category: t('common.categories.bible'),
     emoji: '📖'
   },
   { 
     id: 4, 
     date: '15 Jan 2027', 
-    title: 'Parcours des Martyrs', 
-    excerpt: 'Exposition virtuelle sur l\'héritage des premiers chrétiens d\'Afrique du Nord.', 
-    category: 'Ressources',
+    title: t('home.articles.art4.title'), 
+    excerpt: t('home.articles.art4.excerpt'), 
+    category: t('common.categories.resources'),
     emoji: '🏛️'
   },
 ];
 
-const mockStats = [
-  { number: '2033', description: 'Année du Jubilé' },
-  { number: '2000 ans', description: 'De Présence Chrétienne' },
-  { number: '5', description: 'Régions Continentales' },
+const getMockStats = (t) => [
+  { number: '2033', description: t('home.stats.year') },
+  { number: '2000 ans', description: t('home.stats.presence') },
+  { number: '5', description: t('home.stats.regions') },
 ];
 
 // --- ANIMATION VARIANTS ---
@@ -65,9 +68,16 @@ const itemVariants = {
 
 const Home = () => {
   const { t } = useTranslation();
+  const mockArticles = getMockArticles(t);
+  const mockStats = getMockStats(t);
 
   return (
     <div className="w-full">
+      <SEOMeta 
+        title={t('navigation.home')}
+        description={t('home.heroDescription')}
+        schema={getOrganizationSchema()}
+      />
       {/* 1. HERO SECTION */}
       <section className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1B1B4D] to-[#B85D3E]">
         {/* Ndop subtle stripe overlay */}
@@ -141,12 +151,14 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full h-[400px] md:h-[500px] bg-gradient-to-br from-[#F5F3ED] to-[#E5E3DD] rounded-xl shadow-md border border-[#D1D5DB] flex flex-col items-center justify-center overflow-hidden"
+            className="w-full h-[400px] md:h-[500px] rounded-xl shadow-md border border-[#D1D5DB] overflow-hidden"
           >
-            <span className="text-5xl mb-4" role="img" aria-label="Carte Afrique">🗺️</span>
-            <p className="text-[#5C5C4C] font-montserrat text-center px-4">
-              Carte interactive des sites bibliques africains (Leaflet.js)
-            </p>
+            {/* L'image "sample" est mondiale sur tous les environnements de test Cloudinary (cloudId "demo") */}
+            <ResponsiveImage 
+              src="sample" 
+              alt={t('home.mapPlaceholder')} 
+              priority={false}
+            />
           </motion.div>
         </Container>
       </Section>
@@ -189,10 +201,10 @@ const Home = () => {
               {t('home.ctaTitle')}
             </h3>
             <p className="opacity-80 max-w-2xl mx-auto mb-8 text-lg">
-              Rejoignez ce mouvement historique. Que ce soit par la prière, le soutien ou l'étude, vous avez une place dans le Jubilé 2033.
+              {t('home.ctaDesc')}
             </p>
             <Button variant="primary" size="lg" className="rounded-full">
-              Découvrir Comment
+              {t('home.ctaBtn')}
             </Button>
           </motion.div>
         </Container>

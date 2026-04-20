@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SearchBar from '../common/SearchBar';
 
 /**
  * Main application navigation header.
@@ -63,20 +64,24 @@ const Header = ({ activeLink = '/', onLanguageChange = () => {} }) => {
           ))}
         </nav>
 
-        {/* Language Selector Desktop */}
-        <div className="hidden lg:flex items-center space-x-2 font-montserrat text-sm font-medium">
-          {['EN', 'FR', 'IT'].map((lang) => (
-            <button
-              key={lang}
-              onClick={() => handleLangChange(lang)}
-              className={`hover:text-[#D4AF37] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded px-1
-                ${currentLang === lang ? 'text-[#D4AF37] font-bold' : 'text-gray-300'}
-              `}
-              aria-label={`Change language to ${lang}`}
-            >
-              {lang}
-            </button>
-          ))}
+        {/* Desktop Right Actions */}
+        <div className="hidden lg:flex items-center gap-4">
+          <SearchBar variant="header" placeholder={t('common.searchPlaceholder')} />
+          {/* Language Selector Desktop */}
+          <div className="flex items-center space-x-2 font-montserrat text-sm font-medium">
+            {['EN', 'FR', 'IT'].map((lang) => (
+              <button
+                key={lang}
+                onClick={() => handleLangChange(lang)}
+                className={`hover:text-[#D4AF37] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded px-1
+                  ${currentLang === lang ? 'text-[#D4AF37] font-bold' : 'text-gray-300'}
+                `}
+                aria-label={`Change language to ${lang}`}
+              >
+                {lang}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
