@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /preferences/
+Disallow: /search
+Disallow: /*.json
+Disallow: /*.json?
+
+Sitemap: https://impronte-africane.com/sitemap.xml
