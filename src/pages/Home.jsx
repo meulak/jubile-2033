@@ -79,7 +79,17 @@ const Home = () => {
         schema={getOrganizationSchema()}
       />
       {/* 1. HERO SECTION */}
-      <section className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1B1B4D] to-[#B85D3E]">
+      <section className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1B1B4D] via-[#1B1B4D]/90 to-[#B85D3E]">
+        {/* Background Image with Parallax-like zoom */}
+        <motion.img 
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.15 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          src={`${import.meta.env.BASE_URL}/assets/images/lalibela.png`}
+          alt="Lalibela Rock Churches Background"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        
         {/* Ndop subtle stripe overlay */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
@@ -89,6 +99,7 @@ const Home = () => {
         ></div>
         
         <Container className="relative z-10 text-center text-white px-4">
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

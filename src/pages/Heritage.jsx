@@ -22,17 +22,39 @@ const getMockTimeline = (t) => [
 ];
 
 const mockFathers = [
-  { id: 1, name: "Saint Augustin d'Hippone", dates: "354 - 430", bio: "Philosophe et théologien chrétien majeur, évêque d'Hippone (actuelle Annaba, Algérie). Ses écrits ont posé les fondations intellectuelles de l'Occident.", quote: "Tard je t'ai aimée, beauté ancienne et si nouvelle !" },
-  { id: 2, name: "Tertullien de Carthage", dates: "155 - 220", bio: "Le père fulgurant de la terminologie de la théologie latine. Il a forgé le concept de la Trinité et a ardemment défendu la foi face aux persécutions païennes.", quote: "Le sang des martyrs est une semence de chrétiens." },
-  { id: 3, name: "Cyprien de Carthage", dates: "200 - 258", bio: "Évêque brillant et martyr. Défenseur zélé de l'unité de l'Église face aux divisions intestines et grand organisateur des œuvres de charité.", quote: "Nul ne peut avoir Dieu pour Père, qui n'a l'Église pour Mère." }
+  { 
+    id: 1, 
+    name: "Saint Augustin d'Hippone", 
+    dates: "354 - 430", 
+    image: `${import.meta.env.BASE_URL}/assets/images/st_augustine.png`,
+    bio: "Le plus grand théologien de l'Antiquité, né à Thagaste. Son génie a forgé la pensée chrétienne universelle à travers des œuvres monumentales comme 'Les Confessions' et 'La Cité de Dieu'.", 
+    quote: "Tard je t'ai aimée, beauté ancienne et si nouvelle !" 
+  },
+  { 
+    id: 2, 
+    name: "Tertullien de Carthage", 
+    dates: "155 - 220", 
+    image: null,
+    bio: "Le 'Père de la théologie latine'. Premier grand écrivain chrétien à utiliser le latin, il a inventé le terme de 'Trinité' et a défendu l'Église avec une ferveur inégalée.", 
+    quote: "Le sang des martyrs est une semence de chrétiens." 
+  },
+  { 
+    id: 3, 
+    name: "Cyprien de Carthage", 
+    dates: "200 - 258", 
+    image: null,
+    bio: "Évêque et martyr, il fut le symbole de l'unité de l'Église. Sa théologie sur l'unité ecclésiale demeure une référence absolue pour le dialogue entre chrétiens.", 
+    quote: "Nul ne peut avoir Dieu pour Père, qui n'a l'Église pour Mère." 
+  }
 ];
 
 const mockContemporary = [
-  { id: 1, name: "Jean-Marc Ela", role: "Théologien du Libérationnisme", bio: "Prêtre camerounais qui a développé la théologie sous l'arbre, reconnectant l'Évangile aux luttes paysannes et à la pauvreté.", emoji: "✍️" },
-  { id: 2, name: "John Mbiti", role: "Philosophe des Religions", bio: "Théologien kényan, pionnier monumental de l'étude des religions traditionnelles africaines en lien avec la foi chrétienne.", emoji: "📚" },
-  { id: 3, name: "Kwame Bediako", role: "Historien de l'Identité", bio: "Affinant la théologie interculturelle au Ghana, il démontrait que l'Africain trouve dans le Christ la plénitude de sa propre identité.", emoji: "🌍" },
-  { id: 4, name: "Mercy Amba Oduyoye", role: "Théologie Féministe", bio: "Fondatrice ghanéenne du Cercle des Théologiennes Africaines, ouvrant la voie à la voix des femmes dans la théologie continentale.", emoji: "🕊️" }
+  { id: 1, name: "Jean-Marc Ela", role: "Cameroun", bio: "Artisan d'une 'théologie sous l'arbre', il a su rendre l'Évangile vivant dans les réalités sociales du continent.", emoji: "✍️" },
+  { id: 2, name: "John Mbiti", role: "Kenya", bio: "Pionnier de l'étude des religions traditionnelles africaines, il a montré que 'l'Africain est naturellement religieux'.", emoji: "📚" },
+  { id: 3, name: "Laurenti Magesa", role: "Tanzanie", bio: "Grand penseur de l'éthique africaine, il a exploré la richesse morale des traditions ancestrales à la lumière du Christ.", emoji: "🌍" },
+  { id: 4, name: "Mercy Amba Oduyoye", role: "Ghana", bio: "Fondatrice du Cercle des Théologiennes Africaines, elle a donné une voix puissante et spirituelle aux femmes africaines.", emoji: "🕊️" }
 ];
+
 
 // --- SUB-COMPONENTS ---
 const TimelineItemDesktop = ({ item, index, t }) => {
@@ -203,13 +225,18 @@ const Heritage = () => {
               >
                 <div className="w-full flex justify-center mb-6">
                   <div className="w-24 h-24 rounded-full bg-[#1B1B4D] border-4 border-[#D4AF37] flex items-center justify-center overflow-hidden shadow-lg">
-                    <span className="text-3xl text-[#D4AF37] font-playfair">{father.name.charAt(0)}</span>
+                    {father.image ? (
+                      <img src={father.image} alt={father.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <span className="text-3xl text-[#D4AF37] font-playfair">{father.name.charAt(0)}</span>
+                    )}
                   </div>
                 </div>
                 <div className="text-center mb-6">
                   <h4 className="font-playfair text-xl font-bold text-[#1B1B4D] mb-1">{father.name}</h4>
                   <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">{father.dates}</span>
                 </div>
+
                 <p className="font-serif text-[#5C5C4C] text-sm text-center mb-6 flex-grow">{father.bio}</p>
                 
                 <blockquote className="border-l-[3px] border-[#D4AF37] pl-4 italic text-[#B85D3E] font-playfair font-medium text-sm mb-6">
@@ -255,12 +282,18 @@ const Heritage = () => {
             <p className="font-montserrat text-white/80 max-w-2xl mx-auto">{t('heritage.mapDesc')}</p>
           </div>
           
-          <div className="w-full h-[300px] md:h-[500px] bg-[#F5F3ED] rounded-xl shadow-2xl relative overflow-hidden flex flex-col items-center justify-center p-6 border-4 border-[#D4AF37] group">
-            {/* Visual map placeholder overlay */}
-            <span className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-500">🌍</span>
-            <p className="text-[#1B1B4D] font-playfair text-2xl font-bold mb-2">Leaflet Interactive Map</p>
-            <p className="text-[#5C5C4C] font-montserrat text-sm text-center max-w-md">{t('heritage.mapPlaceholder')}</p>
+          <div className="w-full h-[300px] md:h-[500px] bg-[#F5F3ED] rounded-xl shadow-2xl relative overflow-hidden flex flex-col items-center justify-center border-4 border-[#D4AF37] group">
+            <img 
+              src={`${import.meta.env.BASE_URL}/assets/images/carthage.png`} 
+              alt="Carthage Christian Heritage" 
+              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-[20s] ease-linear" 
+            />
+            <div className="relative z-10 text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border border-[#D4AF37]/30 max-w-lg mx-auto">
+              <h4 className="font-playfair text-2xl font-bold text-[#1B1B4D] mb-2">{t('heritage.mapTitle')}</h4>
+              <p className="text-[#5C5C4C] font-montserrat text-sm">{t('heritage.mapPlaceholder')}</p>
+            </div>
           </div>
+
         </Container>
       </Section>
     </div>

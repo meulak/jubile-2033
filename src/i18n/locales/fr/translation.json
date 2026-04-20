@@ -41,253 +41,106 @@
       "practice": "Pratique"
     }
   },
-  "article": {
-    "shareAlert": "Partage sur {{platform}} : Simulation d'ouverture de pop-up sociale.",
-    "commentSuccess": "Merci ! Votre commentaire a été soumis et est en attente d'approbation.",
-    "tocTitle": "Dans cet article",
-    "authorRole": "Auteur invité",
-    "prev": "Article Précédent",
-    "next": "Article Suivant",
-    "relatedTitle": "Sur le même sujet"
-  },
-  "newsletter": {
-    "success": "Merci ! Veuillez vérifier votre boîte mail pour confirmer votre inscription.",
-    "error": {
-      "empty": "Veuillez entrer une adresse email.",
-      "invalid": "Format d'email invalide."
-    }
-  },
   "home": {
-    "heroTitle": "L'Afrique fait partie de l'histoire du salut",
-    "heroDescription": "Découvrez 2000 ans de présence chrétienne continue, des origines à nos jours.",
-    "heroBtnPrimary": "Explorer",
-    "heroBtnSecondary": "En savoir plus",
-    "jubileeTitle": "Jubilé de la Rédemption 2033",
-    "jubileeDesc": "Commémorant 2000 ans de foi, d'espérance et de charité.",
+    "heroTitle": "L'Afrique : Berceau Méconnu de la Chrétienté",
+    "heroDescription": "Explorez 2000 ans de foi ininterrompue. De la fuite en Égypte aux cathédrales de Lalibela, découvrez comment le continent a façonné et protégé le message du Christ.",
+    "heroBtnPrimary": "Commencer l'Exploration",
+    "heroBtnSecondary": "Notre Vision",
+    "jubileeTitle": "En Route vers le Jubilé 2033",
+    "jubileeDesc": "Nous préparons le bimillénaire de la Rédemption. Une célébration mondiale où l'Afrique, riche de son héritage et de sa ferveur, occupe une place centrale.",
     "stats": {
-      "year": "Année du Jubilé",
-      "presence": "De Présence Chrétienne",
-      "regions": "Régions Continentales"
+      "year": "Horizon 2033",
+      "presence": "2 Millénaires de Foi",
+      "regions": "Un Continent Uni"
     },
-    "mapTitle": "Lieux bibliques en Afrique",
-    "mapPlaceholder": "Carte interactive des sites bibliques africains (Leaflet.js)",
-    "newsTitle": "Dernières Actualités",
-    "ctaTitle": "Participez au Projet",
-    "ctaDesc": "Rejoignez ce mouvement historique. Que ce soit par la prière, le soutien ou l'étude, vous avez une place dans le Jubilé 2033.",
-    "ctaBtn": "Découvrir Comment",
+    "mapTitle": "Géographie Sacrée de l'Afrique",
+    "mapPlaceholder": "Découvrez les sites où l'histoire biblique a rencontré la terre africaine.",
+    "newsTitle": "Chronique du Jubilé",
+    "ctaTitle": "Écrivons l'Histoire Ensemble",
+    "ctaDesc": "Votre voix, vos arts et vos prières sont les pierres vivantes de cet édifice. Rejoignez la communauté Impronte Africane pour préparer 2033.",
+    "ctaBtn": "Devenir Membre",
     "articles": {
       "art1": {
-        "title": "Découverte en Égypte",
-        "excerpt": "Nouvelles fouilles révélant d'anciens manuscrits chrétiens près de la mer Rouge."
+        "title": "Le Mystère des Manuscrits d'Aksoum",
+        "excerpt": "Plongée dans les archives de l'une des plus anciennes nations chrétiennes au monde."
       },
       "art2": {
-        "title": "Synode Africain",
-        "excerpt": "Les évêques se réunissent pour préparer le grand Jubilé 2033."
+        "title": "Théologie de l'Inculturation",
+        "excerpt": "Comment les rythmes et symboles africains enrichissent la liturgie universelle."
       },
       "art3": {
-        "title": "Traductions Bibliques",
-        "excerpt": "Publication des textes sacrés en 5 nouvelles langues locales."
+        "title": "Les Femmes de l'Église Primitive",
+        "excerpt": "Le rôle déterminant de St-Monique et des martyres de Carthage dans la foi."
       },
       "art4": {
-        "title": "Parcours des Martyrs",
-        "excerpt": "Exposition virtuelle sur l'héritage des premiers chrétiens d'Afrique du Nord."
+        "title": "L'Écho du Désert",
+        "excerpt": "L'héritage des Pères du Désert égyptiens dans le monachisme moderne."
       }
     }
   },
   "bible": {
-    "heroTitle": "L'Afrique dans la Bible",
-    "heroSubtitle": "Découvrez comment l'Afrique et ses peuples sont intimement liés à l'histoire sainte, formant les origines d'une foi millénaire inébranlable.",
+    "heroTitle": "L'Empreinte de l'Afrique dans l'Écriture",
+    "heroSubtitle": "Du jardin d'Éden à l'Église des Actes, le continent africain n'est pas en marge de la Bible : il en est l'un des théâtres principaux.",
     "tab1": "Les Racines",
     "tab2": "La Sagesse",
-    "tab3": "L'Exil",
+    "tab3": "Le Refuge",
     "tab4": "Les Prémices",
     "racines": {
-      "title": "Les Racines : Abraham et L'Égypte",
-      "p1": "L'histoire foisonnante du continent africain est profondément ancrée dans les récits des patriarches. Abraham a trouvé refuge en Égypte lors de la famine, marquant ainsi le premier lien d'interdépendance fort entre la promesse originelle d'Israël et la vaste terre protectrice d'Afrique.",
-      "p2": "À travers les siècles, la nation d'Israël s'est développée au sein de la puissante Égypte antique, s'imprégnant inévitablement de sa culture, de son architecture et de sa sagesse avant d'entamer le grand Exode salvateur vers la Terre Promise.",
-      "p3": "Le Sinaï et le désert brûlant, ce pont mystique qui relie géographiquement et religieusement l'Afrique au Moyen-Orient, sont devenus le berceau majestueux de la Loi, de la Révélation et de l'Alliance divine éternelle.",
-      "cta": "Lire l'Article Complet",
-      "quote1": "Le Seigneur dit à Abram : « Quitte ton pays, ta parenté et la maison de ton père, et va vers le pays que je te montrerai. »",
-      "ref1": "Genèse 12:1",
-      "quote2": "Voici les noms des fils d'Israël qui vinrent en Égypte...",
-      "ref2": "Exode 1:1-5"
+      "title": "L'Égypte : Creuset du Peuple de Dieu",
+      "p1": "L'Afrique est présente dès l'aube de l'humanité. Le fleuve Gihon, l'un des bras de l'Éden, parcourait la terre de Koush. C'est en Égypte qu'Abraham trouva secours, et c'est sur cette même terre que le clan de Jacob devint une nation nombreuse.",
+      "p2": "Le séjour en Afrique a forgé l'identité d'Israël. Les pyramides et la sagesse égyptienne ont été le décor de la formation de Moïse, 'instruit dans toute la sagesse des Égyptiens', avant qu'il ne reçoive la Loi au Sinaï.",
+      "p3": "L'Afrique n'est pas qu'un refuge temporaire ; elle est le sol où la promesse faite aux patriarches s'est enracinée et multipliée.",
+      "cta": "Explorer les fondements",
+      "quote1": "D'Égypte, j'ai appelé mon fils.",
+      "ref1": "Osée 11:1",
+      "quote2": "Le nom du second fleuve est Gihon ; il entoure tout le pays de Koush.",
+      "ref2": "Genèse 2:13"
     },
     "sagesse": {
-      "title": "La Sagesse : La Reine de Saba et Salomon",
-      "p1": "La rencontre somptueuse et légendaire entre le prestigieux Roi Salomon, doté d'une sagesse divine, et la Reine de Saba marque une alliance diplomatique, économique, mais aussi profondément spirituelle entre la rayonnante Jérusalem et la riche corne de l'Afrique.",
-      "p2": "Au-delà de l'or, des pierres précieuses et des aromates dont la Bible détaille profusionnement le transport, ces échanges ont fusionné et modelé un imaginaire religieux et savant profondément partagé par les deux peuples.",
-      "p3": "Cet héritage politico-religieux demeure extrêmement vivace de nos jours, tout particulièrement dans les traditions éthiopiennes ancestrales qui rattachent et lient fidèlement leur puissante lignée royale (les Négus) à cette majestueuse rencontre biblique au croisement de deux mondes.",
-      "cta": "Voir la Biographie",
-      "quote1": "La reine de Saba apprit la renommée que Salomon devait au nom du Seigneur. Elle vint donc l'éprouver par des énigmes. Elle arriva à Jérusalem avec une suite imposante...",
-      "ref1": "1 Rois 10:1-13"
+      "title": "La Splendeur du Sud : Salomon et Saba",
+      "p1": "La rencontre entre Salomon et la Reine de Saba symbolise l'union entre la sagesse révélée de Jérusalem et la dignité souveraine de l'Afrique. La Reine de Saba n'est pas venue en simple spectatrice, mais pour éprouver la sagesse par ses propres énigmes.",
+      "p2": "Cette rencontre a laissé une empreinte indélébile, particulièrement en Éthiopie, où la tradition rapporte que cette union a donné naissance à une lignée royale gardienne de l'Arche d'Alliance.",
+      "p3": "La Bible célèbre cette femme 'venue des extrémités de la terre' pour chercher la vérité, devenant un modèle de quête spirituelle pour toute l'humanité.",
+      "cta": "L'héritage d'Aksoum",
+      "quote1": "La Reine de Saba apprit la renommée que Salomon devait au nom de l'Éternel, et elle vint pour l'éprouver par des énigmes.",
+      "ref1": "1 Rois 10:1"
     },
     "exil": {
-      "title": "L'Exil et l'Accueil : Jésus en Égypte",
-      "p1": "La Fuite en Égypte est l'un des moments fondateurs et des plus symboliques de l'aube du Nouveau Testament. Face à la folie destructrice et jalousie mortelle du roi Hérode, c'est l'Afrique bienveillante qui offre instantanément le refuge salvateur à la Sainte Famille.",
-      "p2": "L'Afrique a de tous temps été célébrée comme la terre d'asile par excellence dans la Bible, l'endroit providentiel où le divin et l'humain innocents et acculés trouvent réconfort, ressources et protection ultime pour garantir et préserver la lignée.",
-      "p3": "Cette symbolique spirituelle d'une puissance inouïe résonne encore de nos jours : la terre de l'exil d'hier est le socle originel de demain. Le continent africain est glorifié pour avoir protégé physiquement Celui qui venait en esprit pour protéger et sauver le monde entier.",
-      "cta": "Découvrir la Symbolique",
-      "quote1": "Après leur départ, voici que l'Ange du Seigneur apparaît en songe à Joseph et lui dit : « Lève-toi ; prends l'enfant et sa mère, et fuis en Égypte. Reste là-bas jusqu'à ce que je t'avertisse... »",
-      "ref1": "Matthieu 2:13-15"
+      "title": "L'Afrique : Sanctuaire de la Sainte Famille",
+      "p1": "Quand l'Enfant-Jésus fut menacé par la fureur d'Hérode, c'est vers l'Afrique que Joseph fut dirigé. Le continent est devenu le protecteur du Sauveur, offrant l'asile à Celui qui venait sauver le monde.",
+      "p2": "Ce passage consacre l'Égypte et, par extension, l'Afrique comme une terre sainte, un lieu de préservation divine. De nombreux monastères le long du Nil marquent encore aujourd'hui les étapes de ce voyage sacré.",
+      "p3": "L'Afrique a accueilli le Christ dans son humanité fragile, méritant ainsi sa place au cœur de la Rédemption.",
+      "cta": "Sur les pas de la Sainte Famille",
+      "quote1": "Lève-toi, prends le petit enfant et sa mère, fuis en Égypte.",
+      "ref1": "Matthieu 2:13"
     },
     "premices": {
-      "title": "Les Prémices du Salut : L'Eunuque Éthiopien",
-      "p1": "Sur la route poussiéreuse et déserte descendant de Jérusalem vers Gaza, une rencontre fondatrice ordonnée par l'Esprit Saint se produit entre l'apôtre Philippe et un haut dignitaire magnifiquement vêtu : l'eunuque, le puissant ministre de la Candace, reine d'Éthiopie.",
-      "p2": "Cherchant ardemment et avec humilité à comprendre les vieux et complexes textes du prophète Isaïe depuis le siège de son char royal, la lumière totale lui fut soudainement révélée et donnée par l'apôtre enthousiaste.",
-      "p3": "Dès sa descente sereine dans l'eau providentielle, il devient le premier haut-représentant Africain formellement baptisé tel que rapporté par les Actes, emportant fièrement avec lui la toute première graine vivace du christianisme pour la transplanter vers le cœur profond de l'Afrique pour sa fulgurante expansion millénaire future.",
-      "cta": "Lire le Chapitre des Actes",
-      "quote1": "Or, se trouvait là un Éthiopien, un eunuque, haut fonctionnaire de Candace, reine d'Éthiopie, et surintendant de tous ses trésors. Il était venu à Jérusalem pour adorer...",
-      "ref1": "Actes 8:26-40"
-    },
-    "related": {
-      "title": "Vous pourriez aussi lire",
-      "art1": {
-        "title": "St-Augustin de Thagaste",
-        "description": "Découvrez l'apport monumental et incontournable de la théologie africaine nordique sur la dogmatique de l'Église."
-      },
-      "art2": {
-        "title": "Manuscrits de Timbuktu",
-        "description": "Plongée sidérante dans la préservation acharnée des écritures sacrées au cœur des sables millénaires du Mali."
-      },
-      "art3": {
-        "title": "Art Paléochrétien",
-        "description": "Comment les mosaïques romaines dépeignaient la chrétienté africaine vibrante des premiers siècles."
-      }
+      "title": "L'Éveil de l'Afrique : L'Eunuque et Simon",
+      "p1": "Dès les premiers jours de l'Église, l'Afrique répond à l'Évangile. Simon de Cyrène, originaire de l'actuelle Libye, fut le premier à partager physiquement le fardeau de la Croix auprès du Christ.",
+      "p2": "Plus tard, sur la route de Gaza, le haut fonctionnaire de la Candace, Reine d'Éthiopie, reçoit le baptême. Il est le premier converti des nations mentionné dans les Actes, emportant avec lui la foi pour illuminer le Sud.",
+      "p3": "Ces prémices montrent que l'Afrique n'a pas attendu les missions modernes pour embrasser le Christ ; elle a fait partie du premier souffle de l'Esprit Saint.",
+      "cta": "L'Église naissante",
+      "quote1": "Et cet Éthiopien continua son chemin tout joyeux.",
+      "ref1": "Actes 8:39"
     }
   },
   "heritage": {
-    "title": "Héritage et Histoire",
-    "subtitle": "Explorez la fascinante chronologie de 2000 ans de présence chrétienne continue sur le continent africain.",
-    "filters": {
-      "all": "Tous",
-      "antiquity": "Antiquité",
-      "middle_ages": "Moyen-Âge",
-      "modern": "Moderne"
-    },
     "timeline": {
-      "event1": { "year": "50 AD", "title": "L'Eunuque Éthiopien", "desc": "Le ministre de la Candace est baptisé par l'apôtre Philippe, plantant les toutes premières graines de l'Évangile au cœur du continent africain." },
-      "event2": { "year": "180 AD", "title": "Les Martyrs Scillitains", "desc": "Premières traces documentées du christianisme florissant en Afrique du Nord, tragiquement scellées par le martyre de 12 héroïques chrétiens à Carthage." },
-      "event3": { "year": "251 AD", "title": "Cyprien de Carthage", "desc": "Élu brillant évêque de Carthage, il unifie l'Église africaine lors des brutales persécutions de Dèce et structure magistralement la théologie ecclésiologique." },
-      "event4": { "year": "354-430", "title": "Saint Augustin d'Hippone", "desc": "Le plus grand penseur de l'Antiquité chrétienne. Ses immenses œuvres, comme La Cité de Dieu, façonnent encore aujourd'hui toute la théologie occidentale." },
-      "event5": { "year": "451 AD", "title": "Le Concile de Chalcédoine", "desc": "Grand schisme impliquant la puissante Église Copte d'Égypte qui maintient indéfectiblement sa propre lignée théologique (miaphysisme) à travers les siècles." },
-      "event6": { "year": "700-1400", "title": "La Période Médiévale", "desc": "Expansion fulgurante de l'Islam en Afrique du Nord. La majestueuse Église orthodoxe éthiopienne continue de prospérer, isolée dans ses montagnes (églises rupestres de Lalibela)." },
-      "event7": { "year": "1500-1800", "title": "Les Premières Missions Modernes", "desc": "Arrivée de missionnaires catholiques européens sur les côtes (notamment au Kongo), entraînant un christianisme de cour et de nouvelles christianisations complexes." },
-      "event8": { "year": "1900-2000", "title": "Renouveau et Indépendance", "desc": "Émergence forte et vibrante des Églises d'Institution Africaine (EIA), réappropriation de la foi et incroyable explosion démographique du christianisme sur le continent." },
-      "event9": { "year": "2033", "title": "Jubilé de la Rédemption", "desc": "Célébration spirituelle mondiale des 2000 ans du salut chrétien. L'Afrique se positionne définitivement comme le cœur battant et l'avenir de la chrétienté universelle." }
-    },
-    "thinkersTitle": "Les Grands Penseurs de l'Antiquité",
-    "contemporaryTitle": "Théologiens Contemporains",
-    "contemporarySubtitle": "Penseurs d'aujourd'hui façonnant la pensée chrétienne africaine",
-    "mapTitle": "La Carte Historique",
-    "mapDesc": "Explorez visuellement les grandes métropoles religieuses de Carthage à Alexandrie en passant par Aksoum.",
-    "mapPlaceholder": "La prochaine étape intégrera la cartographie interactive permettant de cliquer sur Carthage, Hippone, l'Éthiopie, et l'Égypte pour de riches détails historiques."
-  },
-  "resources": {
-    "title": "Espace Ressources",
-    "subtitle": "Explorez, lisez, écoutez et téléchargez nos précieuses boîtes à outils, fiches pédagogiques et nos fantastiques répertoires multimédias inculturés.",
-    "searchPlaceholder": "Rechercher un thème, une vidéo, un chant...",
-    "tabs": {
-      "tools": "Boîte à Outils",
-      "multimedia": "Multimédia",
-      "inculturation": "Inculturation"
-    },
-    "outils": {
-      "filters": {
-        "levels": {
-          "all": "Tous Niveaux",
-          "children": "Enfants",
-          "teens": "Ados",
-          "adults": "Adultes"
-        },
-        "themes": {
-          "all": "Tous Sujets",
-          "bible": "Bible",
-          "history": "Histoire",
-          "practice": "Pratique"
-        }
-      },
-      "results": "Ressource(s) trouvée(s)",
-      "noResults": "Aucune ressource ne correspond à votre recherche."
-    },
-    "multimedia": {
-      "tabs": {
-        "videos": "Vidéos (YouTube)",
-        "podcasts": "Podcasts",
-        "playlists": "Playlists Musicales"
-      }
-    },
-    "inculturation": {
-      "riteCongolais": {
-        "title": "Le Rite Zaïrois (Congolais)",
-        "p1": "Le Missel Romain pour les Diocèses du Zaïre, promulgué en 1988 par Saint Jean-Paul II, constitue l'exemple le plus éclatant d'inculturation liturgique réussie et officiellement approuvée par le Saint-Siège.",
-        "p2": "Son génie réside dans l'intégration harmonieuse de l'âme africaine : l'entrée triomphale rythmée, l'invocations des ancêtres au cœur droit justifiés en Christ, et la forme dialoguée de l'homélie. Le corps tout entier prie, la danse devient liturgie.",
-        "cta": "Télécharger le Missel (PDF)"
-      },
-      "chantsTitle": "Bibliothèque de Chants",
-      "regionsTitle": "Diversité des Traditions Locales",
-      "galleryTitle": "Galerie Inspirante"
+      "event1": { "year": "~33 AD", "title": "Simon de Cyrène", "desc": "Un Africain porte la croix du Christ, devenant le symbole de la participation du continent à la Passion." },
+      "event2": { "year": "42 AD", "title": "St Marc à Alexandrie", "desc": "L'évangéliste fonde l'Église d'Égypte, instituant l'une des plus prestigieuses écoles théologiques au monde." },
+      "event3": { "year": "203 AD", "title": "Félicité et Perpétue", "desc": "Deux jeunes mères martyrisées à Carthage, dont le témoignage a rallié des milliers de personnes à la foi." },
+      "event4": { "year": "325 AD", "title": "St Athanase d'Alexandrie", "desc": "Le 'Pilier de l'Église' défend la divinité du Christ au Concile de Nicée, sauvant l'orthodoxie chrétienne." },
+      "event5": { "year": "340 AD", "title": "Royaume d'Aksoum", "desc": "L'Éthiopie devient l'une des premières nations au monde à adopter officiellement le christianisme comme religion d'État." },
+      "event6": { "year": "397 AD", "title": "Les Confessions d'Augustin", "desc": "L'évêque d'Hippone (Algérie) publie son chef-d'œuvre, influençant toute la pensée occidentale pour les siècles à venir." },
+      "event7": { "year": "1210 AD", "title": "Églises de Lalibela", "desc": "Le Roi Lalibela fait tailler dans le roc onze églises monumentales, créant une 'Nouvelle Jérusalem' africaine." },
+      "event8": { "year": "1886 AD", "title": "Martyrs de l'Ouganda", "desc": "De jeunes courtisans donnent leur vie pour leur foi, marquant le renouveau spectaculaire de l'Église en Afrique subsaharienne." },
+      "event9": { "year": "2033 AD", "title": "Le Grand Jubilé", "desc": "L'Afrique, continent comptant le plus grand nombre de chrétiens au monde, invite l'Église universelle à célébrer 2000 ans de grâce." }
     }
   },
   "community": {
-    "heroTitle": "Rejoignez la Communauté",
-    "heroSubtitle": "Participez au grand concours artistique Jubilé 2033, soumettez vos témoignages et discutez avec les membres de tout le continent.",
-    "btnParticipate": "Participer Maintenant",
-    "btnGallery": "Voir la Galerie",
     "concours": {
-      "title": "Jésus Vu par l'Afrique",
-      "desc": "Le grand concours créatif du Jubilé 2033 est ouvert ! Exprimez votre vision de la foi chrétienne à travers l'art visuel, la musique ou la vidéo.",
-      "datesTitle": "Dates Clés & Prix",
-      "open": "Ouverture :",
-      "close": "Fermeture :",
-      "results": "Résultats :",
-      "prize": "Dotation Globale",
-      "prizeDesc": "Partagé entre les lauréats des trois catégories.",
-      "downloadRules": "Télécharger Règlement (PDF)",
-      "form": {
-        "title": "Partager Votre Créativité",
-        "success": "Soumission Réussie !",
-        "successDesc": "Votre œuvre a bien été transmise au jury. Un email de confirmation vous a été envoyé. Merci pour votre participation !",
-        "uploadPlaceholder": "Glissez et déposez votre fichier ici",
-        "uploadFormats": "JPG/PNG (Max 10MB), MP4 (Max 50MB), MP3 (Max 5MB)",
-        "consent": "J'accepte le règlement du concours et je cède les droits d'affichage sur cette plateforme.",
-        "submit": "Soumettre l'œuvre",
-        "submitting": "Envoi en cours"
-      }
-    },
-    "forum": {
-      "title": "Discussions Récentes",
-      "openThread": "Ouvrir un fil",
-      "replies": "Réponses",
-      "explore": "Explorer le forum complet"
-    },
-    "partners": "Soutenu par nos partenaires et sponsors"
-  },
-  "sidebar": {
-    "newsletter": {
-      "title": "S'inscrire à la Newsletter",
-      "desc": "Recevez nos dernières découvertes historiques et réflexions théologiques directement dans votre boîte mail.",
-      "placeholder": "votre@email.com",
-      "btn": "Rejoindre"
-    },
-    "share": "Partager"
-  },
-  "footer": {
-    "about": "À Propos",
-    "content": "Contenu",
-    "engagement": "Engagement",
-    "social": "Réseaux Sociaux",
-    "links": {
-      "history": "Notre Histoire",
-      "vision": "Vision Jubilé 2033",
-      "team": "L'Équipe",
-      "join": "Rejoindre la Communauté",
-      "events": "Événements",
-      "contact": "Nous Contacter"
-    },
-    "legal": {
-      "mentions": "Mentions légales",
-      "privacy": "Politique de confidentialité"
-    },
-    "copyright": "© 2026 Impronte Africane di Gesù"
+      "title": "Concours : Visions du Christ Africain",
+      "desc": "Comment imaginez-vous le visage du Christ dans nos cultures aujourd'hui ? Participez au grand concours artistique du Jubilé 2033."
+    }
   }
 }

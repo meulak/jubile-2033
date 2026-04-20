@@ -7,7 +7,7 @@ import Card from '../components/common/Card';
 import Tag from '../components/common/Tag';
 import { Link } from 'react-router-dom';
 
-const BibleTabContent = ({ title, content, quotes, align = 'left', cta }) => {
+const BibleTabContent = ({ title, content, quotes, image, align = 'left', cta }) => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 15 }}
@@ -32,17 +32,17 @@ const BibleTabContent = ({ title, content, quotes, align = 'left', cta }) => {
       </div>
 
       <div className={`w-full xl:w-[400px] flex-shrink-0 flex flex-col gap-6 ${align === 'right' ? 'xl:order-first' : ''}`}>
-        {/* Abstract/Image representation with lazy load concept */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full h-[300px] bg-gradient-to-br from-[#F5F3ED] to-[#E5E3DD] rounded-xl flex flex-col items-center justify-center border border-[#D4AF37]/20 shadow-inner relative overflow-hidden group"
+          className="w-full h-[300px] bg-gray-100 rounded-xl overflow-hidden border border-[#D4AF37]/20 shadow-md group"
         >
-          {/* Subtle Ndop overlay */}
-          <div className="absolute inset-0 z-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #000 0, #000 2px, #fff 2px, #fff 10px)' }}></div>
-          <span className="text-6xl opacity-70 z-10 group-hover:scale-110 transition-transform duration-500">🏜️</span>
-          <span className="text-xs text-gray-400 mt-4 z-10 font-montserrat uppercase tracking-widest">(Image Source Placeholder)</span>
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+          />
         </motion.div>
         
         {/* Citations block */}
@@ -86,6 +86,7 @@ const AfricaInBible = () => {
         { text: t('bible.racines.quote2'), ref: t('bible.racines.ref2') }
       ],
       cta: t('bible.racines.cta'),
+      image: `${import.meta.env.BASE_URL}/assets/images/holy_family_egypt.png`, // Generic Egypt/Roots
       align: "left"
     },
     sagesse: {
@@ -99,6 +100,7 @@ const AfricaInBible = () => {
         { text: t('bible.sagesse.quote1'), ref: t('bible.sagesse.ref1') }
       ],
       cta: t('bible.sagesse.cta'),
+      image: `${import.meta.env.BASE_URL}/assets/images/sheba_solomon.png`,
       align: "right"
     },
     exil: {
@@ -112,6 +114,7 @@ const AfricaInBible = () => {
         { text: t('bible.exil.quote1'), ref: t('bible.exil.ref1') }
       ],
       cta: t('bible.exil.cta'),
+      image: `${import.meta.env.BASE_URL}/assets/images/holy_family_egypt.png`,
       align: "left"
     },
     premices: {
@@ -125,9 +128,11 @@ const AfricaInBible = () => {
         { text: t('bible.premices.quote1'), ref: t('bible.premices.ref1') }
       ],
       cta: t('bible.premices.cta'),
+      image: `${import.meta.env.BASE_URL}/assets/images/eunuch_baptism.png`,
       align: "right"
     }
   };
+
 
   return (
     <div className="w-full bg-[#F5F3ED] min-h-screen pb-20 fade-in-section">
