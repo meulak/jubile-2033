@@ -42,9 +42,17 @@ const Header = ({ activeLink = '/', onLanguageChange = () => {} }) => {
       
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="font-playfair text-2xl text-[#D4AF37] font-semibold tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded">
-          Impronte Africane
+        <Link to="/" aria-label="Impronte Africane – Accueil" className="flex items-center gap-3 outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/images/logo.png`}
+            alt="Logo Impronte Africane"
+            className="h-12 w-12 object-contain rounded-full border-2 border-[#D4AF37]/40 shadow-md"
+          />
+          <span className="font-playfair text-xl text-[#D4AF37] font-semibold tracking-wide hidden sm:inline">
+            Impronte Africane
+          </span>
         </Link>
+
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8">
