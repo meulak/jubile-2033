@@ -9,6 +9,7 @@ import Card from '../components/common/Card';
 import SEOMeta from '../components/common/SEOMeta';
 import InteractiveMap from '../components/common/InteractiveMap';
 import ResponsiveImage from '../components/common/ResponsiveImage';
+import CarouselHero from '../components/common/CarouselHero';
 import { getOrganizationSchema } from '../utils/schemaHelpers';
 
 // --- MOCK DATA ---
