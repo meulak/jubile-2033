@@ -280,5 +280,32 @@
       "privacy": "Privacy"
     },
     "copyright": "© 2026 Impronte Africane di Gesù. All rights reserved."
+  },
+  "heroSlides": {
+    "slide1": {
+      "title": "Africa, the Bible, and You",
+      "text": "Always heard your culture was outside the Bible? Discover it has ALWAYS been there.",
+      "cta": "See How"
+    },
+    "slide2": {
+      "title": "Teach an Authentic Faith",
+      "text": "How can you show your students that Africa SHAPED Christianity? Here is how.",
+      "cta": "Access Resources"
+    },
+    "slide3": {
+      "title": "2000 Years of Forgotten Stories",
+      "text": "The history of salvation was written in AFRICA. Discover these untold stories.",
+      "cta": "Explore"
+    },
+    "slide4": {
+      "title": "Academic Research on Christian Africa",
+      "text": "Articles, sources, data. Everything you need to know about 2000 years of African Christian presence.",
+      "cta": "Consult"
+    },
+    "slide5": {
+      "title": "Towards Jubilee 2033",
+      "text": "Prepare for the Jubilee by discovering the African roots of your faith. It is your heritage.",
+      "cta": "Start the Journey"
+    }
   }
 }

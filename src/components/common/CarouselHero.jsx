@@ -1,41 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // Slide data – titles, short texts, CTA and dynamic background images
-const slides = [
+// Texts are now handled via translation keys
+const slidesData = [
   {
-    title: "L'Afrique, la Bible et toi",
-    text: "Tu as toujours entendu que ta culture était hors‑Bible ? Découvre qu’elle y a TOUJOURS été.",
-    cta: "Voir comment",
+    key: "slide1",
     link: "/youth",
     image: "jeune.png",
   },
   {
-    title: "Enseigner une foi authentique",
-    text: "Comment montrer à tes élèves que l’Afrique a FAÇONNÉ le christianisme ? Voici comment.",
-    cta: "Accéder ressources",
+    key: "slide2",
     link: "/catéchistes",
     image: "église.png",
   },
   {
-    title: "2000 ans d'histoires oubliées",
-    text: "L'histoire du salut s'est écrite en AFRIQUE. Découvre ces histoires jamais racontées.",
-    cta: "Explorer",
+    key: "slide3",
     link: "/curieux",
     image: "2000.webp",
   },
   {
-    title: "Recherche académique sur l'Afrique chrétienne",
-    text: "Articles, sources, données. Tout ce que tu dois savoir sur 2000 ans de présence chrétienne africaine.",
-    cta: "Consulter",
+    key: "slide4",
     link: "/chercheurs",
     image: "st_augustine.png",
   },
   {
-    title: "Vers le Jubilé 2033",
-    text: "Prépare-toi pour le Jubilé en découvrant les racines africaines de ta foi. C'est ton héritage.",
-    cta: "Commencer le voyage",
+    key: "slide5",
     link: "/jubilee",
     image: "lalibela.png",
   },
@@ -49,17 +41,19 @@ const textVariants = {
 };
 
 export default function CarouselHero() {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
 
   // Auto‑rotate every 7 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
+      setIndex((prev) => (prev + 1) % slidesData.length);
     }, 7000);
     return () => clearInterval(timer);
   }, []);
 
-  const { title, text, cta, link, image } = slides[index];
+  const currentSlide = slidesData[index];
+  const { key, link, image } = currentSlide;
 
   return (
     <section className="relative w-full h-[600px] md:h-[800px] flex items-center justify-center overflow-hidden cinematic-gradient">
@@ -92,16 +86,16 @@ export default function CarouselHero() {
             exit="exit"
           >
             <h1 className="font-playfair text-4xl md:text-[80px] leading-[1.1] font-bold text-white mb-6 text-shadow-premium">
-              {title}
+              {t(`heroSlides.${key}.title`)}
             </h1>
             <p className="font-serif text-lg md:text-2xl text-white opacity-90 max-w-3xl mx-auto mb-10 italic leading-relaxed">
-              {text}
+              {t(`heroSlides.${key}.text`)}
             </p>
             <Link
               to={link}
               className="inline-block bg-[#D4AF37] text-[#1B1B4D] font-montserrat font-bold uppercase tracking-widest px-10 py-4 rounded-full hover:bg-white hover:text-[#1B1B4D] transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20"
             >
-              {cta}
+              {t(`heroSlides.${key}.cta`)}
             </Link>
           </motion.div>
         </AnimatePresence>
@@ -109,7 +103,7 @@ export default function CarouselHero() {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-        {slides.map((_, i) => (
+        {slidesData.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}

@@ -280,5 +280,32 @@
       "privacy": "Privacy"
     },
     "copyright": "© 2026 Impronte Africane di Gesù. Tutti i diritti riservati."
+  },
+  "heroSlides": {
+    "slide1": {
+      "title": "L'Africa, la Bibbia e te",
+      "text": "Hai sempre sentito che la tua cultura fosse fuori dalla Bibbia? Scopri che c'è SEMPRE stata.",
+      "cta": "Vedi come"
+    },
+    "slide2": {
+      "title": "Insegnare una fede autentica",
+      "text": "Come mostrare ai tuoi studenti che l'Africa ha PLASMATO il cristianesimo? Ecco come.",
+      "cta": "Accedi alle risorse"
+    },
+    "slide3": {
+      "title": "2000 anni di storie dimenticate",
+      "text": "La storia della salvezza è stata scritta in AFRICA. Scopri queste storie mai raccontate.",
+      "cta": "Esplora"
+    },
+    "slide4": {
+      "title": "Ricerca accademica sull'Africa cristiana",
+      "text": "Articoli, fonti, dati. Tutto ciò che devi sapere su 2000 anni di presenza cristiana africana.",
+      "cta": "Consulta"
+    },
+    "slide5": {
+      "title": "Verso il Giubileo 2033",
+      "text": "Preparati al Giubileo scoprendo le radici africane della tua fede. È la tua eredità.",
+      "cta": "Inizia il viaggio"
+    }
   }
 }
