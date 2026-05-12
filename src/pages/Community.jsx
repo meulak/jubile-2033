@@ -47,6 +47,12 @@ const mockDiscussions = [
   { id: 3, title: "Composition : Écrire un hymne Jubilé 2033", author: "Maestro David", replies: 34, lastUpdate: "Il y a 1 jour", tag: "Musique" },
   { id: 4, title: "Place des jeunes dans la théologie africaine", author: "Sarah T.", replies: 89, lastUpdate: "Il y a 3 jours", tag: "Communauté" },
 ];
+const mockPartners = [
+  "Partner 1",
+  "Partner 2",
+  "Université Example",
+  "Partner 3"
+];
 
 
 // =======================
@@ -63,7 +69,45 @@ const Community = () => {
   const [activeSort, setActiveSort] = useState(t('community.concours.sort.recent', 'Récent'));
   const [lightboxItem, setLightboxItem] = useState(null);
 
-  // ... (rest of states)
+  // Added state to avoid runtime errors in the concours form
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [formData, setFormData] = useState({ consent: false });
+  const [formErrors, setFormErrors] = useState({});
+
+  // Simple handlers to keep the form functional (placeholder implementation)
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Simulate a successful submission
+    setIsSuccess(true);
+    setIsSubmitting(false);
+    setUploadProgress(100);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+    // Filtered and sorted artworks based on current filter and sort
+  const filteredArtworks = useMemo(() => {
+    let result = mockArtworks;
+    // Apply category filter if not showing all
+    if (activeFilter && activeFilter !== t('heritage.filters.all')) {
+      result = result.filter((art) => art.category === activeFilter);
+    }
+    // Apply sorting
+    if (activeSort === t('community.concours.sort.recent', 'Récent')) {
+      // Keep original order (assumes mockArtworks is already recent-first)
+      return result;
+    }
+    // Popular sorting – descending votes
+    return [...result].sort((a, b) => b.votes - a.votes);
+  }, [activeFilter, activeSort, t]);
 
   return (
     <div className="w-full bg-[#F5F3ED] min-h-screen pb-20">

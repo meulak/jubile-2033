@@ -6,6 +6,9 @@
     "resources": "Risorse",
     "community": "Comunità"
   },
+  "header": {
+    "brand": "Impronte Africane"
+  },
   "languages": {
     "fr": "Français",
     "en": "English",

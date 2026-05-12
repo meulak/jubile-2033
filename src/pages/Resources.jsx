@@ -23,19 +23,19 @@ const getMockTools = (t) => [
 ];
 
 const mockVideos = [
-  { id: 'v1', ytid: 'J---aiyznGQ', title: "L'Afrique : Cœur de la Chrétienté Antique", views: "128K vues", duration: "18:45", date: "Il y a 2 mois", desc: "Une conférence magistrale sur le rôle des évêques africains dans la définition du dogme chrétien." },
-  { id: 'v2', ytid: 'lx2JdF4zpoE', title: "Splendeur du Rite Congolais", views: "75K vues", duration: "12:10", date: "Il y a 5 mois", desc: "Documentaire sur la beauté de la liturgie inculturée à Kinshasa : danse, rythme et ferveur." },
-  { id: 'v3', ytid: '9bZkp7q19f0', title: "Sur les traces de Reine de Saba", views: "210K vues", duration: "32:20", date: "Il y a 1 an", desc: "Le mystère de l'Arche d'Alliance et les liens millénaires entre Jérusalem et Aksoum." },
+  { id: 'v1', ytid: 'OEo4IMroUJI', title: "Messe du Pape François en Rite Zaïrois", views: "145K vues", duration: "10:15", date: "Il y a 1 an", desc: "La ferveur et la beauté de la célébration eucharistique présidée par le Pape François selon le rite zaïrois à Kinshasa." },
+  { id: 'v2', ytid: '9ObRNbB1MwI', title: "Priere pour la reconciliation en rite Orthodoxe éthiopien", views: "78K vues", duration: "06:40", date: "Il y a 6 mois", desc: "Un moment solennel de prière liturgique pour l'unité et la réconciliation au sein de la vénérable Église orthodoxe éthiopienne." },
+  { id: 'v3', ytid: '-8W1zuAOZeA', title: "Histoire et Tradition de l'Église Éthiopienne", views: "250K vues", duration: "24:18", date: "Il y a 2 ans", desc: "Un documentaire immersif retraçant l'incroyable héritage et les traditions séculaires de l'Église chrétienne d'Éthiopie." },
 ];
 
 const mockSpotifyShows = [
   { id: '0ofXAdFIQQRsCYj9754UFx', title: 'Théologie Africaine Episode 1', desc: 'Introduction aux Pères du désert et la spiritualité monastique.', duration: '45 min' },
-  { id: '6y0igZArWVu6I53VczYv24', title: 'Théologie Africaine Episode 2', desc: 'Les origines mariales en Égypte et dans la Corne de \'Afrique.', duration: '38 min' }
+  { id: '6y0igZArWVu6I53VczYv24', title: 'Théologie Africaine Episode 2', desc: 'Les origines mariales en Égypte et dans la Corne de l\'Afrique.', duration: '38 min' }
 ];
 
 const mockSpotifyPlaylists = [
-  { id: '37i9dQZF1DWWMOmoXKqHTD', title: 'Chants Liturgiques Africains' },
-  { id: '37i9dQZF1DXcBWIGoYBM5M', title: 'Louange et Adoration Congolaise' }
+  { id: '72TfXSd4KAf3rx9tWs1XNn', title: 'Chants Liturgiques Africains' },
+  { id: '4CKx0qGD16rApL6pTzqu8z', title: 'Louange et Adoration Congolaise' }
 ];
 
 const mockChants = [
@@ -75,6 +75,8 @@ const Resources = () => {
   
   // Multimedia States
   const [activeMediaTab, setActiveMediaTab] = useState('videos');
+  const [activeVideo, setActiveVideo] = useState(null);
+  const [activeSpotifyEmbed, setActiveSpotifyEmbed] = useState(null);
 
   // Lightbox State
   const [lightboxImg, setLightboxImg] = useState(null);
@@ -195,21 +197,26 @@ const Resources = () => {
       <AnimatePresence mode="wait">
         {/* VIDEOS */}
         {activeMediaTab === 'videos' && (
-          <motion.div key="videos" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <motion.div key="videos" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {mockVideos.map(vid => (
-              <div key={vid.id} className="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <div 
+                key={vid.id} 
+                className="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col cursor-pointer border border-[#D4AF37]/10 hover:border-[#D4AF37]/50"
+                onClick={() => setActiveVideo(vid)}
+              >
                 <div className="relative w-full aspect-video bg-gray-900 overflow-hidden">
-                  {/* Fake Youtube thumbnail with standard format */}
-                  <img src={`https://img.youtube.com/vi/${vid.ytid}/hqdefault.jpg`} alt="thumbnail" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" loading="lazy" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white pl-1 group-hover:bg-red-500 transition-colors cursor-pointer">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
+                  <img src={`https://img.youtube.com/vi/${vid.ytid}/mqdefault.jpg`} alt={vid.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" loading="lazy" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
+                    <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white pl-1 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-350 cursor-pointer">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                      </svg>
                     </div>
                   </div>
-                  <span className="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded">{vid.duration}</span>
+                  <span className="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded font-montserrat">{vid.duration}</span>
                 </div>
-                <div className="p-5 flex flex-col flex-grow">
-                  <h4 className="font-playfair font-bold text-lg text-[#1B1B4D] mb-2 line-clamp-2 leading-tight">{vid.title}</h4>
+                <div className="p-5 flex flex-col flex-grow bg-[#FDFDFD]">
+                  <h4 className="font-playfair font-bold text-lg text-[#1B1B4D] mb-2 line-clamp-2 leading-tight group-hover:text-[#B85D3E] transition-colors">{vid.title}</h4>
                   <p className="font-serif text-sm text-[#5C5C4C] mb-4 line-clamp-2 flex-grow">{vid.desc}</p>
                   <div className="flex items-center justify-between text-[11px] font-montserrat font-bold text-gray-400 mt-auto pt-3 border-t border-gray-100">
                     <span>{vid.views}</span>
@@ -223,14 +230,23 @@ const Resources = () => {
 
         {/* PODCASTS */}
         {activeMediaTab === 'podcasts' && (
-          <motion.div key="podcasts" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div key="podcasts" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {mockSpotifyShows.map(show => (
-              <div key={show.id} className="bg-white rounded-xl shadow border border-[#D4AF37]/10 p-6 flex flex-col hover:border-[#D4AF37] transition-all group">
-                <h4 className="font-playfair font-bold text-xl text-[#1B1B4D] mb-2">{show.title}</h4>
-                <p className="font-serif text-sm text-[#5C5C4C] mb-6">{show.desc}</p>
-                <div className="w-full mt-auto rounded-lg overflow-hidden bg-gray-100 aspect-[5/2] relative flex items-center justify-center">
-                  <span className="font-montserrat text-sm text-gray-500 font-bold">Spotify Embed Placeholder</span>
-                  {/* Real embed code would be here but Spotify needs a valid ID. We mock it for visual presentation. */}
+              <div key={show.id} className="bg-white rounded-xl shadow border border-[#D4AF37]/10 p-6 flex flex-col hover:border-[#D4AF37] hover:shadow-lg transition-all group">
+                <h4 className="font-playfair font-bold text-xl text-[#1B1B4D] mb-1">{show.title}</h4>
+                <p className="font-serif text-sm text-[#5C5C4C] mb-4">{show.desc}</p>
+                <div className="w-full mt-auto rounded-xl overflow-hidden bg-transparent shadow-md">
+                  <iframe 
+                    style={{ borderRadius: '12px' }}
+                    src={`https://open.spotify.com/embed/show/${show.id}?utm_source=generator&theme=0`} 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowFullScreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    title={show.title}
+                  ></iframe>
                 </div>
               </div>
             ))}
@@ -239,15 +255,24 @@ const Resources = () => {
 
         {/* PLAYLISTS */}
         {activeMediaTab === 'playlists' && (
-          <motion.div key="playlists" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div key="playlists" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {mockSpotifyPlaylists.map(playlist => (
-              <div key={playlist.id} className="bg-[#1B1B4D] rounded-xl shadow-xl overflow-hidden p-6 flex flex-col hover:scale-[1.02] transition-transform text-white border border-white/10">
-                <div className="w-full aspect-square bg-[#D4AF37]/20 rounded-lg mb-6 flex items-center justify-center">
-                   <span className="text-5xl">🎵</span>
+              <div key={playlist.id} className="bg-[#1B1B4D] rounded-2xl shadow-xl overflow-hidden p-6 flex flex-col hover:scale-[1.01] transition-all duration-300 text-white border border-[#D4AF37]/20">
+                <h4 className="font-playfair font-bold text-2xl text-[#D4AF37] mb-2">{playlist.title}</h4>
+                <p className="font-montserrat text-xs opacity-80 mb-5">Découvrez la beauté et la puissance de l'inculturation musicale à travers cette playlist d'exception.</p>
+                <div className="w-full mt-auto rounded-xl overflow-hidden shadow-lg bg-transparent">
+                  <iframe 
+                    style={{ borderRadius: '12px' }}
+                    src={`https://open.spotify.com/embed/playlist/${playlist.id}?utm_source=generator`} 
+                    width="100%" 
+                    height="380" 
+                    frameBorder="0" 
+                    allowFullScreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    title={playlist.title}
+                  ></iframe>
                 </div>
-                <h4 className="font-playfair font-bold text-xl text-[#D4AF37] mb-2">{playlist.title}</h4>
-                <p className="font-montserrat text-xs opacity-70 mb-6">Explorez la puissance des chorales et de l'inculturation musicale.</p>
-                <Button variant="secondary" className="w-full text-white border-white hover:bg-white hover:text-[#1B1B4D]">Écouter sur Spotify</Button>
               </div>
             ))}
           </motion.div>
@@ -431,6 +456,31 @@ const Resources = () => {
           </div>
         )}
       </Modal>
+
+      {/* Lecteur Vidéo YouTube Modal */}
+      <Modal
+        isOpen={!!activeVideo}
+        onClose={() => setActiveVideo(null)}
+        size="lg"
+        title={activeVideo?.title || "Vidéo"}
+      >
+        {activeVideo && (
+          <div className="w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${activeVideo.ytid}?autoplay=1&rel=0`}
+              title={activeVideo.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        )}
+      </Modal>
+
+
 
     </div>
   );

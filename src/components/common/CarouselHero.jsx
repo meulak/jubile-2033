@@ -8,27 +8,27 @@ import { useTranslation } from 'react-i18next';
 const slidesData = [
   {
     key: "slide1",
-    link: "/youth",
+    link: "/bible",
     image: "jeune.png",
   },
   {
     key: "slide2",
-    link: "/catéchistes",
+    link: "/ressources",
     image: "église.png",
   },
   {
     key: "slide3",
-    link: "/curieux",
+    link: "/heritage",
     image: "2000.webp",
   },
   {
     key: "slide4",
-    link: "/chercheurs",
+    link: "/ressources",
     image: "st_augustine.png",
   },
   {
     key: "slide5",
-    link: "/jubilee",
+    link: "/communaute",
     image: "lalibela.png",
   },
 ];
@@ -107,9 +107,8 @@ export default function CarouselHero() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`h-1.5 transition-all duration-500 rounded-full ${
-              index === i ? 'w-10 bg-[#D4AF37]' : 'w-4 bg-white/30 hover:bg-white/50'
-            }`}
+            className={`h-1.5 transition-all duration-500 rounded-full ${index === i ? 'w-10 bg-[#D4AF37]' : 'w-4 bg-white/30 hover:bg-white/50'
+              }`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}

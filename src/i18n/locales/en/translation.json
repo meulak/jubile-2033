@@ -6,6 +6,9 @@
     "resources": "Resources",
     "community": "Community"
   },
+  "header": {
+    "brand": "African Footprints"
+  },
   "languages": {
     "fr": "Français",
     "en": "English",

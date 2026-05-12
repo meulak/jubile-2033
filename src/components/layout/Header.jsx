@@ -49,7 +49,7 @@ const Header = ({ activeLink = '/', onLanguageChange = () => {} }) => {
             className="h-12 w-12 object-contain rounded-full border-2 border-[#D4AF37]/40 shadow-md"
           />
           <span className="font-playfair text-xl text-[#D4AF37] font-semibold tracking-wide hidden sm:inline">
-            Impronte Africane
+            {t('header.brand')}
           </span>
         </Link>
 

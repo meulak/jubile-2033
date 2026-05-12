@@ -6,6 +6,9 @@
     "resources": "Espace Ressources",
     "community": "Communauté"
   },
+  "header": {
+    "brand": "Empreintes africaines"
+  },
   "languages": {
     "fr": "Français",
     "en": "English",
